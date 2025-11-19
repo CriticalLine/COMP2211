@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://course.cse.ust.hk/comp2211/labs/lab2/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<!-- ### Change lab number ### -->
+    <title>COMP 2211 Lab 2: Naive Bayes Classifier</title>
+
+   <!-- Bootstrap core CSS -->
+  <link href="./COMP 2211 Lab 2_ Naive Bayes Classifier_files/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="./COMP 2211 Lab 2_ Naive Bayes Classifier_files/blog-home.css" rel="stylesheet">
+
+  <!-- For code highlighting -->
+  <link href="./COMP 2211 Lab 2_ Naive Bayes Classifier_files/prism.css" rel="stylesheet">
+
+  <style>
+    pre {
+      background: #f4f4f4;
+      border: 1px solid #ddd;
+      border-left: 3px solid #f36d33;
+      color: #666;
+      page-break-inside: avoid;
+      font-family: monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 1.6em;
+      max-width: 100%;
+      overflow: auto;
+      padding: 1em 1.5em;
+      display: block;
+      word-wrap: break-word;
+    }
+
+    span.input {
+      color: #00f700;
+      ;
+    }
+
+    table {
+      width: 100%;
+      display: inline-block;
+      overflow-x: auto;
+    }
+
+    table caption {
+      font-size: medium;
+    }
+
+    table thead th {
+      background-color: #ddd;
+    }
+
+    table th,
+    table td {
+      text-align: left;
+      padding: 3px 6px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #aaa #aaa;
+    }
+
+    table tr:nth-child(even) {
+      background-color: #eee;
+    }
+
+    blockquote {
+      border: 1px solid #b3b3b3;
+      border-left: 10px solid #b3b3b3;
+      border-radius: 0px;
+      background: #fafafa;
+      font-size: 18px;
+      font-family: Georgia, serif;
+      margin: 10px;
+      padding: 10px 20px;
+    }
+
+    blockquote p {
+      margin: 0;
+      line-height: 30px;
+      padding-bottom: 20px;
+    }
+
+    blockquote.small {
+      display: block;
+      font-size: 80%;
+      color: brown;
+      text-align: right;
+    }
+
+    code {
+      /* color: goldenrod; */
+      font-size: 1em;
+      /* background: none !important; */
+    }
+
+    figure.figure {
+      width: 100%;
+      text-align: center;
+    }
+
+    .bd-callout {
+      padding: 1.25rem;
+      margin-top: 1.25rem;
+      margin-bottom: 1.25rem;
+      border: 1px solid #eee;
+      border-left-width: .25rem;
+      border-radius: .25rem;
+    }
+
+    .bd-callout h4 {
+      margin-top: 0;
+      margin-bottom: .25rem;
+    }
+
+    .bd-callout p:last-child {
+      margin-bottom: 0;
+    }
+
+    .bd-callout code {
+      border-radius: .25rem;
+    }
+
+    .bd-callout+.bd-callout {
+      margin-top: -.25rem;
+    }
+
+    .bd-callout-info {
+      border-left-color: #5bc0de;
+    }
+
+    .bd-callout-warning {
+      border-left-color: #f0ad4e;
+    }
+
+    .bd-callout-danger {
+      border-left-color: #d9534f;
+    }
+
+    .bd-callout-success {
+      border-left-color: #5cb85c;
+    }
+
+    .bd-callout-primary {
+      border-left-color: #428bca;
+    }
+
+    .bd-callout-info h6 {
+      color: #5bc0de;
+    }
+
+    .bd-callout-warning h6 {
+      color: #f0ad4e;
+    }
+
+    .bd-callout-danger h6 {
+      color: #d9534f;
+    }
+
+    .bd-callout-success h6 {
+      color: #5cb85c;
+    }
+
+    .bd-callout-primary h6 {
+      color: #428bca;
+    }
+  </style>
+  </head>
+
+  <body>
+  <script src="./COMP 2211 Lab 2_ Naive Bayes Classifier_files/prism.js.download"></script>
+  <!--     <script src="https://myCDN.com/prism@v1.x/components/prism-core.min.js"></script>
+    <script src="https://myCDN.com/prism@v1.x/plugins/autoloader/prism-autoloader.min.js"></script> -->
+	
+    <!-- Page Content -->	
+    <div class="container">
+
+      <div class="row">
+
+        <!-- Entries Column -->
+        <div class="col-md-9">
+
+          <h2 class="my-4"><span style="color:darkblue">COMP 2211</span>
+            <small>Exploring Artificial Intelligence</small>
+          </h2>
+		  
+		  <!-- ### Change lab number and title ### -->
+		  <h3 class="my-4">Lab 2
+            <span style="color:#660066">Naive Bayes Classifier</span>
+          </h3>
+		  
+		  <!-- Review section -->
+		  <!-- ### Complete the review section for the lab ### -->
+          <div class="card mb-4">      
+            <div class="card-body" id="review">
+              <h3 class="card-title">Review</h3>
+        <br>
+    <p class="card-text">
+    Before you begin the <a href="https://course.cse.ust.hk/comp2211/labs/lab2/#labwork">Lab Work</a>, here is a review of the Naive Bayes Classifier. 
+It aims to refresh your memory of what you have learned in 
+class. The review will cover:
+    </p><ul>
+      <li>Naive Bayes model concepts</li>
+      <li>Laplacian smoothing in case of Division by 0</li>
+      <li>Methods for underflow prevention</li>
+    </ul>
+    <p></p>
+        <p class="card-text">
+            To open the review notebook file, please do the following:
+            </p><ul>
+                <li>Download the following notebook file by right-clicking and selecting "Save link as": <a href="https://course.cse.ust.hk/comp2211/labs/lab2/files/lab2_review.ipynb">notebook</a>
+                </li>
+                <li>Upload the file to Google Drive.</li>
+                <li>Open the .ipynb file with Google Colab.</li>
+            </ul>
+            
+            <!--
+          Please download the <a href="files/lab2_review.ipynb">notebook</a> by right-clicking and selecting "Save link as" and opening it using Google Colab. You should see the following if you open the notebook successfully.
+            -->
+          
+    <!--<img style="width:100%" src="images/lab2_review.png"/>-->
+        <p></p>
+        <br>
+            </div>
+      <div class="card-footer text-muted">
+              End of Review
+            </div>
+          </div>
+
+          <!-- Introduction section -->
+      <!-- ### Complete introduction section for the lab ### -->
+      <div class="card mb-4">
+        <!-- ### Add an image representing the lab content here ### -->
+        <div class="card-body" id="introduction">
+          <h3 class="card-title">Introduction</h3>
+          <p class="card-text">
+            In this lab exercise, you will build a simple method to predict whether a mushroom is poisonous or edible based on characteristics such as odor, spore print color, population, gill size, bruises, ring number, stalk surface, and stalk shape. You will apply Naive Bayes to an augmented version of the classic UCI mushroom dataset. Follow the guided steps and complete the key pieces of code.
+          </p>
+          <p class="card-text">
+            The table below provides an overview of the augmented mushroom dataset we'll use for predictions. This dataset describes samples from 23 species of gilled mushrooms in the Agaricus and Lepiota families.
+          </p>
+          <table>
+            <tbody><tr>
+              <th>Feature</th>
+              <th>Integer → Meaning</th>
+            </tr>
+            <tr>
+              <td><strong>odor</strong></td>
+              <td>0 = anise, 1 = musty, 2 = almond, 3 = none, 4 = foul, 5 = fishy, 6 = creosote, 7 = pungent, 8 = spicy</td>
+            </tr>
+            <tr>
+              <td><strong>spore_print_color</strong></td>
+              <td>0 = yellow, 1 = black, 2 = white, 3 = purple, 4 = chocolate, 5 = green, 6 = buff, 7 = orange, 8 = brown</td>
+            </tr>
+            <tr>
+              <td><strong>population</strong></td>
+              <td>0 = clustered, 1 = scattered, 2 = solitary, 3 = abundant, 4 = numerous, 5 = several</td>
+            </tr>
+            <tr>
+              <td><strong>gill_size</strong></td>
+              <td>0 = broad, 1 = narrow</td>
+            </tr>
+            <tr>
+              <td><strong>is_bruises</strong></td>
+              <td>0 = no bruises, 1 = bruises</td>
+            </tr>
+            <tr>
+              <td><strong>ring_number</strong></td>
+              <td>0 = none, 1 = two, 2 = one</td>
+            </tr>
+            <tr>
+              <td><strong>stalk_surface_below_ring</strong></td>
+              <td>0 = fibrous, 1 = scaly, 2 = smooth, 3 = silky</td>
+            </tr>
+            <tr>
+              <td><strong>stalk_shape</strong></td>
+              <td>0 = enlarging, 1 = tapering</td>
+            </tr>
+          </tbody></table>
+          <p class="card-text">
+            The features can be found in the CSV files <a href="https://course.cse.ust.hk/comp2211/labs/lab2/data/X_train.csv">X_train.csv</a> and <a href="https://course.cse.ust.hk/comp2211/labs/lab2/data/X_test.csv">X_test.csv</a>.
+          </p>
+          <p class="card-text">
+            The class labels are in <a href="https://course.cse.ust.hk/comp2211/labs/lab2/data/y_train.csv">y_train.csv</a> and <a href="https://course.cse.ust.hk/comp2211/labs/lab2/data/y_test.csv">y_test.csv</a>, where <code>0</code> indicates edible and <code>1</code> indicates poisonous.
+          </p>
+          <p class="card-text">
+            This lab activity requires you to build a Naive Bayes model to predict whether a mushroom is poisonous or edible. By the end of this lab, you will have hands-on experience in a practical classification problem and a deeper appreciation of the Naive Bayes principles discussed in class. Let's begin!
+          </p>
+        </div>
+        <div class="card-footer text-muted">
+          End of Introduction
+        </div>
+      </div>
+
+
+          <!-- Lab work section -->
+		  <!-- ### Complete the lab work section for the lab ### -->
+          <div class="card mb-4">      
+            <div class="card-body" id="labwork">
+              <h3 class="card-title">Lab Work</h3>
+			  <p class="card-text">You are given a series of lab tasks
+to practice your skills in building an AI model using Naive Bayes. 
+
+</p><ul>
+    <li>Download the following files by right-clicking and selecting "Save link as":
+        <ul>
+            <li><a href="https://course.cse.ust.hk/comp2211/labs/lab2/files/lab2_task.ipynb">Python notebook</a></li>
+            <li><a href="https://course.cse.ust.hk/comp2211/labs/lab2/data/X_train.csv">Training set features</a></li>
+            <li><a href="https://course.cse.ust.hk/comp2211/labs/lab2/data/y_train.csv">Training set labels</a></li>
+            <li><a href="https://course.cse.ust.hk/comp2211/labs/lab2/data/X_test.csv">Test set features</a></li>
+            <li><a href="https://course.cse.ust.hk/comp2211/labs/lab2/data/y_test.csv">Test set labels</a></li>
+        </ul>
+    </li>
+    <li>Upload the .ipynb file to Google Drive.</li>
+    <li>Open the .ipynb file using Google Colab.</li>
+    <li>Upload the dataset files to Google Colab.</li>
+</ul>
+<p>*If you have trouble following the above instructions, please refer to the demo video below.</p>
+<div class="embed-responsive embed-responsive-16by9 mb-4">
+  <iframe class="embed-responsive-item" src="./COMP 2211 Lab 2_ Naive Bayes Classifier_files/lab2_file_upload_demo.html" title="Lab Video" allowfullscreen=""></iframe>
+</div>
+<p></p>
+<br>
+  <h2>Implementing a Naive Bayes Classifier for Categorical Features</h2>
+  <p>
+    This implementation demonstrates a simple <strong>Naive Bayes</strong> classifier for
+    categorical features. Below is an outline of the tasks involved in building and applying
+    the model.
+  </p>
+
+  <h3>Task 1 — Calculate priors</h3>
+  <ul>
+    <li>
+      <strong>Implement:</strong> <code>calculate_priors(y)</code> so that it returns a NumPy array of shape <code>(num_classes,)</code> containing the <strong>smoothed empirical prior</strong> for each class.
+    </li>
+    <li>
+      <strong>Laplace smoothing:</strong> Add 1 to each class count to avoid zero probabilities.
+    </li>
+    <li>
+      <strong>Steps:</strong>
+      <ol>
+        <li>Let <code>num_classes = max(y) + 1</code>.</li>
+        <li>Build a one-hot indicator matrix by comparing <code>y</code> to <code>np.arange(num_classes)</code>.</li>
+        <li>Sum over samples to get counts per class.</li>
+        <li>Apply add-one smoothing and return a 1-D array of length <code>num_classes</code>.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h3>Task 2 — Calculate likelihoods</h3>
+  <ul>
+    <li>
+      <strong>Implement:</strong> <code>calculate_likelihoods(X, y)</code> so that it returns a <em>list</em> whose <code>j</code>-th element is a 2-D array of shape <code>(K_j, num_classes)</code> with smoothed estimates of the conditional probabilities for each feature value given the class.
+    </li>
+    <li>
+      <strong>Laplace smoothing:</strong> Add 1 to each feature‑value count within each class.
+    </li>
+    <li>
+      <strong>Steps:</strong>
+      <ol>
+        <li>Compute <code>num_classes</code> and, for each feature <code>j</code>, determine the number of categories via <code>num_j = max(X[:, j]) + 1</code>.</li>
+        <li>For each feature <code>j</code>:
+          <ol type="a">
+            <li>Build an <code>(num_samples, num_j)</code> indicator matrix for that feature.</li>
+            <li>Compute class‑conditional counts by multiplying the one-hot class indicators (from Task&nbsp;1) with the feature indicator matrix.</li>
+            <li>Apply Laplace smoothing by dividing each count+1 by the class’s total samples+<code>num_j</code>.</li>
+          </ol>
+        </li>
+        <li>Append each feature’s likelihood matrix to a list and return it.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h3>Task 3 — Calculate posteriors</h3>
+  <ul>
+    <li>
+      <strong>Implement:</strong> <code>calculate_posteriors(X, class_priors, likelihoods)</code> that returns posterior probabilities for each sample and class.
+    </li>
+    <li>
+      <strong>Approach:</strong>
+      <ol>
+        <li>Start with the log of the class priors.</li>
+        <li>For each feature <code>j</code>, add the log-likelihood lookup from the likelihood tables.</li>
+        <li>Predict each sample’s class by selecting the highest total log-posterior.</li>
+      </ol>
+    </li>
+    <li>
+      <strong>Hint:</strong> Use broadcasting to add your 1-D log-prior vector across all samples efficiently.
+    </li>
+  </ul>
+<br>
+            </div>
+      <div class="card-footer text-muted">
+              End of Lab Work
+            </div>
+          </div>
+
+          <!-- Resources section -->
+		  <!-- ### Complete resources section for the lab ### -->
+          <!-- <div class="card mb-4">            
+            <div class="card-body" id="resources">
+              <h3 class="card-title">Resources &amp; Sample I/O</h3>
+			  <ul>
+			    <li>Skeleton code: <a href="">...</a></li>
+				<li>Demo program (executable for Windows): <a href="">...</a></li>
+			  </ul>
+              <h4>Sample I/O</h4>
+            </div>            
+			<div class="card-footer text-muted">
+              End of Resources &amp; Sample I/O
+            </div>
+          </div> -->
+		  
+		  <!-- Grading scheme section -->
+		  <!-- ### Complete grading section for the lab ### -->
+          <div class="card mb-4">            
+            <div class="card-body" id="grading">
+              <h3 class="card-title">Submission &amp; Deadline</h3> 
+			  <p class="card-text">
+          </p><ul>
+          <li>Deadline: <span style="color:red">Wednesday, 8 October 2025, 
+23:59</span>.</li>
+        <li>You may earn 10 points for each lab via Automated Grading on the <a href="https://zinc.cse.ust.hk/">ZINC Online Submission System</a>.</li>
+        <!-- li>Please check <a href="zinc-submission/index.html">here</a> for an overview of the usage of ZINC.</li> -->
+        <!--<li>Comment out the "Mount Google Drive" and "Unmount Google Drive" sections before submission.-->
+        <li>Submit a zip file containing only 
+<code>lab2_task.py</code> to ZINC. You can create your zip file by the following steps:<br>
+        <ul>
+          <li>Comment out any additional script you may have included for debugging purposes.</li>
+          <li>Click <code>File</code> -&gt; <code>Download</code> -&gt; <code>Download .py</code>. 
+          </li>
+          <li>Make sure the name of the .py file is <code>lab2_task.py</code>, as this is 
+          necessary for ZINC to check your work.</li>
+          <li>Compress the .py file to a zip file. The name of the zip file does not matter.</li>
+          <li>Submit the zip file to <a href="https://zinc.cse.ust.hk/">ZINC</a>. 
+            ZINC usage instructions can be found <a href="https://zinc.cse.ust.hk/guide">here</a>.</li>
+        </ul>
+</li>
+<li>You can submit your codes <b>up to 50 times</b> to ZINC before the deadline. 
+  Each time you submit your zip file, ZINC will give feedback on the correctness of your tasks via real-time grading.
+  However, only the last submission will be graded (not the submission with the maximum grade).</li>
+<li><b>ZINC time limit</b>: Each test case on ZINC has a <b>time limit of 300 seconds</b>. If your program exceeds this limit, ZINC will return a <b>Timeout and assign a score of 0 for that test case</b>. 
+We encourage you to use <b>NumPy functions</b> and <b>vectorization</b> instead of inefficient nested loops. Submissions that rely on slow iterative approaches are likely to exceed the time limit.</li>
+<!-- <li>In addition, we will use <b>other test cases or datasets</b> to regrade your submission.
+  We do this to discourage students from hard coding. 
+If you get the correct answer in ZINC through hard coding, 
+note that your final grade will be different from ZINC's real-time grading result at the time of your submission.</li> -->
+        </ul>
+        <p></p>
+            </div>
+      <div class="card-footer text-muted">
+              End of Submission &amp; Deadline
+            </div>
+          </div>
+		  
+		  <!-- Frequently asked questions section -->
+		  <!-- ### Complete frequently asked questions section for the lab ### -->
+          <div class="card mb-4">            
+            <div class="card-body" id="faq">
+              <h3 class="card-title">Frequently Asked Questions</h3> 
+              <b>NOTE: </b>ZINC submission will not necessarily use the same dataset and test cases for evaluation. <b>PLEASE DO NOT HARD CODE THE NUMBERS. WE WILL USE A SEPARATE HIDDEN TEST CASE TO GRADE YOUR LABS.</b><br>
+              <br>
+              <b>Q: </b>May I use nested while loops or list comprehensions? <br>
+              <b>A: </b>While loops, list comprehensions, and any other type of loops are not allowed to be nested. However, they may be used individually (stand-alone) where necessary. Recurrsive function calls will not be allowed as well.<br>
+              <br>
+              <b>Q: </b>Can we use NumPy functions that we did not learn in class?<br>
+              <b>A: </b>Yes, you may use other NumPy functions that were not reviewed in class.<br>
+
+            </div> 
+			<div class="card-footer text-muted">
+              End of Frequently Asked Questions
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-3">
+		  <div class="sticky-top">
+            <!-- Menu Widget -->
+            <div class="card my-12">
+              <h5 class="card-header">Menu</h5>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <ul class="mb-0" type="circle" style="padding-left:20px">
+					  <li>
+                        <a href="https://course.cse.ust.hk/comp2211/labs/lab2/#review">Review</a>
+                      </li>
+                      <li>
+                        <a href="https://course.cse.ust.hk/comp2211/labs/lab2/#introduction">Introduction</a>
+                      </li>
+                      <li>
+                        <a href="https://course.cse.ust.hk/comp2211/labs/lab2/#labwork">Lab Work</a>
+                      </li>
+                      <!-- <li>
+                        <a href="#resources">Resources &amp; Sample I/O</a>
+                      </li> -->
+			  		  <li>
+				  	    <a href="https://course.cse.ust.hk/comp2211/labs/lab2/#grading">Submission &amp; Deadline</a>
+					  </li>
+					  <li>
+						<a href="https://course.cse.ust.hk/comp2211/labs/lab2/#faq">Frequently Asked Questions</a>
+					  </li>
+                    </ul>
+                  </div>                
+                </div>
+              </div>
+		    </div>
+          		  
+		    <!-- Maintainance widget -->
+            <div class="card my-4">
+              <h5 class="card-header">Page maintained by</h5>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        Pengbo Li
+                      </li>
+                      <li>
+                        Email: <a href="mailto:plibt@connect.ust.hk">plibt@connect.ust.hk</a>
+                      </li>
+                      <li>
+                        Lab Task Designer: Yitang Gao
+                      </li>
+					  <li>Last Modified: <script type="text/javascript">document.write(document.lastModified);</script>09/25/2025 20:44:36</li>
+                    </ul>
+                  </div>				
+                </div>
+              </div>
+			</div>          
+		  		  
+		    <!-- Homepage widget -->
+            <div class="card my-4">
+              <h5 class="card-header">Homepage</h5>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <a href="http://course.cse.ust.hk/comp2211">Course Homepage</a>
+                      </li>
+                    </ul>
+                  </div>				
+                </div>
+              </div>
+            </div>
+	      </div>
+        </div>
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Maintained by COMP 2211 Teaching Team © 2025 HKUST Computer Science and Engineering</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="./COMP 2211 Lab 2_ Naive Bayes Classifier_files/jquery.min.js.download"></script>
+    <script src="./COMP 2211 Lab 2_ Naive Bayes Classifier_files/bootstrap.bundle.min.js.download"></script>	
+  
+
+
+
+</body></html>
