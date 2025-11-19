@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://course.cse.ust.hk/comp2211/labs/lab4/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<!-- ### Change assignment number ### -->
+    <title>COMP 2211 Lab 4: K-Means Clustering</title>
+
+   <!-- Bootstrap core CSS -->
+  <link href="./COMP 2211 Lab 4_ K-Means Clustering_files/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="./COMP 2211 Lab 4_ K-Means Clustering_files/blog-home.css" rel="stylesheet">
+
+  <!-- For code highlighting -->
+  <link href="./COMP 2211 Lab 4_ K-Means Clustering_files/prism.css" rel="stylesheet">
+
+  <style>
+    pre {
+      background: #f4f4f4;
+      border: 1px solid #ddd;
+      border-left: 3px solid #f36d33;
+      color: #666;
+      page-break-inside: avoid;
+      font-family: monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 1.6em;
+      max-width: 100%;
+      overflow: auto;
+      padding: 1em 1.5em;
+      display: block;
+      word-wrap: break-word;
+    }
+
+    span.input {
+      color: #00f700;
+      ;
+    }
+
+    /* table {
+      width: 100%;
+      display: inline-block;
+      overflow-x: auto;
+    }
+
+    table caption {
+      font-size: medium;
+    }
+
+    table thead th {
+      background-color: #ddd;
+    }
+
+    table th,
+    table td {
+      text-align: left;
+      padding: 3px 6px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #aaa #aaa;
+    }
+
+    table tr:nth-child(even) {
+      background-color: #eee;
+    } */
+
+    blockquote {
+      border: 1px solid #b3b3b3;
+      border-left: 10px solid #b3b3b3;
+      border-radius: 0px;
+      background: #fafafa;
+      font-size: 18px;
+      font-family: Georgia, serif;
+      margin: 10px;
+      padding: 10px 20px;
+    }
+
+    blockquote p {
+      margin: 0;
+      line-height: 30px;
+      padding-bottom: 20px;
+    }
+
+    blockquote.small {
+      display: block;
+      font-size: 80%;
+      color: brown;
+      text-align: right;
+    }
+
+    code {
+      /* color: goldenrod; */
+      font-size: 1em;
+      /* background: none !important; */
+    }
+
+    figure.figure {
+      width: 100%;
+      text-align: center;
+    }
+
+    .bd-callout {
+      padding: 1.25rem;
+      margin-top: 1.25rem;
+      margin-bottom: 1.25rem;
+      border: 1px solid #eee;
+      border-left-width: .25rem;
+      border-radius: .25rem;
+    }
+
+    .bd-callout h4 {
+      margin-top: 0;
+      margin-bottom: .25rem;
+    }
+
+    .bd-callout p:last-child {
+      margin-bottom: 0;
+    }
+
+    .bd-callout code {
+      border-radius: .25rem;
+    }
+
+    .bd-callout+.bd-callout {
+      margin-top: -.25rem;
+    }
+
+    .bd-callout-info {
+      border-left-color: #5bc0de;
+    }
+
+    .bd-callout-warning {
+      border-left-color: #f0ad4e;
+    }
+
+    .bd-callout-danger {
+      border-left-color: #d9534f;
+    }
+
+    .bd-callout-success {
+      border-left-color: #5cb85c;
+    }
+
+    .bd-callout-primary {
+      border-left-color: #428bca;
+    }
+
+    .bd-callout-info h6 {
+      color: #5bc0de;
+    }
+
+    .bd-callout-warning h6 {
+      color: #f0ad4e;
+    }
+
+    .bd-callout-danger h6 {
+      color: #d9534f;
+    }
+
+    .bd-callout-success h6 {
+      color: #5cb85c;
+    }
+
+    .bd-callout-primary h6 {
+      color: #428bca;
+    }
+  </style>
+  </head>
+
+  <body>
+  <script src="./COMP 2211 Lab 4_ K-Means Clustering_files/prism.js.download"></script>
+  <!--     <script src="https://myCDN.com/prism@v1.x/components/prism-core.min.js"></script>
+    <script src="https://myCDN.com/prism@v1.x/plugins/autoloader/prism-autoloader.min.js"></script> -->
+
+    <!-- Page Content -->	
+    <div class="container">
+
+      <div class="row">
+
+        <!-- Entries Column -->
+        <div class="col-md-9">
+
+          <h2 class="my-4"><span style="color:darkblue">COMP 2211</span>
+            <small>Exploring Artificial Intelligence</small>
+          </h2>
+		  
+		  <!-- ### Change assignment number and title ### -->
+		  <h3 class="my-4">Lab 4
+            <span style="color:#660066">K-Means Clustering</span>
+          </h3>
+
+                  <!-- ### Complete the review section for the lab ### -->
+          <div class="card mb-4">
+            <div class="card-body" id="review">
+              <h3 class="card-title">Review</h3>
+        <br>
+    <p class="card-text">
+      This section is a review of the K-means clustering algorithm. It aims to refresh your memory of what you learned in class. 
+      The review will cover:
+    </p><ul>
+      <li>Clustering concept</li>
+      <li>Evaluation and limitations of the K-means clustering algorithm</li>
+      <li>K-means clustering variants</li>
+    </ul>
+    <p></p>
+        <p class="card-text">
+            To open the review notebook, please do the following:
+            </p><ul>
+                <li>Download the notebook file by right-clicking and selecting "Save link as": <a download="" href="https://course.cse.ust.hk/comp2211/labs/lab4/files/lab4_review.ipynb">notebook</a>
+                </li>
+                <li>Open the notebook using Google Colab.</li>
+            </ul>
+
+            <!--
+          Please download the <a href="files/lab2_review.ipynb">notebook</a> by right-clicking and selecting "Save link as" and opening it using Google Colab. You should see the following if you open the>
+            -->
+
+    <!--<img style="width:100%" src="images/lab2_review.png"/>-->
+        <p></p>
+        <br>
+            </div>
+      <div class="card-footer text-muted">
+              End of Review
+            </div>
+          </div>
+
+          <!-- Introduction section -->
+		  <!-- ### Complete introduction section for the assignment ### -->
+          <div class="card mb-4">
+            
+		    <!-- ### Add an image representing the assignment content here ### -->
+            <img class="card-img-top" src="./COMP 2211 Lab 4_ K-Means Clustering_files/kmeans++.png">
+            <div class="card-body" id="introduction">
+              <h3 class="card-title">Introduction</h3>
+              <p class="card-text">
+                In this lab, we will implement a <b>K-Means Clustering</b> algorithm to help segment <b>activity mix data</b>, which is essential for analyzing college student behavior. K-means is a popular clustering algorithm that partitions data into <b>K</b> clusters by iteratively assigning points to the nearest centroid and updating cluster centers. For this lab, we will use a simple dataset consisting of 420 data samples with nine different attributes (excluding StudentID): Program, Residence, Year, GPA, LibraryVisitsPerWeek, NightCanteenSpendHKD, SportsMinutesPerWeek, LectureAbsencesPerMonth, SocialEventsPerMonth. Please download the <a download="" href="https://course.cse.ust.hk/comp2211/labs/lab4/data/activity_mix_public.csv"> dataset</a>. 
+
+              </p><p>   As you have noticed, our dataset contains a total of 9 attributes (excluding StudentID). To improve clustering performance and visualization, we can apply <b>Principal Component Analysis (PCA)</b> to reduce the dimensionality of our dataset, while retaining most of its underlying information. PCA is a popular technique used to reduce the number of features while preserving their information (variance).
+              </p>
+            <!-- <img class="card-img-top" src="./images/cluster.png"> -->
+			  <!-- <br/>
+			  
+			  <h4>Sub-section heading</h4>
+			  <p>
+			    ...
+			  </p>
+			  <br/>
+			  
+			  <h4>Sub-section heading</h4>
+			  <p>
+			    ...
+			  </p>			   -->
+            </div>
+            <div class="card-footer text-muted">
+              End of Introduction
+            </div>
+          </div>
+
+          <!-- Description section -->
+		  <!-- ### Complete description section for the assignment ### -->
+          <div class="card mb-4">      
+            <div class="card-body" id="assignment_tasks">
+              <h3 class="card-title">Lab Works</h3>
+              <p class="card-text">This lab has 6 tasks as follows.</p>
+              
+              <li>
+                <b>Part 1:</b>  Data Preprocessing (2 Tasks)
+              </li>
+              <li>
+                <b>Part 2:</b> Dimensionality Reduction (2 Tasks)
+              </li>
+              <li>
+                <b>Part 3:</b>  K-Means Clustering (2 Tasks)
+              </li>
+
+              <br> 
+              
+              <p class="card-text">Detailed descriptions of each task are included in the <a download="" href="https://course.cse.ust.hk/comp2211/labs/lab4/files/lab4_task.ipynb"> lab4_task.ipynb</a> file. You need to download it by right-clicking and selecting "Save link as", then upload to the Google Colab. </p>
+
+
+			  
+			  
+            </div>
+			<div class="card-footer text-muted">
+              End of Lab Tasks
+            </div>
+          </div>
+
+      
+		  
+		  <!-- Grading scheme section -->
+		  <!-- ### Complete grading section for the lab ### -->
+          <div class="card mb-4">            
+            <div class="card-body" id="grading">
+              <h3 class="card-title">Submission &amp; Deadline</h3> 
+			  <p class="card-text">
+          </p><ul>
+          <li>Deadline: <span style="color:red">Monday, 3 November 2025, 
+23:59</span>.</li>
+        <li>You may earn 10 points for each lab via Automated Grading on the <a href="https://zinc.cse.ust.hk/">ZINC Online Submission System</a>.</li>
+        <!-- li>Please check <a href="zinc-submission/index.html">here</a> for an overview of the usage of ZINC.</li> -->
+        <!--<li>Comment out the "Mount Google Drive" and "Unmount Google Drive" sections before submission.-->
+        <li>Submit a zip file containing only 
+<code>lab4_task.py</code> to ZINC. You can create your zip file by the following steps:<br>
+        <ul>
+          <li>Comment out any additional script you may have included for debugging purposes.</li>
+          <li>Click <code>File</code> -&gt; <code>Download</code> -&gt; <code>Download .py</code>. 
+          </li>
+          <li>Make sure the name of the .py file is <code>lab4_task.py</code>, as this is 
+          necessary for ZINC to check your work.</li>
+          <li>Compress the .py file to a zip file. The name of the zip file does not matter.</li>
+          <li>Submit the zip file to <a href="https://zinc.cse.ust.hk/">ZINC</a>. 
+            ZINC usage instructions can be found <a href="https://zinc.cse.ust.hk/guide">here</a>.</li>
+        </ul>
+</li>
+<li>You can submit your codes <b>up to 50 times</b> to ZINC before the deadline. 
+  Each time you submit your zip file, ZINC will give feedback on the correctness of your tasks via real-time grading.
+  However, only the last submission will be graded (not the submission with the maximum grade).</li>
+<li>In addition, we will use <b>other test cases or datasets</b> to regrade your submission.
+  We do this to discourage students from hard coding. 
+If you get the correct answer in ZINC through hard coding, 
+note that your final grade will be different from ZINC's real-time grading result at the time of your submission.</li>
+        </ul>
+        <p></p>
+            </div>
+      <div class="card-footer text-muted">
+              End of Submission &amp; Deadline
+            </div>
+          </div>
+		  
+		  
+		  <!-- FAQ section -->
+		  <!-- ### Complete FAQ section for the assignment ### -->
+          <div class="card mb-4">            
+            <div class="card-body" id="faq">
+              <h3 class="card-title">Frequently Asked Questions</h3> 			  
+                <p class="card-text">
+                  <b>Q</b>: Can we use loop in the tasks?
+                    <br>
+                    <b>A</b>: You should try to use vectorization. Some loops can be used in task 6.
+                </p> 
+                <p class="card-text">
+                    <b>Q:</b> Can I modify the provided skeleton code outside of the TODO?  
+                    <br>
+                    <b>A:</b> No, you are not encouraged to do so. Besides, if you add any code outside the function definition, you should either remove it for submission or put it under <code>if __main__:</code>.
+                </p>
+                <p class="card-text">
+                  <b>Q</b>: Can I modify the numerical type of data in my code (e.g., change int to float32)?
+                    <br>
+                    <b>A</b>: No, you shouldn't perform any type change, as it may cause the output of the correct implementation to deviate slightly from the answer.
+                </p>
+            </div>
+		        <div class="card-footer text-muted">
+              End of Frequently Asked Questions
+            </div>          
+          </div>
+        
+          <!-- Log section -->
+          <!-- ### Complete FAQ section for the assignment ### -->
+          <div class="card mb-4">            
+            <div class="card-body" id="log">
+              <h3 class="card-title">Change Log</h3> 			  
+              <p class="card-text">
+                <b>2025-09-30</b> Initial version.<br>
+              </p>
+            </div>
+            <div class="card-footer text-muted">
+              End of Frequently Asked Questions
+            </div>          
+          </div>
+        </div>
+				
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-3">
+		  <div class="sticky-top">
+            <!-- Menu Widget -->
+            <div class="card my-12">
+              <h5 class="card-header">Menu</h5>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <ul class="mb-0" type="circle" style="padding-left:20px">
+                      <li>
+                        <a href="https://course.cse.ust.hk/comp2211/labs/lab4/#introduction">Introduction</a>
+                      </li>
+                      <li>
+                        <a href="https://course.cse.ust.hk/comp2211/labs/lab4/#assignment_tasks">Assignment Tasks</a>
+                      </li>
+                      <!-- <li>
+                        <a href="#grading_scheme">Grading Scheme</a>
+                      </li>
+                      <li>
+                        <a href="#download">Download</a>
+                      </li> -->
+			  		  <li>
+					    <a href="https://course.cse.ust.hk/comp2211/labs/lab4/#submission">Submission &amp; Deadline</a>
+					  </li>
+					  <li>
+					    <a href="https://course.cse.ust.hk/comp2211/labs/lab4/#faq">Frequently Asked Questions</a>
+					  </li>
+            <li>
+					    <a href="https://course.cse.ust.hk/comp2211/labs/lab4/#log">Change Log</a>
+					  </li>
+                    </ul>
+                  </div>                
+                </div>
+              </div>
+            </div>
+		  
+		    <!-- Maintainance widget -->
+            <div class="card my-4">
+              <h5 class="card-header">Page maintained by</h5>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        Jialiang WANG
+                      </li>
+                      <li>
+                        Email: <a href="mailto:jwangic@connect.ust.hk">jwangic@connect.ust.hk</a>
+                      </li>
+		      <li>
+			      Lab Task Designer: Jialiang WANG, Vinayak KHURANA
+		</li>
+		      <li>Last Modified: <script type="text/javascript">document.write(document.lastModified);</script>10/07/2025 20:32:46</li>
+                    </ul>
+                  </div>				
+                </div>
+              </div>
+            </div>
+		  
+		  
+		    <!-- Homepage widget -->
+            <div class="card my-4">
+              <h5 class="card-header">Homepage</h5>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <a href="http://course.cse.ust.hk/comp2211">Course Homepage</a>
+                      </li>
+                    </ul>
+                  </div>				
+                </div>
+              </div>
+            </div>
+		  </div>
+        </div>
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Maintained by COMP 2211 Teaching Team © 2025 HKUST Computer Science and Engineering</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="./COMP 2211 Lab 4_ K-Means Clustering_files/jquery.min.js.download"></script>
+    <script src="./COMP 2211 Lab 4_ K-Means Clustering_files/bootstrap.bundle.min.js.download"></script>	
+  
+
+
+</body></html>

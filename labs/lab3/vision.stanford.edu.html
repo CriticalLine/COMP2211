@@ -1,0 +1,123 @@
+
+<!-- saved from url=(0053)http://vision.stanford.edu/teaching/cs231n-demos/knn/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <script src="./vision.stanford.edu_files/jquery.min.js.download"></script>
+    <script src="./vision.stanford.edu_files/bootstrap.min.js.download"></script>
+    <script src="./vision.stanford.edu_files/underscore-min.js.download"></script>
+    <link href="./vision.stanford.edu_files/bootstrap.min.css" rel="stylesheet">
+    <script src="./vision.stanford.edu_files/knn.js.download"></script>
+    <style>
+      canvas {
+        cursor: pointer;
+      }
+      .instructions {
+        font-size: 14pt;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h1>K-Nearest Neighbors Demo</h1>
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-4 instructions">
+          This interactive demo lets you explore the K-Nearest Neighbors algorithm for
+          classification.
+          <p>
+          Each point in the plane is colored with the class that would be assigned to it using
+          the K-Nearest Neighbors algorithm. Points for which the K-Nearest Neighbor algorithm
+          results in a tie are colored white.
+          </p><p>
+          You can move points around by clicking and dragging!
+        </p></div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <canvas id="canvas" width="800" height="600"></canvas>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-2">
+          <h3>Metric</h3>
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary btn-lg" id="l1-btn">
+              <input type="radio" name="metric"> L1
+            </label>
+            <label class="btn btn-primary btn-lg active" id="l2-btn">
+              <input type="radio" name="metric" checked=""> L2
+            </label>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <h3>Num Neighbors (K)</h3>
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary btn-lg active" id="k-1-btn">
+              <input type="radio" name="k" checked=""> 1
+            </label>
+            <label class="btn btn-primary btn-lg" id="k-2-btn">
+              <input type="radio" name="k"> 2
+            </label>
+            <label class="btn btn-primary btn-lg" id="k-3-btn">
+              <input type="radio" name="k"> 3
+            </label>
+            <label class="btn btn-primary btn-lg" id="k-4-btn">
+              <input type="radio" name="k"> 4
+            </label>
+            <label class="btn btn-primary btn-lg" id="k-5-btn">
+              <input type="radio" name="k"> 5
+            </label>
+            <label class="btn btn-primary btn-lg" id="k-6-btn">
+              <input type="radio" name="k"> 6
+            </label>
+            <label class="btn btn-primary btn-lg" id="k-7-btn">
+              <input type="radio" name="k"> 7
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-2">
+          <h3>Num classes</h3>
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary btn-lg" id="num-cls-2-btn">
+              <input type="radio" name="num-cls"> 2
+            </label>
+            <label class="btn btn-primary btn-lg" id="num-cls-3-btn">
+              <input type="radio" name="num-cls"> 3
+            </label>
+            <label class="btn btn-primary btn-lg active" id="num-cls-4-btn">
+              <input type="radio" name="num-cls" checked=""> 4
+            </label>
+            <label class="btn btn-primary btn-lg" id="num-cls-5-btn">
+              <input type="radio" name="num-cls"> 5
+            </label>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <h3>Num points</h3>
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary btn-lg" id="num-pts-20-btn">
+              <input type="radio" name="num-pts"> 20
+            </label>
+            <label class="btn btn-primary btn-lg" id="num-pts-30-btn">
+              <input type="radio" name="num-pts"> 30
+            </label>
+            <label class="btn btn-primary btn-lg active" id="num-pts-40-btn">
+              <input type="radio" name="num-pts" checked=""> 40
+            </label>
+            <label class="btn btn-primary btn-lg" id="num-pts-50-btn">
+              <input type="radio" name="num-pts"> 50
+            </label>
+            <label class="btn btn-primary btn-lg" id="num-pts-60-btn">
+              <input type="radio" name="num-pts"> 60
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+    </div>
+  
+
+</body></html>
