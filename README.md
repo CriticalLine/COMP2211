@@ -1,3 +1,3 @@
 # COMP2211
 HKUST COMP2211 2025 FALL
-
+Backup all the course materials
