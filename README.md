@@ -1,3 +1,36 @@
 # COMP2211
-HKUST COMP2211 2025 FALL
 
+HKUST COMP2211 - Fall 2025
+Instructor: XIAO Huiru
+
+## About
+
+This repository contains course materials and resources for COMP2211 (Exploring Artificial Intelligence) at HKUST.
+
+## Contents
+
+- Lecture notes
+- Assignments
+- Lab exercises
+- Past exam papers
+- Homepage of the course: [COMP2211 Course Page](https://course.cse.ust.hk/comp2211/)
+
+## Course Information
+
+- **Institution**: Hong Kong University of Science and Technology
+- **Semester**: Fall 2025
+
+## Getting Started
+
+Clone this repository to access course materials:
+
+```bash
+git clone https://github.com/CriticalLine/COMP2211.git
+```
+
+## License
+
+Course materials are for educational purposes only.
+Unauthorized distribution is prohibited.
+All rights reserved by **HKUST** and the course instructors.
+Please refer to the `LICENSE` and `LICENSE_additional` files for more details.
