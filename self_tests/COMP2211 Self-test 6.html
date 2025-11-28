@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0060)https://course.cse.ust.hk/comp2211/self-test/self-test6.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>COMP2211 Self-test Web Page</title>
+
+<meta name="keywords" content="">
+<!--link rel="stylesheet" href="img/Underground.css" type="text/css" /-->
+<!-- Bubble tooltips: adopted from: http://www.web-graphics.com/mtarchive/BubbleTooltips.html--><!-- For automatic tooltip: -->
+<script src="./COMP2211 Self-test 6_files/bubbletooltips.js.download" type="text/javascript"></script>
+<!-- Example:  usage <a href="" title=""></a>  --><!-- For customize tooltip -->
+<link media="all" href="./COMP2211 Self-test 6_files/bt.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="./COMP2211 Self-test 6_files/jquery.js.download"></script>
+
+<!-- JQuery Calender is located here... -->
+<style type="text/css">@import url(jquerycalendar/jquery-calendar.css);</style>
+<script type="text/javascript" src="./COMP2211 Self-test 6_files/jquery-calendar.js.download"></script>
+
+<script type="text/javascript" src="./COMP2211 Self-test 6_files/selftestmenu.js.download"></script>
+<link rel="stylesheet" type="text/css" href="./COMP2211 Self-test 6_files/selfteststyle.css">
+<!-- highslide stuff: TESTING... -->
+<script type="text/javascript" src="./COMP2211 Self-test 6_files/highslide-with-html.js.download"></script>
+<script type="text/javascript">    
+    hs.graphicsDir = 'highslide/graphics/';
+    hs.outlineType = 'rounded-white';
+    hs.outlineWhileAnimating = true;
+</script>
+<style type="text/css">@import url(highslide/myslide.css);</style>
+<!-- END OF highslide stuff -->
+
+<link class="undefined" type="text/css" rel="stylesheet" href="./COMP2211 Self-test 6_files/BubbleTooltips.css" media="screen" style="display: block;"></head>
+
+<!-- Start of the main html body -->
+<body>
+
+<!-- wrap starts here -->
+<div id="main">
+<div id="wrap">
+        <!-- header -->
+        <div id="header">
+                <span id="slogan"></span>
+                <!-- tabs -->
+                <ul>
+                  <li class="showall-solution"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test6.html#"><span>Show all solutions</span></a></li>
+                  <li class="hideall-solution"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test6.html#"><span>Hide all solutions</span></a></li>
+				  
+				  <!--
+                  <li id="tabShowNormalView"><a href="#" title="The normal webpage view"><span>Web view</span></a></li>
+                  <li id="tabShowAllOnePage"><a href="#" title="The view which is suitable for printing"><span>Printable view</span></a></li>
+                  <li id="tabIncFontSize"><a href="#" title="Increase the font size" ><span >++ Font size</span></a></li>
+                  <li id="tabDecFontSize"><a href="#" title="Decrease the font size" ><span >-- Font size</span></a></li>
+				  
+				  -->
+				  
+                </ul>
+        </div>
+        <!-- main block: right panel -->
+        <!--div id="main"-->
+
+          <!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+          <div id="block1" style="display:block;	clear:left;">
+            <h1>Self-test 6: <br> Artificial 
+Neural Network - Perceptrons  </h1>
+
+          <ol>
+
+            <!-- Start of the first question -->
+            <li>
+            <div class="question-wrapper" style="position: static;">
+            <div class="question-content">
+              <p>Which of the following statements is/are true about a perceptron?</p>
+              <ol type="A">
+                <li> It can only be used for linearly seperable data.</li>
+                <li> It should have exactly two inputs and one output.</li>
+                <li> One similarity between perceptron and KNN is that they both include learnable parameters.</li>
+                <li> Every parameter must be updated during an epoch.</li>
+              
+              </ol>
+            </div>
+        
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <p><b>A</b></p>
+              <p>B: It can have more than 2 inputs. </p><p> C: There are no learnable parameters in KNN.</p><p> D: Not necessarily all parameters are updated
+                in one epoch.
+              </p>
+            </div>              
+            </div>
+            <hr>
+            </li>
+            <!-- End of the first question -->
+
+           
+			
+			
+			 <li>
+            <div class="question-wrapper">
+            <div class="question-content">      
+              <p>Which of the followings is/are true about a perceptron?</p>
+              <ol type="A">
+                <li> It belongs to an unsupervised learning algorithm.</li>
+                <li> It can be mathematically modeled as a vector dot product.</li>
+                <li> Its output is equivalent to the direct result of a weighted sum of the inputs plus a bias.</li>
+                <li> For a perceptron with n inputs and 1 output, there should be n+1 parameters, including bias.</li>
+              
+              </ol>
+            </div>
+          
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <p><b>B and D</b> </p>
+              <p>A: It is a supervised learning algorithm. </p><p> C: The sum result needs to go through an activation function to obtain the final output.</p>
+            </div>
+            </div>
+            <hr>
+            </li>
+
+
+            <li>
+            <div class="question-wrapper">
+            <div class="question-content">
+              <p>Suppose we have a dataset with many data points, each with N features. Each feature is either positive (with value 1) or 
+                negative (with value -1). We say a data point is "positive" if it has more positive features than negative features, and 
+                "negative" otherwise. Design the weights, bias and activation function of a perceptron to classify positive data points 
+                from negative data points. </p>
+
+            </div>
+            
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <p><b>	A data point is positive if and only if the sum of all its values is strictly greater than 0. We can achieve this in a
+                perceptron using the following settings:
+                <br> <br>
+                - Weights: all 1s. <br>
+                - Bias: 0 <br>
+                - Activation function: Return 1 if the input is strictly greater than 0, and return 0 otherwise. <br> 
+                <br>
+                When a data point is fed into the perceptron, we perform dot product on the data point with the weights vector. This sums
+                all the values in the data point. Then, we check if this sum is strictly greater than 0 in the activation function. A data
+                point is positive if and only if the activation function returns 1.
+              </b></p>
+            </div>
+            </div>
+            <hr>
+            </li>
+
+
+            <li>
+              <div class="question-wrapper">
+              <div class="question-content">
+                <p>Which of the following can be considered as hyperparameters for a Perceptron?</p>
+                <ol type="A">
+                  <li> choice of activation function</li>
+                  <li> choice of learning rate</li>
+                  <li> choice of having a bias term or not</li>
+                  <li> choice of the number of inputs</li>
+                
+                </ol>
+              </div>
+          
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>A, B and C</b> </p>
+              </div>
+              </div>
+              
+              <hr>
+              </li>
+
+            <li>
+            <div class="question-wrapper">
+            <div class="question-content">
+              <p>Suppose we use perceptron to learn on K training samples where each sample is represented in n-dimensional space. We stopped training
+                after e epochs. How many arithmetic operations were done during training? Express it in terms of K, e and n. (arithmetic operations include both 
+                multiplication and addition, ignore the operations for parameter update and the operations in the activation function)
+                
+              
+            </p></div>
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <p><b>Each sample will lead to n multiplications and n additions (don't forget the bias). That is 2n operations per sample. So total 
+                number of arithmetic operations during training is 2eKn.
+              </b> </p>
+            </div>
+            </div>
+
+            <hr>
+            </li>
+
+            <li>
+            <div class="question-wrapper">
+            <div class="question-content">
+
+              <p>You are given a perceptron with 2 inputs, and weight w = [1, 1] and bias = 2; the chosen activation function is the step function, where it returns 1 when x &gt; 0 and 0 otherwise. <br>
+                Which of the following perceptron configurations have the same decision plane as the given perceptron?
+              </p>
+              <ol type="A">
+                <li>w = [0.5, 0.5], bias = 1</li>
+                <li>w = [100, 100], bias = 200</li>
+                <li>w = [1, 1], bias = sqrt(2)</li>
+                <li>w = [-1, -1], bias = -2</li>
+                
+            
+              </ol>
+            </div>      
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <p> <b>ABD</b> </p>
+            </div>              
+            </div>
+            <hr>
+            </li>
+			
+			
+			<li>
+            <div class="question-wrapper">
+            <div class="question-content">
+              <p>You are given the same perceptron as in the previous question. Which of the following perceptron configurations produce the 
+                same classification effect as the given perceptron? </p><p></p>
+                <ol type="A">
+                  <li>w = [0.5, 0.5], bias = 1</li>
+                  <li>w = [100, 100], bias = 200</li>
+                  <li>w = [1, 1], bias = sqrt(2)</li>
+                  <li>w = [-1, -1], bias = -2</li>
+                  
+              
+                </ol>
+
+              <p></p>              
+            </div>      
+
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <p> <b>AB</b> </p>
+            </div>              
+            </div>
+            <hr>
+        </li>
+          
+          
+
+            
+
+          </ol>
+        </div>
+
+        <!-- wrap ends here; don't delete this /div --> 
+        </div>
+
+</div>
+
+
+
+
+<div id="calendar_div"></div><span id="btc" style="position: absolute;"></span><div style="padding: 0px; border: none; margin: 0px; position: absolute; left: 0px; top: 0px; width: 100%; z-index: 1001;"><a class="highslide-loading" title="Click to cancel" style="position: absolute; opacity: 0.75; left: -9999px; z-index: 1;">Loading...</a><table cellspacing="0" style="padding: 0px; border: none; margin: 0px; visibility: hidden; position: absolute; z-index: 1001; border-collapse: collapse;"><tbody style="padding: 0px; border: none; margin: 0px;"><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px 0px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -40px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px 0px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -80px; height: 20px; width: 20px;"></td><td class="rounded-white" style="padding: 0px; border: none; margin: 0px; position: relative;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px -80px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -20px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -60px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px -20px; height: 20px; width: 20px;"></td></tr></tbody></table><img src="./COMP2211 Self-test 6_files/rounded-white.png" style="padding: 0px; border: none; margin: 0px; position: absolute; left: -9999px; top: -9999px;"></div></body></html>

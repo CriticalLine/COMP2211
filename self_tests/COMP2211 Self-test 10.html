@@ -1,0 +1,417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0061)https://course.cse.ust.hk/comp2211/self-test/self-test10.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>COMP2211 Self-test Web Page</title>
+  
+  <meta name="keywords" content="">
+  <!--link rel="stylesheet" href="img/Underground.css" type="text/css" /-->
+  <!-- Bubble tooltips: adopted from: http://www.web-graphics.com/mtarchive/BubbleTooltips.html-->
+  <!-- For automatic tooltip: -->
+  <script src="./COMP2211 Self-test 10_files/bubbletooltips.js.download" type="text/javascript"></script>
+  <!-- Example:  usage <a href="" title=""></a>  -->
+  <!-- For customize tooltip -->
+  <link media="all" href="./COMP2211 Self-test 10_files/bt.css" type="text/css" rel="stylesheet">
+  <script type="text/javascript" src="./COMP2211 Self-test 10_files/jquery.js.download"></script>
+
+  <!-- JQuery Calender is located here... -->
+  <style type="text/css">
+    @import url(jquerycalendar/jquery-calendar.css);
+  </style>
+  <script type="text/javascript" src="./COMP2211 Self-test 10_files/jquery-calendar.js.download"></script>
+
+  <script type="text/javascript" src="./COMP2211 Self-test 10_files/selftestmenu.js.download"></script>
+  <link rel="stylesheet" type="text/css" href="./COMP2211 Self-test 10_files/selfteststyle.css">
+  <!-- highslide stuff: TESTING... -->
+  <script type="text/javascript" src="./COMP2211 Self-test 10_files/highslide-with-html.js.download"></script>
+  <script type="text/javascript">
+    hs.graphicsDir = 'highslide/graphics/';
+    hs.outlineType = 'rounded-white';
+    hs.outlineWhileAnimating = true;
+  </script>
+  <style type="text/css">
+    @import url(highslide/myslide.css);
+  </style>
+  <!-- END OF highslide stuff -->
+
+<link class="undefined" type="text/css" rel="stylesheet" href="./COMP2211 Self-test 10_files/BubbleTooltips.css" media="screen" style="display: block;"></head>
+
+<!-- Start of the main html body -->
+
+<body>
+
+  <!-- wrap starts here -->
+  <div id="main">
+    <div id="wrap">
+      <!-- header -->
+      <div id="header">
+        <span id="slogan"></span>
+        <!-- tabs -->
+        <ul>
+          <li class="showall-solution"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test10.html#"><span>Show all solutions</span></a></li>
+          <li class="hideall-solution"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test10.html#"><span>Hide all solutions</span></a></li>
+
+          <!--
+                  <li id="tabShowNormalView"><a href="#" title="The normal webpage view"><span>Web view</span></a></li>
+                  <li id="tabShowAllOnePage"><a href="#" title="The view which is suitable for printing"><span>Printable view</span></a></li>
+                  <li id="tabIncFontSize"><a href="#" title="Increase the font size" ><span >++ Font size</span></a></li>
+                  <li id="tabDecFontSize"><a href="#" title="Decrease the font size" ><span >-- Font size</span></a></li>
+				  
+				  -->
+
+        </ul>
+      </div>
+      <!-- main block: right panel -->
+      <!--div id="main"-->
+
+      <!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+      <div id="block1" style="display:block;	clear:left;">
+        <h1>Self-test 10: <br> Minimax &amp; Alpha-Beta Pruning </h1>
+
+        <ol>
+
+          <!-- Basic type question -->
+          <li>
+            <div class="question-wrapper" style="position: static;">
+              <div class="question-content">
+                <p>Which of the following games can we (theoretically) apply minimax to?</p>
+                <ol type="A">
+                  <li> Monopoly </li>
+                  <li> Connect 4 </li>
+                  <li> Poker </li>
+                  <li> Contract bridge </li>
+                </ol>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <b> Connect 4. Recall we can only apply minimax to perfect information, zero-sum, deterministic games.</b>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper" style="position: static;">
+              <div class="question-content">
+                <p> Which of the following tree-search algorithms is minimax based on? </p>
+                <ol type="A">
+                  <li> Breadth-First Search </li>
+                  <li> Depth-First Search </li>
+                  <li> Dijkstra's </li>
+                  <li> Bellman-Ford </li>
+                </ol>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <b> Depth-First Search. Breadth-First search explores a tree layer by layer, and the other two are shortest path algorithms which aren't exactly related to minimax.</b>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Suppose we have the following game tree, and it is the AI's turn. 
+                  <br>
+                  1. What should be the initial value of node A?
+                  <br>
+                  2. Which move will the AI make? </p>
+                <img src="./COMP2211 Self-test 10_files/minimax1.png" alt="diagram 1">
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>1. Negative infinity. 2. Path a - The AI maximizes its score.</b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Suppose we have the following game tree. Initialize the value for A - E.</p>
+                <img src="./COMP2211 Self-test 10_files/minimax2.png" alt="diagram 2">
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>A, C, E is negative infinity; B, D is positive infinity.</b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Following the previous question, suppose on every node, the algorithm explores the path from left to right. Indicate the exploration order of the algorithm.</p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b> adfgebchjki
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+          
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Following the previous question, explore paths f and g, and update node C (twice) according to the minimax algorithm.</p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b> First, the algorithm explores path f and returns with score -1. C gets updated to max(-inf, -1) = -1.
+                  <br>
+                  Then the algorithm explores path g and returns with score 0. C gets updated to max(-1, 0) = 0.
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Following the previous question, explore paths d and e, and update node B (twice) according to the minimax algorithm. </p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b> From the previous question, we know that C returns a score of 0; B gets updated to min(inf, 0) = 0
+                  <br>
+                  Then the algorithm explores path e and returns with score 1. B gets updated to min(1, 0) = 0.
+                </b></p>
+
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Following the previous question, explore paths a and b, and update node A (twice) according to the minimax algorithm. </p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b> From the previous question, we know that B returns a score of 0; A gets updated to max(-inf, 0) = 0
+                  <br>
+                  Then the algorithm explores path b and returns with score 1. A gets updated to max(1, 0) = 1.</b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> FInally, explore path c and update node A one last time according to the minimax algorithm. During the process, you would also have to update node D and E, similar to the previous questions.</p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b> Here are the steps in detail:
+                  <br>
+                  Algorithm travels path c -&gt; h -&gt; j. The algorithm returns to node E with score 1. E gets updated to max(-inf, 1) = 1
+                <br> 
+                Algorithm travels path k. The algorithm returns to node E with score -1. E gets updated to max (1, -1) = 1
+                <br>
+                The algorithm returns to node D with score E = 1, D gets updated to min(inf, 1) = 1
+                <br>
+                Algorithm travels path i. The algorithm returns to node D with score 1. D gets updated to min(inf, 1) = 1
+                <br>
+                The algorithm returns to node A with score D = 1. A gets updated to max(1, 1) = 1</b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+
+          <!-- Medium type question -->
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Determine whether each of the following statements is true or false. </p>
+                <ol type="A">
+                  <li> We should apply minimax on Black Jack.  </li>
+                  <li> We should apply minimax on Chinese Chess. </li>
+                  <li> Alpha-Beta pruning is guaranteed to speed up the minimax algorithm. </li>
+                  <li> We can use GPU to speed up the minimax algorithm. </li>
+                </ol>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b> All 4 of them are false. Black Jack is not perfect information; Chinese Chess has more game states than atoms in the universe, hence it is practically not possible to apply minimax; alpha-beta pruning only speeds up minimax when we can actually prune something; GPUs are only good at matrix multiplication.</b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p>Consider the game tree in figure 2 (question 4). Perform minimax with alpha-beta pruning and indicate which paths will be pruned. (A path is pruned when the algorithm exits without ever travelling that path)</p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b> Path i will be pruned. </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p>Consider the following game tree. Perform minimax with alpha-beta pruning and indicate which paths will be pruned. (A path is pruned when the algorithm exits without ever travelling that path)</p>
+                <img src="./COMP2211 Self-test 10_files/minimax4.png" alt="diagram 4">
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b> 
+                  Paths f, g, o, p, q, r, s will be pruned.
+                  <img src="./COMP2211 Self-test 10_files/minimax3.gif" alt="diagram 3"> 
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> The following code snippet is an implementation of minimax (no alpha-beta pruning) in an arbitrary game. Complete the following code snippet and call the minimax function appropriately inside the "solve" function that solves the board and returns the best move for the AI.
+</p><pre>  from game import get_score, make_move, undo_move, has_finished, get_possible_moves
+
+  def minimax(board, is_AI_turn):
+    score, best_move = -1e99 if is_AI_turn else 1e99, -1
+    possible_moves = get_possible_moves(board, is_AI_turn)
+
+    if has_finished(board):
+    <p style="color:#3EB489">      
+      # Return some variables appropriately
+      </p>
+    for move in moves:
+      <p style="color:#3EB489">      
+      ##############################################################  
+      # Your code goes here
+
+      # Here are the imported functions you can use
+      # get_score(board): takes in the game board and returns the score of the board - 1 if the AI wins, -1 if the human wins, and 0 otherwise.
+      # make_move(board, is_AI_turn, move): takes in the game board, a boolean indicating whether it is the AI's turn, and move, and returns True if the move is made successfully, and False otherwise.
+      # undo_move(board, is_AI_turn, move): takes in the game board, a boolean indicating whether it is the AI's move we want to undo, and move, and returns True if the move is undone successfully, and False otherwise.
+      # has_finished(board): returns True if the game has finished (someone won or the game is a draw), False otherwise
+      # get_possible_moves(board, is_AI_turn): takes in the game board and a boolean indicating whether it is the AI's turn, and returns a list of possible moves.
+      
+      ############################################################## 
+      
+      # Also return the appropriate variables. You have to complete the rest of the function</p>
+
+  def solve(board):
+  <p style="color:#3EB489">      
+    # Solve the game board for the AI. Call the minimax function and return the best possible move given the game board.</p>    
+</pre>
+Your code should contain at most 10 lines, no loops and at most one recursive call of the minimax function. <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b> Here is one possible solution.
+</b></p><pre><b>  from game import get_score, make_move, undo_move, has_finished, get_possible_moves
+
+  def minimax(board, is_AI_turn):
+    score, best_move = -1e99 if is_AI_turn else 1e99, -1
+    possible_moves = get_possible_moves(board, is_AI_turn)
+
+    if has_finished(board):
+      return get_score(board), best_move
+    
+    for move in moves:
+      <p style="color:#3EB489">      
+      ##############################################################  
+      # Here is some psuedocode
+
+      for each move:
+        if the move is valid:
+          make the move to traverse the game tree
+          call the minimax function with the updated game board and the negation of the boolean, indicating it is the other player's turn
+          if it is AIs turn:
+            We maximize - new score = max(score from minimax, current score)
+          else:
+            We minimize - new score = min(score from minimax, current score)
+          if score is updated:
+            best move = move from minimax
+          undo move
+      
+
+      From the above we see that we need to return the score, but we also need to return the best move for the solve function below
+      ############################################################## 
+      </p>
+      if make_move(board, move):
+        child_score, child_best_move = minimax(board, not is_AI_turn)
+        new_score = max(child_score, score) if is_AI_turn else min(child_score, score)
+        if new_score != score:
+          best_move = move
+        undo_move(board, is_AI_turn, move)
+  
+    return score, best_move
+
+  def solve(board):
+  <p style="color:#3EB489">      
+    # In this portion we have to call the minimax function once. Personally I like to wrap any recursive function inside another function, because usually we need to input and/or return additional information with recursive calls. This prevents cluttering the main code.
+    </p>
+    score, best_move = minimax(board, True)
+    return best_move
+</b></pre><b>
+                </b><p></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+
+          <!-- Advanced type question -->
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p>Let's have some fun and play a game of Isola https://colab.research.google.com/drive/1Y-cuwBfXNKuSX7uNAyIbX8bvgKfQkiOc?usp=sharing
+                  <br>
+                  As a bonus, you can try to implement the "depth" and "transposition table" techniques for minimax.
+                </p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <b>
+                  https://colab.research.google.com/drive/1w7x93vOpz1OQ82AldQsCwA600yZUKnh0?usp=sharing
+                </b>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+
+        </ol>
+      </div>
+
+      <!-- wrap ends here; don't delete this /div -->
+    </div>
+
+  </div>
+  
+
+
+
+<div id="calendar_div"></div><span id="btc" style="position: absolute;"></span><div style="padding: 0px; border: none; margin: 0px; position: absolute; left: 0px; top: 0px; width: 100%; z-index: 1001;"><a class="highslide-loading" title="Click to cancel" style="position: absolute; opacity: 0.75; left: -9999px; z-index: 1;">Loading...</a><table cellspacing="0" style="padding: 0px; border: none; margin: 0px; visibility: hidden; position: absolute; z-index: 1001; border-collapse: collapse;"><tbody style="padding: 0px; border: none; margin: 0px;"><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px 0px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -40px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px 0px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -80px; height: 20px; width: 20px;"></td><td class="rounded-white" style="padding: 0px; border: none; margin: 0px; position: relative;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px -80px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -20px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -60px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px -20px; height: 20px; width: 20px;"></td></tr></tbody></table><img src="./COMP2211 Self-test 10_files/rounded-white.png" style="padding: 0px; border: none; margin: 0px; position: absolute; left: -9999px; top: -9999px;"></div></body></html>

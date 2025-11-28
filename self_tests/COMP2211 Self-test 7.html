@@ -1,0 +1,424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0060)https://course.cse.ust.hk/comp2211/self-test/self-test7.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>COMP2211 Self-test Web Page</title>
+
+<meta name="keywords" content="">
+<!--link rel="stylesheet" href="img/Underground.css" type="text/css" /-->
+<!-- Bubble tooltips: adopted from: http://www.web-graphics.com/mtarchive/BubbleTooltips.html--><!-- For automatic tooltip: -->
+<script src="./COMP2211 Self-test 7_files/bubbletooltips.js.download" type="text/javascript"></script>
+<!-- Example:  usage <a href="" title=""></a>  --><!-- For customize tooltip -->
+<link media="all" href="./COMP2211 Self-test 7_files/bt.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="./COMP2211 Self-test 7_files/jquery.js.download"></script>
+
+<!-- JQuery Calender is located here... -->
+<style type="text/css">@import url(jquerycalendar/jquery-calendar.css);</style>
+<script type="text/javascript" src="./COMP2211 Self-test 7_files/jquery-calendar.js.download"></script>
+
+<script type="text/javascript" src="./COMP2211 Self-test 7_files/selftestmenu.js.download"></script>
+<link rel="stylesheet" type="text/css" href="./COMP2211 Self-test 7_files/selfteststyle.css">
+<!-- highslide stuff: TESTING... -->
+<script type="text/javascript" src="./COMP2211 Self-test 7_files/highslide-with-html.js.download"></script>
+<script type="text/javascript">    
+    hs.graphicsDir = 'highslide/graphics/';
+    hs.outlineType = 'rounded-white';
+    hs.outlineWhileAnimating = true;
+</script>
+<style type="text/css">@import url(highslide/myslide.css);</style>
+<!-- END OF highslide stuff -->
+
+<link class="undefined" type="text/css" rel="stylesheet" href="./COMP2211 Self-test 7_files/BubbleTooltips.css" media="screen" style="display: block;"></head>
+
+<!-- Start of the main html body -->
+<body>
+
+<!-- wrap starts here -->
+<div id="main">
+<div id="wrap">
+        <!-- header -->
+        <div id="header">
+                <span id="slogan"></span>
+                <!-- tabs -->
+                <ul>
+                  <li class="showall-solution"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test7.html#"><span>Show all solutions</span></a></li>
+                  <li class="hideall-solution"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test7.html#"><span>Hide all solutions</span></a></li>
+				  
+				  <!--
+                  <li id="tabShowNormalView"><a href="#" title="The normal webpage view"><span>Web view</span></a></li>
+                  <li id="tabShowAllOnePage"><a href="#" title="The view which is suitable for printing"><span>Printable view</span></a></li>
+                  <li id="tabIncFontSize"><a href="#" title="Increase the font size" ><span >++ Font size</span></a></li>
+                  <li id="tabDecFontSize"><a href="#" title="Decrease the font size" ><span >-- Font size</span></a></li>
+				  
+				  -->
+				  
+                </ul>
+        </div>
+        <!-- main block: right panel -->
+        <!--div id="main"-->
+
+          <!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+          <div id="block1" style="display:block;	clear:left;">
+            <h1>Self-test 7: <br> Artificial 
+Neural Network - Multi-Layer Perceptron  </h1>
+
+          <ol>
+
+            <!-- Start of the first question -->
+            <li>
+            <div class="question-wrapper" style="position: static;">
+            <div class="question-content">
+              <p>Which of the followings is/are true about MLP?</p>
+              <ol type="A">
+                <li> We can use MLP to classify data that is NOT linearly separable regardless of the number of layers and choice of the activation function.</li>
+                <li> A deeper network guarantees better performance than shallow networks.</li>
+                <li> MLP is a feed-forward neural network designed to work exactly as human brains learn. </li>
+                <li> To use MLP for supervised learning, we always need to apply a suitable loss function at the end of the network.</li>
+              
+              </ol>
+            </div>
+        
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <p><b>D</b></p>
+              <p>A: If the activation functions are linear, we cannot use it to classify data that is not linearly separable.</p>
+              <p>B: A deeper network does not guarantee better performance. In fact if the network is too deep, it can get very difficult to train and 
+                lead to even worse performance.
+              </p>
+              <p>C: MLP is only designed to mimic human brains. The actual human brain is much more complex and sophisticated than MLP.</p>
+            </div>              
+            </div>
+            <hr>
+            </li>
+            <!-- End of the first question -->
+
+           
+			
+			
+			 <li>
+            <div class="question-wrapper">
+            <div class="question-content">      
+              <p>Which of the followings is/are true about activation functions?</p>
+              <ol type="A">
+                <li> Both linear and non-linear activation functions are practical choices for MLP in real-world applications.</li>
+                <li> ReLU is generally a good choice of activation function for the final layer of the image classification problem.</li>
+                <li> Activation functions have to be continuous and differentiable at every point.</li>
+                <li> One problem with the Sigmoid activation functions is that it may cause a vanishing gradient problem in the saturation zone.</li>
+              
+              </ol>
+            </div>
+          
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <b>D </b>
+              <p>
+                A: As noted in Q1, if the activation function is linear, we can only classify linear separable data; the performance of the MLP would be no better than a single perceptron.
+                <br><br>
+                B: Usually we use softmax as the activation function in the last layer of a classification problem.
+                <br><br>
+                
+                C: ReLU is not continuous and differentiable at every point, but it is still a good activation function.
+                Some may wonder won't this affect back-propagation and training? The trick is to simply assign a derivative value (typically 1 or 0) at (0,0) of ReLU 
+                so that a derivative value is defined for every point of the ReLU function. Then the gradient can flow through it smoothly.
+              </p>
+
+            </div>
+            </div>
+            <hr>
+            </li>
+
+
+            <li>
+            <div class="question-wrapper">
+            <div class="question-content">
+              <p>Suppose we have a Multi-Layer-Perceptron, which inputs are NumPy arrays of shape (32, 32), with the following structure summary. What is the total number of parameters in the network, including bias?
+
+                </p><pre>_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ flatten (Flatten)           (None,     )                       
+                                                                 
+ Layer_1 (Dense)             (None, 4096)                 
+                                                                 
+ Layer_2 (Dense)             (None, 4096)                
+                                                                 
+ Layer_3 (Dense)             (None, 4096)                
+                                                                 
+ Layer_4 (Dense)             (None, 4096)                
+                                                                 
+ Layer_5 (Dense)             (None, 10)                     
+                                                                 
+=================================================================
+Total params: (Solve for this number)
+Trainable params:
+Non-trainable params:
+_________________________________________________________________
+                </pre>
+
+              <p></p>
+            </div>
+            
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <p><b>We have 32 * 32 = 1024 outputs in the flattening layer. <br>
+                1024 * 4096 weights + 4096 biases in Layer 1<br>
+                4096 * 4096 weights + 4096 biases in Layer 2 - 4<br>
+                4096 * 10 weights + 10 biases in Layer 5<br>
+                In total we have 54583306 parameters. <br><br><br>
+              Challenge for you: using Keras, build a model with the above structure and print the model summary to verify our answer.</b></p>
+            </div>
+            </div>
+            <hr>
+            </li>
+
+            <!-- insert code question  -->
+            <li>
+              <div class="question-wrapper">
+              <div class="question-content">
+                <p>Read the following code in python, which builds an MLP using the Keras library. What is the number of parameters in this network?</p>
+                <pre>from keras.models import Sequential
+from keras.layers import Dense, Dropout
+                  
+def myModel():
+    model = Sequential()
+    model.add(Dense(1000, input_shape = (500,), activation='ReLU'))
+    model.add(Dropout(0.6))
+    model.add(Dense(400,activation='ReLU'))
+    model.add(Dropout(0.6))
+    model.add(Dense(10,activation='sigmoid'))
+
+    return model
+
+model = myModel()
+                </pre>
+              </div>
+              
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>500*1000+1000 + 1000*400+400 + 400*10+10 = 905410</b></p>
+              </div>
+              </div>
+              <hr>
+              </li>
+            <!-- end insert code question -->
+
+            <li>
+              <div class="question-wrapper">
+              <div class="question-content">
+                <p>Explain why activation functions have to be non-linear.</p>
+                
+              </div>
+          
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>Suggested Answer: Without the activation functions, any layer of the neural network is just a linear transformation from one 
+                  domain to another. If the transformation result is fed into a linear activation function, then the combined result is still linear. In 
+                  this case, no matter how many layers we have, the overall effect is the same as just one linear transformation, and hence can only be used for
+                  linearly separable data. The non-linear activation function brings nonlinearity to the network and expands the range of representable functions
+                  of this network. This is also one reason why MLPs are known as universal function approximators. 
+                </b> </p>
+              </div>
+              </div>
+              
+              <hr>
+              </li>
+
+            <li>
+            <div class="question-wrapper">
+            <div class="question-content">
+              <p>Which of the following is/are TRUE about back-propagation?
+              </p><ol type="A">
+                <li>It transmits loss back through the network to adjust the inputs.</li>
+                <li>It transmits loss back through the network to adjust the weights.</li>
+                <li>It is based on the recursive use of the chain rule.</li>
+                <li>It is based on the recursive use of the Leibniz integral rule.</li>
+              </ol>
+            </div>
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <p><b>BC</b> </p>
+            </div>
+            </div>
+
+            <hr>
+            </li>
+
+            <li>
+            <div class="question-wrapper">
+            <div class="question-content">
+
+              <p>Which of the followings is/are TRUE about over-fitting?</p>
+              <ol type="A">
+                <li>Over-fitting is a phenomenon when the network is too adapted to the training data and cannot generalize well to unseen test data.</li>
+                <li>Over-fitting is a phenomenon when the network performs too well on the test data such that the experimental results can not be correctly justified and hence make the model not reliable and trustworthy.</li>
+                <li>Considering from the point of view of the hyperplane for classification, overfitted models tend to have a more curvatured decision boundary than well-fitted model.</li>
+                <li>Considering from the point of view of the hyperplane for classification, overfitted models tend to have a less curvatured decision boundary than well-fitted model.</li>
+              </ol>
+            </div>      
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <p> <b>AC</b> </p>
+            </div>              
+            </div>
+            <hr>
+            </li>
+
+            <li>
+              <div class="question-wrapper">
+              <div class="question-content">
+  
+                <p>Which of the followings is/are FALSE about avoiding over-fitting?</p>
+                <ol type="A">
+                  
+                  <li>Reducing the number of layers in the network can help avoid over-fitting.</li>
+                  <li>Adding a regularization term in the loss function can help avoid over-fitting.</li>
+                  <li>Reducing the number of training data can help avoid over-fitting.</li>
+                  <li>Reducing the number of training epochs can help avoid over-fitting.</li>
+              
+                </ol>
+              </div>      
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p> <b>C</b> </p>
+              </div>              
+              </div>
+              <hr>
+              </li>
+
+              <li>
+                <div class="question-wrapper">
+                <div class="question-content">
+    
+                  <p>Suppose you built an MLP network to do binary classification, there is only one neuron in the last layer and say its output 
+                    is z. the final output of your network y is given by:
+                  </p>
+
+                  <p><b>y = sigmoid(ReLU(z))</b>
+                  </p>
+                  <p>You classify all inputs with a final value y &gt;= 0.5 as positive. What is the problem with this network?</p>
+                </div>      
+                <div class="toggle-solution">Solution</div>
+                <div class="solution-content">
+                  
+                  <p> <b>Using ReLU then sigmoid will cause all predictions to be positive
+                    (Sigmoid(ReLU(z)) &gt;= 0.5 for any z).
+                  </b> </p>
+                </div>              
+                </div>
+                <hr>
+                </li>
+			
+			
+			<li>
+            <div class="question-wrapper">
+            <div class="question-content">
+              <p>Perform back-propagation on the following computation graph to calculate the loss with respect to the two inputs, a and b. The forward pass is marked with black arrows and 
+                values and is already marked on the graph for you. The gradient flowing into the final node is 1, which is marked in red on the right hand side.
+                The red arrows help illustrate the gradient flow during back-propagation, and the red question marks serve as hints to help you walk through the back-propagation process. You only need to present the final results of de/da and de/db. (Again, 
+                sorry that I am terrible at hand drawing and writing:&lt;) </p><p></p>
+                <img src="./COMP2211 Self-test 7_files/MLP_computation_graph.jpg" alt="plot">
+                <p>Here is an alternative, typesetted picture without colour.</p>
+                <img src="./COMP2211 Self-test 7_files/mlp1.png" alt="plot">
+                <p>What are de/da and de/db? Extra hint: The total gradient flowing into 
+                  a node (neuron) should be the sum of all gradients flowing in.</p><p></p>
+              
+
+              <p></p>              
+            </div>      
+
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <p> <b>de/da = 30; de/db = 22</b> </p>
+              <p> <b>You may refer to the following graph for detailed steps.</b> </p>
+              <img src="./COMP2211 Self-test 7_files/MLP_computation_graph_sol.jpg" alt="plot haha">
+            </div>              
+            </div>
+            <hr>
+        </li>
+
+        <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p>Suppose you are given the following MLP, with all weights and bias set to 0, all activation functions chosen to be Sigmoid, 
+                  and the 4 inputs are [1.8, 2.2, 2.5, 4.3].</p><p></p>
+                  <img src="./COMP2211 Self-test 7_files/mlp2.png" alt="plot">
+                  <p>What is the output?</p><p></p>
+  
+                <p></p>              
+              </div>      
+  
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p> <b>0.5</b> </p>
+              </div>              
+              </div>
+              <hr>
+          </li>
+          
+          <li>
+              <div class="question-wrapper">
+                <div class="question-content">
+                  <p>Consider an MLP network with one input layer, one hidden layer and one output layer. The activation function for the output layer is softmax (to be followed with cross-entropy loss),
+                    and the activation function for the hidden layer is the step function (same as the one on page 11 of the <a href="https://course.cse.ust.hk/comp2211/notes/6-ann-perceptron-full.pdf">slides</a> for perceptron). 
+                    Please explain whether there will be a problem if we train this network using gradient descent and why.</p><p></p>
+        
+                  <p></p>              
+                </div>      
+    
+                <div class="toggle-solution">Solution</div>
+                <div class="solution-content">
+                  <p> <b>Suggested solution: There will be a gradient vanishing problem. For the step
+                    activation function, the derivative is zero almost everywhere except for the raising edge, so the gradient for the
+                    first-layer weights will almost always be zero; hence the weights will never be updated.</b></p>
+                </div>              
+                </div>
+                <hr>
+                </li>
+
+                <li>
+                  <div class="question-wrapper">
+                  <div class="question-content">
+      
+                    <p>Which of the followings is/are TRUE about weight updating during back-propagation?</p>
+                    <ol type="A">
+                    
+                      <li>Usually, the weights are initially set to 0</li>
+                          <li>The updates are proportional to the loss</li>
+                          <li> The updates are proportional to the output of the
+                            weight layer </li>
+                          <li>The output layer weights are used when computing the loss
+                            of the hidden layer</li>
+                  
+                    </ol>
+                  </div>      
+                  <div class="toggle-solution">Solution</div>
+                  <div class="solution-content">
+                    <p> <b>BD</b> </p>
+                    <p>
+                      A: We usually initialize the weights and biases randomly according to some distribution <br>
+	                    C: The magnitude of the weight updates are only proportional to the difference between the desired output and the actual output, not the actual output itself. <br>
+                    <b>
+                      P.S. For weight initialization, many pieces of mature research prove effective weight initialization 
+                      methods, such as the Xavier initialization, etc.; you may google it for more details. 
+                    </b> </p>
+                  </div>              
+                  </div>
+                  <hr>
+                  </li>
+
+
+                
+
+            
+
+          </ol>
+        </div>
+
+        <!-- wrap ends here; don't delete this /div --> 
+        </div>
+
+</div>
+
+
+
+
+<div id="calendar_div"></div><span id="btc" style="position: absolute; top: 50px; left: 7px;"></span><div style="padding: 0px; border: none; margin: 0px; position: absolute; left: 0px; top: 0px; width: 100%; z-index: 1001;"><a class="highslide-loading" title="Click to cancel" style="position: absolute; opacity: 0.75; left: -9999px; z-index: 1;">Loading...</a><table cellspacing="0" style="padding: 0px; border: none; margin: 0px; visibility: hidden; position: absolute; z-index: 1001; border-collapse: collapse;"><tbody style="padding: 0px; border: none; margin: 0px;"><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px 0px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -40px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px 0px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -80px; height: 20px; width: 20px;"></td><td class="rounded-white" style="padding: 0px; border: none; margin: 0px; position: relative;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px -80px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -20px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -60px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px -20px; height: 20px; width: 20px;"></td></tr></tbody></table><img src="./COMP2211 Self-test 7_files/rounded-white.png" style="padding: 0px; border: none; margin: 0px; position: absolute; left: -9999px; top: -9999px;"></div></body></html>

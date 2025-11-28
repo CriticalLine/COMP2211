@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://course.cse.ust.hk/comp2211/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" style="padding-top:100px; font-family: &#39;Open Sans&#39;, sans-serif;">≈
+
+
+
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <title>COMP 2211 Exploring Artificial Intelligence</title>
+   <!-- Bootstrap Core CSS -->
+   <link href="./COMP 2211 Exploring Artificial Intelligence_files/bootstrap.min.css" rel="stylesheet">
+   <!-- Custom CSS -->
+   <link href="./COMP 2211 Exploring Artificial Intelligence_files/scrolling-nav.css" rel="stylesheet">
+   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+   <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   <link rel="icon" href="https://course.cse.ust.hk/comp2211/img/cse_icon.png">
+   <link href="./COMP 2211 Exploring Artificial Intelligence_files/css" rel="stylesheet">
+
+
+
+   <img src="./COMP 2211 Exploring Artificial Intelligence_files/ai-banner3.jpg" style="width:100%; display:block; margin-top:-50px; float:none" alt="Title Image">
+   <nav class="navbar navbar-default navbar-fixed-top top-nav-collapse">
+      <div class="container">
+         <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="https://course.cse.ust.hk/comp2211/#page-top">Home</a>
+         </div>
+         <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav" data-toggle="collapse" data-target=".in">
+               <li class="hidden">
+                  <a class="page-scroll" href="https://course.cse.ust.hk/comp2211/#page-top"></a>
+               </li>
+               <li class="">
+                  <a class="page-scroll" href="https://course.cse.ust.hk/comp2211/#announcements">Announcements</a>
+               </li>
+               <li class="dropdown">
+                  <a href="https://course.cse.ust.hk/comp2211/#" class="dropdown-toggle" data-toggle="dropdown">Course Info<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                     <li class=""><a href="https://course.cse.ust.hk/comp2211/#coursedetails" class="page-scroll">Course Details</a></li>
+                     <li class=""><a href="https://course.cse.ust.hk/comp2211/#schedule" class="page-scroll">Schedule</a></li>
+                     <li class=""><a href="https://course.cse.ust.hk/comp2211/#gradingscheme" class="page-scroll">Grading Scheme</a></li>
+                     <li class=""><a href="https://course.cse.ust.hk/comp2211/#assessmentrubrics" class="page-scroll">Assessment Rubrics</a></li>
+                  </ul>
+               </li>
+               <li class="">
+                  <a class="page-scroll" href="https://course.cse.ust.hk/comp2211/#people">People</a>
+               </li>
+               <li class="">
+                  <a class="page-scroll" href="https://course.cse.ust.hk/comp2211/#lectures">Lectures</a>
+               </li>
+               <li class="">
+                  <a class="page-scroll" href="https://course.cse.ust.hk/comp2211/#honorcode">Honor Code</a>
+               </li>
+               <li class="">
+                  <a class="page-scroll" href="https://course.cse.ust.hk/comp2211/#labs">Labs</a>
+               </li>
+               <li class="">
+                  <a class="page-scroll" href="https://course.cse.ust.hk/comp2211/#assignments">Programming Assignments</a>
+               </li>
+               <li class="">
+                  <a class="page-scroll" href="https://course.cse.ust.hk/comp2211/#exams">Exams</a>
+               </li>
+               <li class="">
+                  <a class="page-scroll" href="https://course.cse.ust.hk/comp2211/#selflearning">Self-learning Center</a>
+               </li>
+               <li class="active">
+                  <a class="page-scroll" href="https://course.cse.ust.hk/comp2211/#faqs">FAQs</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+   <section id="intro" class="intro-section">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12" style="padding-top:30px; padding-bottom:30px">
+               <div class="banner">
+                  <h3>COMP 2211 Exploring Artificial Intelligence</h3>
+                  <p style="padding-left:10px; padding-right:10px; padding-top:10px"><span style="font-weight:bold">Description:</span><br><br>This course aims to give a gentle
+                     introduction to the basic elements of artificial intelligence (AI) through understanding examples
+                     from various applications and hands-on experimentation using AI software tools. In addition to
+                     covering the technical aspect of AI through such topics as search and problem solving, knowledge
+                     representation, probabilistic reasoning, machine learning, computer vision and image processing,
+                     speech and language processing, and robotics, this course will also study the historical
+                     perspective, social and ethical implications, as well as potential and limitations of AI.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--<div style="width:100%">
+	    <img src="img/ai-banner3.jpg" style="width:100%; display:block; float:none" alt="Title Image"/>
+         </div>-->
+   </section>
+
+   <!-- Announcements Section -->
+   <section id="announcements" class="announcements-section">
+      <div class="container">
+         <div class="row">
+            <h3 class="titleheader">Announcements</h3>
+            <div class="col-lg-12">
+               <ul>
+                  <!--<li><span 
+style="color:blue">2022-5-14</span><br/>The Zoom meeting links for the final 
+examination are available <a href="https://course.cse.ust.hk/comp2211/final-zoom-meeting.html">here</a>. Please enter 
+your student ID to check the link of your assigned meeting room.</li>
+			<br/>
+                        <li><span style="color:blue">2022-4-11</span><br/>Programming assignment 2 has been released. It's due 
+on May 11, 2022, 23:59.</li>
+			<br/>-->
+                  <!--<li><span style="color:blue">2022-11-10</span><br/>
+			A final exam paper checking session will be conducted on December 12, 2022 
+(Wednesday) from 11:30 am - 1:00 pm at Rm 5583 (Lift 30). The procedure of paper 
+checking is as follows:
+				<ol>
+					<li>Present your student ID, tell us your 
+venue and seat number (please check it at 
+<a 
+href="https://course.cse.ust.hk/comp2211/final-seating-plan.html">https://course.cse.ust.hk/comp2211/final-seating-plan.html</a>), 
+and get your paper.
+					<li>After checking your paper, please return 
+your paper no matter whether there are any changes in the marking.</li>
+					<li>Get back your student ID.</li>
+				</ol>
+			</li>
+			<br/>
+                        <li><span style="color:blue">2022-10-31</span><br/>Programming 
+assignment 2 has been released. It's due on November 30, 2022, 23:59.</li>
+			<br/>
+                	<li><span style="color:blue">2022-10-31</span><br/>Check your midterm score <a 
+href="midterm-grade.html">here</a>. Please enter your student ID to check your score for each question and the 
+total.</li>
+			<br/>			
+			<li><span style="color:blue">2022-9-1</span><br/>We 
+will offer additional classes during Weeks 1 and 2 to help you develop your 
+AI programming skills.<br/>
+			For L1:	
+			<ul>
+				<li>14 September 2022 (Wed) from 8pm to 10pm at LTG (<a 
+href="https://hkust.zoom.us/j/98435480532?pwd=dkhZMTJzUWZIUUVPWm9mcmhLUnJhZz09">Zoom Meeting Link</a>)</li>
+				<li>15 September 2022 (Thu) from 8pm to 10pm at LTG (<a 
+href="https://hkust.zoom.us/j/91321268029?pwd=QXloTmY2S3B3VnZrZkZ4MllUYkJNQT09">Zoom Meeting Link</a>)</li>
+			</ul>
+			For L2:
+			<ul>
+				<li>9 September 2022 (Fri) from 8pm to 10pm at Rm 2405 (<a 
+href="https://hkust.zoom.us/j/92376010693?pwd=MUQzc3VxY2JXeTJISEdSY2laSzRlUT09">Zoom Meeting Link</a>)</li>
+				<li>16 September 2022 (Fri) from 8pm to 10pm at Rm 2405 (<a 
+href="https://hkust.zoom.us/j/92376010693?pwd=MUQzc3VxY2JXeTJISEdSY2laSzRlUT09">Zoom Meeting Link</a>)</li>
+			</ul>
+			</li>
+			<br/>-->
+                  <!--<li><span style="color:blue">2023-02-03</span><br/>The lesson for L1 on 12 September will be 
+cancelled due to a public holiday. A make-up class will be offered on 9 September from 8:00pm to 10:00pm at Rm 2302 
+(<a 
+href="https://hkust.zoom.us/j/99107714392?pwd=OCt6Vm9QR3gyYmVqRGtVRVNaTHVydz09">Zoom Meeting Link</a>) to 
+compensate for the missing lesson.
+			</li>
+			<br/>-->
+                  <!--<li><span style="color:blue">2023-05-09</span><br/>The 
+final exam will be conducted on May 18, 2023 (Thursday) from  8:30 - 11:30am 
+at S.H.Ho Sports Hall.</li>
+			<br/>
+                        <li><span style="color:blue">2023-04-12</span><br/>Programming assignment 2 has been 
+released. It's due on May 9, 2023, 23:59.</li>
+			<br/>
+			<li><span style="color:blue">2023-04-05</span><br/>
+			A midterm exam paper checking session will be conducted on April 18, 2023 
+(Tuesday) from 7:30 - 9:00pm at Rm 4619 (Lift 31-32). The procedure of paper checking is as follows:
+				<ol>
+					<li>Present your student ID, and get your paper.</li>
+					<li>After checking your paper, please return your paper no matter whether there are any changes in the marking.</li>
+					<li>Get back your student ID.</li>
+				</ol>
+			</li>
+			<br/> -->
+                	<li><span style="color:blue">2025-10-21</span><br>Check your midterm venue <a href="https://course.cse.ust.hk/comp2211/seat.html">here</a>. Please enter your student ITSC account and Student ID to check your assigned venue.</li>
+         Check the midterm information <a href="https://canvas.ust.hk/courses/64950/discussion_topics/580377">here</a>.
+         <br>
+                     <!--   <li><span style="color:blue">2023-02-19</span><br/>Starting 
+from this week, TAs will start offering their office hours. Details can be found in the <a 
+href="#TAs">Teaching Assistants</a> section.</li>
+			<br/>-->
+                  <!--<li><span style="color:blue">2023-10-24</span><br/>There 
+will 
+be no make-up lecture for L2 on October 26th (Thu), considering the consistency between the two sections' progress.</li>
+                        <br/>
+                        <li><span style="color:blue">2023-10-23</span><br/>Programming assignment 2 has been 
+released. It's due on November 30, 2023 (Thursday), 23:59.</li>
+			<br/>
+			<li><span style="color:blue">2023-09-19</span><br/>The make-up lectures for L2 (compensation for the public holidays) are arranged as follows:<br/>
+October 5th and 26th, 2023 (Thursday), 7:30PM - 8:50PM, Mixed-mode (LSK-1007 + Zoom: <a href="https://hkust.zoom.us/j/97366896023?pwd=d1liMk5teldYaGZhZ2NUcytDV2p0Zz09">https://hkust.zoom.us/j/97366896023?pwd=d1liMk5teldYaGZhZ2NUcytDV2p0Zz09</a>)</li>
+<br/>-->
+                  <!--<li><span style="color:blue">2024-05-19</span><br/>Check the final exam seating arrangement <a 
+href="final-seating-plan.html">here</a>. Please enter your student ID to check your assigned venue and seat number.</li>
+			<br/>
+                        <li><span style="color:blue">2024-04-28</span><br/>The final
+examination will be conducted 
+on May 22nd 2024 (Wednesday) from 8:30am-11:30am. More details about the exam will be announced.</li>
+			<br/>-->
+                  <!--                	<li><span style="color:blue">2024-12-11</span><br/>Check the final seating arrangement <a 
+href="final-seating-plan.html">here</a>. Please enter your student ID to check your assigned venue and seat number.</li>
+			<br/>
+                        <li><span style="color:blue">2024-11-05</span><br/>Programming assignment 2 has been 
+released. It's due on November 30, 2024 (Saturday), 23:59.</li>
+			<br/>
+                	<li><span style="color:blue">2024-10-30</span><br/>Check the midterm seating arrangement <a 
+href="midterm-seating-plan.html">here</a>. Please enter your student ID to check your assigned venue and seat number.</li>
+			<br/>
+			<br/>
+			</li>-->
+                  <!--The arrangement is shown below:
+<ul>
+	<li>L1: February 8th and 15th, 2024 (Thursday), 8:00PM - 10:00PM, Mixed-mode (Rm 2504 (Lift 25/26) + Zoom: <a 
+href="https://hkust.zoom.us/j/95056695596?pwd=TjBvbXdsK1N2a040K1I1bUxVb0EvZz09">here</a>)</li>
+	<li>L2 &amp; L3: 
+	<ul>
+		<li>February 15th, 2024 (Thursday), 8:00PM - 9:30PM, Mixed-mode (LTC + Zoom: <a 
+href="https://hkust.zoom.us/j/97041725609?pwd=U2FNZmtsSTRnUlZ0bkFmbDB5Tng0dz09">here</a>)</li>
+		<li>February 21st, 2024 (Wednesday), 7:30PM - 9:30PM, Mixed-mode (LTG + Zoom: <a
+href="https://hkust.zoom.us/j/97041725609?pwd=U2FNZmtsSTRnUlZ0bkFmbDB5Tng0dz09">here</a>)</li>
+	</ul>
+</ul>-->
+<!--                 <li><span style="color:blue">2025-04-09</span><br />Programming assignment 2 has been
+                     released. It's due on May 10, 2025 (Saturday), 23:59.</li><br />
+                  <li><span style="color:blue">2025-02-28</span><br />Programming assignment 1 has been
+                     released. It's due on March 29, 2025 (Saturday), 23:59.</li><br /> -->
+                     <li><span style="color:blue">2025-09-05</span><br>The midterm
+                     examination will take place on October 28, 2025 (Tuesday) from 7:30pm to 9:30pm.</li>
+		  <br> 
+                     <li><span style="color:blue">2025-09-01</span><br>
+                     There will be no labs during the first two weeks (Sep 1, 2, 8 &amp; 9). The first lab will
+                     begin in Week 3
+                     (Sep 15 &amp; 16).<br>
+                     However, we will conduct an additional lecture (for L1 and L2 together) to go over advanced Python topics.
+                     <ul>
+                        <li>Time: Sep 9 (Tuesday), 07:00PM - 09:00PM</li>
+                        <li>Venue: LTB
+                        </li>
+                    </ul>
+                  </li>
+                  <br>
+                  <li><span style="color:blue">2025-09-01</span><br>
+                     In this course, you are not allowed to use generative artificial intelligence tools like ChatGPT or
+                     similar software for your
+                     labs and programming assignments. If you use these tools for your work, it will be considered
+                     cheating because it means you
+                     haven't done the work on your own.</li>
+                  <br>
+                  <li><span style="color:blue">2025-09-01</span><br>Welcome to COMP 2211! For this course, we use our
+                     own course webpage (<a href="https://course.cse.ust.hk/comp2211/">https://course.cse.ust.hk/comp2211/</a>) and grades
+                     can be
+                     found on Canvas (<a href="https://canvas.ust.hk/courses/64950/">https://canvas.ust.hk/courses/64950/</a>).
+                     Discussions are also done via Piazza on Canvas. </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Course Details Section -->
+   <section id="coursedetails" class="coursedetails-section">
+      <div class="container">
+         <div class="row">
+            <h3 class="titleheader">Course Details</h3>
+            <div class="col-lg-6">
+               <br>
+               <ul>
+                  <li>
+                     The course consists of, per week,
+                     <ul>
+                        <li>3 hours of lectures</li>
+                        <li>2 hours of lab exercises</li>
+                     </ul>
+                     an it gives you 3 credits for successful completion of the course.
+                  </li>
+               </ul>
+               <br>
+               <h4>Reference Books</h4>
+               <br>
+               <!--<ul>-->
+               <!--<li>
+                        Recommended textbooks
+                        <table class="table-hover">
+                           <tr>
+                              <td style="padding:5px"><img src="img/howtoprogram.jpg" style="width:150px;" alt="C++ How to Program"/></td>
+                              <td style="width:5px"></td>
+                              <td>
+                                 <ul>
+                                    <li><<a href="https://julac.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=TN_cdi_safari_books_9780134448930&context=PC&vid=HKUST&lang=en_US&search_scope=HKUST_catalog_primo&adaptor=primo_central_multiple_fe&tab=default_tab&query=any,contains,C%20%20%20how%20to%20program">Paul Deitel, Deitel & Associates (2017). C++ How to Program.</a><br/>
+									There are only few copies available in the campus bookstore. On the other hand, you may purchase an e-version of book from the campus bookstore for HK$316. We were told that it may take around 3 days to get the code for an ebook.
+									</li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="padding:5px"><img src="img/algo.jpg" style="width:150px;" alt="Algorithm Textbook"/></td>
+                              <td style="width:5px"></td>
+                              <td>
+                                 <ul>
+                                    <li><a href="https://lbdiscover.ust.hk/bib/991001362359703412">M.A. Weiss (2014). Data Structures and Algorithm Analysis in C++.</a><br/>
+									The book is out of print. You may be able to find some free PDF copy on the Web.
+									</li>
+                                 </ul>
+                              </td>
+                           </tr>
+						   <tr>
+                              <td style="padding:5px"><img src="img/shaffer-algo.jpg" style="width:150px;" alt="Algorithm Textbook"/></td>
+                              <td style="width:5px"></td>
+                              <td>
+                                 <ul>
+                                    <li><a href="http://people.cs.vt.edu/~shaffer/Book/C++3elatest.pdf">Data Structures and Algorithm Analysis Ed. 3.2 (C++ Version).</a><br/>
+									The above links to a free online version of the book from the author, Clifford A. Shaffer of Virginia Tech, USA.
+									</li>
+                                 </ul>
+                              </td>
+                           </tr>
+                        </table>
+                        <br/>
+                     </li>-->
+               <!--<li>-->
+               <table class="table-hover">
+                  <tbody><tr>
+                     <td style="padding:5px"><img src="./COMP 2211 Exploring Artificial Intelligence_files/ai-crash-course.jpg" style="width:150px;" alt="AI Crash Course"></td>
+                     <td style="width:5px"></td>
+                     <td>
+                        <ul>
+                           <li><a href="https://lbdiscover.ust.hk/bib/991012881204303412">Hadelin de
+                                 Ponteves. Al Crash Course: A fun and hands-on introduction to machine learning,
+                                 reinforcement learning, deep learning, and artificial intelligence with Python</a>
+                              <br>
+                              HKUST library provides
+                              online access to this textbook.
+                           </li>
+                        </ul>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="padding:5px"><img src="./COMP 2211 Exploring Artificial Intelligence_files/python-beginner-guide.jpg" style="width:150px;" alt="Thinking in C++"></td>
+                     <td style="width:5px"></td>
+                     <td>
+                        <ul>
+                           <li>Denis Rothman, Matthew
+                              Lamons, Rahul Kumar, Abhishek Nagaraja, Amir Ziai, and Ankit
+                              Dixit. Python: Beginner's Guide to Artificial Intelligence: Build applications to
+                              intelligently
+                              interact with the world around you using Python
+                           </li>
+                        </ul>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="padding:5px"><img src="./COMP 2211 Exploring Artificial Intelligence_files/artificial-intelligence-with-python.jpg" style="width:150px;" alt="AI with Python"></td>
+                     <td style="width:5px"></td>
+                     <td>
+                        <ul>
+                           <li><a href="https://lbdiscover.ust.hk/bib/991012884447803412">Prateek Joshi, Artificial
+                                 intelligence with Python : build real-world artificial intelligence applications with
+                                 Python to intelligently interact with the world around you</a>
+                              <br>
+                              HKUST library provides
+                              online access to this textbook.
+                           </li>
+                        </ul>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="padding:5px"><img src="./COMP 2211 Exploring Artificial Intelligence_files/ip-cookbook.png" style="width:150px;" alt="s2"></td>
+                     <td style="width:5px"></td>
+                     <td>
+                        <ul>
+                           <li><a href="https://lbdiscover.ust.hk/bib/991012888737803412">Sandipan Dey. (2020). Python
+                                 Image Processing Cookbook</a>
+                              <br>HKUST library provides online access to this textbook.
+                           </li>
+                        </ul>
+                     </td>
+                  </tr>
+                  <!--<tr>
+                              <td style="padding:5px"><img src="img/s3.jpg" style="width:150px;" alt="s3"/></td>
+                              <td style="width:5px"></td>
+                              <td>
+                                 <ul>
+                                    <li><a href="https://lbdiscover.ust.hk/bib/991002209259703412">Stanley Lippman (2013). C++ Primer.</a></li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="padding:5px"><img src="img/s4.jpg" style="width:150px;" alt="s4"/></td>
+                              <td style="width:5px"></td>
+                              <td>
+                                 <ul>
+                                    <li><a href="https://lbdiscover.ust.hk/bib/991012704264303412">Scott Meyers (2005). 
+Effective C++: 55 Specific Ways to Improve Your Programs and Designs.</a></li>
+                                 </ul>
+                              </td>
+                           </tr>-->
+               </tbody></table>
+               <!--</li>-->
+               <!--</ul>-->
+               <br><br>
+            </div>
+            <div class="col-lg-6">
+               <h4>Topics Covered</h4>
+               <ol>
+                  <li>Brief history of Artificial Intelligence</li>
+                  <li>Search and problem solving</li>
+                  <li>Knowledge representation</li>
+                  <li>Probabilistic reasoning</li>
+                  <li>Machine learning</li>
+                  <li>Computer vision and image processing</li>
+                  <li>Speech and language processing</li>
+                  <li>Robotics</li>
+                  <li>Social and ethical implications of AI</li>
+                  <li>Potential and limitations</li>
+               </ol>
+               <br>
+               <h4>Keyword Syllabus</h4>
+               <ol>
+                  <li>A Brief History of Artificial Intelligence</li>
+                  <li>Advanced Python for Artificial Intelligence</li>
+                  <li>Naive Bayes</li>
+                  <li>K-Nearest Neighbours</li>
+                  <li>K-Means Clustering</li>
+                  <li>Perceptron and Multi-Layer Perceptron</li>
+                  <li>Fundamentals of Image Processing</li>
+                  <li>Convolutional Neural Networks</li>
+                  <li>Minimax and Alpha-beta Pruning</li>
+                  <li>Artificial Intelligence Ethics</li>
+                  <li>Reinforcement Learning (Self-Study)</li>
+               </ol>
+               <br>
+               <h4>Intended Learning Outcomes</h4>
+               On successful completion of this course, students are expected to be able to:<br><br>
+               <ol>
+                  <li>Demonstrate understanding of the historical perspective and development of artificial intelligence
+                     (AI)</li>
+                  <li>Demonstrate understanding of the basic elements of AI thinking</li>
+                  <li>Demonstrate proficiency in applying basic principles and techniques of AI and using AI software
+                     tools to solve problems in a range of applications</li>
+                  <li>Demonstrate awareness of the social and ethical implications as well as potential and limitations
+                     of AI</li>
+               </ol>
+               <br>
+               <h4>Prerequisite &amp; Exclusions</h4>
+               <div class="table-responsive regulartable" style="border:none">
+                  Pre-requisite: COMP 1021 OR COMP 1029P.
+                  <br><br>
+                  Exclusion: COMP 3211, COMP 4211, COMP
+                  4221, COMP 4331, COMP 4332, COMP 4421, COMP 4471, COMP
+                  4901K, COMP 4901L, ELEC 4130, ELEC 4230, IDPO 4110, ISOM
+                  3360, MATH 4336, MATH 4432, RMBI 4310, COMP 5211, COMP
+                  5212, COMP 5213, COMP 5221, COMP 5222, COMP 5223, COMP
+                  5331, COMP 5421
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Schedule Section -->
+   <section id="schedule" class="schedule-section">
+      <div class="container">
+         <div class="row">
+            <h3 class="titleheader">Schedule</h3>
+            <div class="col-lg-12">
+               <h4>Lecture Schedule</h4>
+               <div class="table-responsive regulartable" style="border:none">
+                  <table class="table-hover">
+                     <tbody><tr>
+                        <th style="text-align:center">Section</th>
+                        <th>Date and Time</th>
+                        <th>Room</th>
+                        <th>Instructor</th>
+                        <th>Lecture Videos</th>
+                     </tr>
+                     <tr>
+                        <td style="text-align:center">L1</td>
+                        <td>Tue &amp; Thu, 10:30PM - 11:50AM</td>
+                        <td>Rm4619 (Lift 31-32) <a href="http://pathadvisor.ust.hk/interface.php?roomno=4619"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a> </td>
+                        <td>Xiao, Huiru</td>
+                        <td style="text-align:center"><a href="https://canvas.ust.hk/courses/64950">Canvas</a></td>
+                     </tr>
+                     <tr>
+                        <td style="text-align:center">L2</td>
+                        <td>Tue &amp; Thu, 03:00PM - 04:20PM</td>
+                        <td>Rm2502 (Lift 25-26) <a href="http://pathadvisor.ust.hk/interface.php?roomno=2502"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></td>
+                        <td>Xiao, Huiru</td>
+                        <td style="text-align:center"><a href="https://canvas.ust.hk/courses/64950">Canvas</a></td>
+                     </tr>
+                     <tr>
+                     <!--   <td style="text-align:center">L3</td>
+                        <td>Tue &amp Thu, 10:30AM - 11:50AM</td>
+                        <td>Rm 2407 (Lift 17-18) <a href="http://pathadvisor.ust.hk/interface.php?roomno=2407"><span
+                                 class="glyphicon glyphicon-search" aria-hidden="true"></span></a> </td>
+                        <td>XIAO, Huiru</td>
+                        <td style="text-align:center"><a href="https://canvas.ust.hk/courses/60961/">Canvas</a></td>
+		     </tr> -->
+                  </tr></tbody></table>
+               </div>
+               <h4>Lab Schedule</h4>
+               <div class="table-responsive regulartable" style="border:none">
+                  <table class="table-hover">
+                     <tbody><tr>
+                        <th style="text-align:center">Section</th>
+                        <th>Date and Time</th>
+                        <th>Room</th>
+                        <th style="text-align:center">Teaching Assistant</th>
+                        <th style="text-align:center">Student Helper</th>
+                     </tr>
+                     <tr>
+                        <td style="text-align:center">LA1</td>
+                        <td>Mon; 04:30PM - 06:20PM</td>
+                        <td style="text-align:center">Rm5403 (Lift 17-18)
+                           <a href="http://pathadvisor.ust.hk/interface.php?roomno=5403"> <span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+                        </td>
+                        <td style="text-align:center" rowspan="3" colspan="2">
+                           Each lab will be conducted by<br>different TAs and student helpers.<br>Please check out
+                           the detailed arrangement <a href="https://course.cse.ust.hk/comp2211/lab-tas.html">here</a>.
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="text-align:center">LA2</td>
+                        <td>Tue; 12:00PM - 01:50PM</td>
+                        <td style="text-align:center">LTG (Lift 25-26) <a href="http://pathadvisor.ust.hk/interface.php?roomno=ltg"> <span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+                        </td>
+                     </tr>
+                     <tr>
+                     <!--   <td style="text-align:center">LA3</td>
+                        <td>Wed; 04:00PM - 05:50PM</td>
+                        <td style="text-align:center">LTK (Lift 31-32) <a
+                              href="http://pathadvisor.ust.hk/interface.php?roomno=ltk"> <span
+                                 class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+			</td> -->
+                     </tr>
+                     <!--<tr>
+                           <td style="text-align:center">LA3</td>
+                           <td colspan="2">This session will have no scheduled meetings. You are expected to access the 
+video-on-demand 
+<br/>recordings of the weekly lab material which you will follow at your own pace.</td>
+                           <td style="text-align:center" colspan="2"><a href="LA3-videos.html">Videos Here</a></td>
+                        </tr>-->
+                     <!--<tr>
+                           <td style="text-align:center">LA1 (Group B)</td>
+                           <td>Monday 11:30am - 1:20pm</td>
+                           <td style="text-align:center">
+<a href="https://cssysteM.cse.ust.hk/Facilities/hkust_only/labsetup/lab4.html">Rm 4210 
+(Lift 20)</a><a href="http://pathadvisor.ust.hk/interface.php?roomno=4210"> <span 
+class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+				<a 
+href="https://hkust.zoom.us/j/96552017024?pwd=cXNoMnUzYXZadFNzT2tCMlIxOW9yZz09">Here</a>
+			   </td>
+                           <td>ZHANG, Jingyang</td>
+			   <td>REN, Zhengtong</td>
+                        </tr>-->
+                  </tbody></table>
+               </div>
+               <!--<div style="color:red">Please check the <a href="">lab group list</a> and attend the group which you have been assigned to.
+		  </div>-->
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Grading Scheme Section -->
+   <section id="gradingscheme" class="gradingscheme-section">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+               <h4>Grading Scheme</h4>
+               <div class="table-responsive regulartable" style="border:none">
+                  <table class="table-hover">
+                     <tbody><tr>
+                        <th>Item</th>
+                        <th style="text-align:center">Percentage</th>
+                     </tr>
+                     <tr>
+                        <td>Laboratory exercises</td>
+                        <td style="text-align:center">10%</td>
+                     </tr>
+                     <tr>
+                        <td>Programming assignment 1</td>
+                        <td style="text-align:center">15%</td>
+                     </tr>
+                     <tr>
+                        <td>Programming assignment 2</td>
+                        <td style="text-align:center">15%</td>
+                     </tr>
+                     <tr>
+                        <td>Midterm examination</td>
+                        <td style="text-align:center">20%</td>
+                     </tr>
+                     <tr>
+                        <td>Final examination</td>
+                        <td style="text-align:center">40%</td>
+                     </tr>
+                  </tbody></table>
+                  <!--<br/>
+		     There are two different ways to assess your performance.<br/><br/>
+                     <ol>
+                       <li>Laboratory exercises (10%) + Programming assignments (30%) + Midterm exam (20%) + Final exam (40%)</li>
+                       <li>Laboratory exercises (10%) + Programming assignments (30%) + Final exam (60%)</li>
+                     </ol>
+                     We will automatically choose the higher score of the two for you.-->
+               </div>
+               <br>
+               <p>Please check your own marks from the <a href="https://canvas.ust.hk/courses/64950/">COMP 2211 Canvas
+                     page</a>.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Assessment Rubrics Section -->
+   <section id="assessmentrubrics" class="assessment-rubrics-section">
+      <div class="container">
+         <div class="row">
+            <h3 class="titleheader">Assessment Rubrics</h3>
+            <div class="col-lg-12">
+               <div class="table-responsive regulartable" style="border:none">
+                  <table class=".hover-table" style="border:1">
+                     <thead>
+                        <tr>
+                           <th style="vertical-align:top">
+                              <p style="">Course Learning Outcome</p>
+                           </th>
+                           <th>
+                              <p>Exemplary</p>
+                           </th>
+                           <th>
+                              <p>Competent</p>
+                           </th>
+                           <th>
+                              <p>Needs Work</p>
+                           </th>
+                           <th>
+                              <p>Unsatisfactory</p>
+                           </th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td style="vertical-align:top">
+                              <p>1. Demonstrate understanding of the historical perspective and development of
+                                 artificial intelligence (AI)</p>
+                           </td>
+                           <td style="vertical-align:top">
+                              <p>Demonstrate thorough understanding of the historical perspective and development of
+                                 artificial intelligence (AI).</p>
+                           </td>
+                           <td style="vertical-align:top">
+                              <p>Demonstrate sufficient understanding of the historical perspective and development of
+                                 artificial intelligence (AI).</p>
+                           </td>
+                           <td style="vertical-align:top">
+                              <p>Demonstrate insufficient understanding of the historical perspective and development of
+                                 artificial intelligence (AI).</p>
+                           </td>
+                           <td style="vertical-align:top">
+                              <p>Is unable to understand the historical perspective and development of artificial
+                                 intelligence (AI).</p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="vertical-align:top">
+                              <p>2. Demonstrate understanding of the basic elements of AI thinking.</p>
+                           </td>
+                           <td style="vertical-align:top">
+                              <p>Demonstrate thorough understanding of the basic elements of AI thinking.</p>
+                           </td>
+                           <td style="vertical-align:top">
+                              <p>Demonstrate sufficient understanding of the basic elements of AI thinking.</p>
+                           </td>
+                           <td style="vertical-align:top">
+                              <p>Demonstrate insufficient understanding of the basic elements of AI thinking.</p>
+                           </td>
+                           <td style="vertical-align:top">
+                              <p>Is unable to understand the basic elements of AI thinking.</p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="vertical-align:top">
+                              <p>3. Demonstrate proficiency in applying basic principles and techniques of AI and using
+                                 AI software tools to solve problems in a range of applications.</p>
+                           </td>
+                           <td style="vertical-align:top">
+                              <p>Demonstrate thorough understanding of the basic principles and techniques of AI. Is
+                                 able to use AI software to solve problems in a wide range of applications.</p>
+                           </td>
+                           <td style="vertical-align:top">
+                              <p>Demonstrate sufficient understanding of the basic principles and techniques of AI. Is
+                                 able use AI software to solve problems in standard applications.</p>
+                           </td>
+                           <td style="vertical-align:top">
+                              <p>Demonstrate marginal understanding of the basic principles and techniques of AI. Is
+                                 able to use AI software to solve simple applications.</p>
+                           </td>
+                           <td style="vertical-align:top">
+                              <p>Demonstrate little understanding of the basic principles and techniques of AI. Have
+                                 great difficulty in using AI software even in simple applications.</p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="vertical-align:top">
+                              <p>4. Demonstrate awareness of the social and ethical implications as well as potential
+                                 and limitations of AI.
+                              </p>
+                           </td>
+                           <td style="vertical-align:top">
+                              <p>Demonstrates a comprehensive awareness of the social and ethical implications as well
+                                 as potential and limitations of AI.
+                              </p>
+                           </td>
+                           <td style="vertical-align:top">
+                              <p>Demonstrates a thorough awareness of the social and ethical implications as well as
+                                 potential and limitations of AI.
+                              </p>
+                           </td>
+                           <td style="vertical-align:top">
+                              <p>Demonstrates a basic awareness of the social and ethical implications as well as
+                                 potential and limitations of AI.
+                              </p>
+                           </td>
+                           <td style="vertical-align:top">
+                              <p>Demonstrates a lack of awareness of the social and ethical implications as well as
+                                 potential and limitations of AI.
+                              </p>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  Download the pdf version <a href="https://course.cse.ust.hk/comp2211/misc/comp2211-rubrics.pdf">here</a>.
+                  <br><br>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- People Section -->
+   <section id="people" class="people-section invisibletable">
+      <div class="container">
+         <div class="row">
+            <h3 class="titleheader">People</h3>
+            <div class="col-lg-12">
+               <h4>Instructors</h4>
+               <div class="">
+                  <table style="width:100%" class="table-hover">
+                   <!--  <tr>
+                        <td style="width:33%"><img src="img/desmond.jpg" class="peopleimg" alt="Desmond" /></td>
+                        <td style="width:1%"></td>
+                        <td style="width:66%;">
+                           <span style="font-weight: bold">TSOI, Desmond Yau Chat</span><br />
+                           <span><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Rm
+                              3553</span><br />
+                           <span><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a
+                                 href="mailto:desmond@ust.hk">desmond@ust.hk</a></span><br />
+                           <span><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> <a
+                                 href="http://www.cse.ust.hk/~desmond">http://www.cse.ust.hk/~desmond</a></span><br />
+                           <span><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>Office Hour:
+                              Every Thursday from 13:30 - 14:30 (Rm 3553)</span><br />
+                           <span><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                              Find me by PathAdvisor: <a
+                                 href="http://pathadvisor.ust.hk/interface.php?roomno=3553">Click Here</a>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="width:33%"><img src="img/songguo.jpg" class="peopleimg" alt="Song" /></td>
+                        <td style="width:1%"></td>
+                        <td style="width:66%;">
+                           <span style="font-weight: bold">GUO, Song</span><br />
+                           <span><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> CYT Rm
+                              3006A</span><br />
+                           <span><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a
+                                 href="mailto:songguo@ust.hk">songguo@ust.hk</a></span><br />
+                           <span><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> <a
+                                 href="http://www.cse.ust.hk/~songguo">http://www.cse.ust.hk/~songguo</a></span><br />
+                           <span><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>Office Hour: By
+                              Email Appointment</span><br />
+                           <span><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                              Find me by PathAdvisor: <a
+                                 href="http://pathadvisor.ust.hk/interface.php?roomno=cyt3006">Click Here</a>
+                        </td>
+                     </tr>
+		     <tr> -->
+                        <tbody><tr><td style="width:33%"><img src="./COMP 2211 Exploring Artificial Intelligence_files/huiru.jpeg" class="peopleimg" alt="Huiru"></td>
+                        <td style="width:1%"></td>
+                        <td style="width:66%;">
+                           <span style="font-weight: bold">XIAO, Huiru (Pearl)</span><br>
+                           <span><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Rm
+                              2538</span><br>
+                           <span><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:huiruxiao@ust.hk">huiruxiao@ust.hk</a></span><br>
+                           <span><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> <a href="https://cse.hkust.edu.hk/admin/people/faculty/profile/huiruxiao">https://cse.hkust.edu.hk/admin/people/faculty/profile/huiruxiao</a></span><br>
+                           <span><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>Office Hour: Every Wednesday from 17:30 - 18:30 (Rm 2538)</span><br>
+                           <span><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                              Find me by PathAdvisor: <a href="http://pathadvisor.ust.hk/interface.php?roomno=2538">Click Here</a>
+                        </span></td>
+                     </tr>
+                  </tbody></table>
+               </div>
+
+               <h4 id="TAs">Teaching Assistants</h4>
+               <div class="">
+                  <table class="table-hover">
+                   <tbody><tr>
+                        <td style="width:33%"><img src="./COMP 2211 Exploring Artificial Intelligence_files/gary.jpg" class="peopleimg" alt="Gary"></td>
+                        <td style="width:1%"></td>
+                        <td style="width:66%;">
+                           <span style="font-weight: bold">CHEUNG, Wing Ho (Gary)</span><br>
+                           <span><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Rm
+                              2532</span><br>
+                           <span><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:garywh@ust.hk">garywh@ust.hk</a></span><br>
+                              <span><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>Office Hour: Every Friday from 14:00 - 15:00 (CS Lab Rm 4213)</span><br>
+                           <span><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                              Find me by PathAdvisor: <a href="http://pathadvisor.ust.hk/interface.php?roomno=4213">Click Here</a></span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="width:33%"><img src="./COMP 2211 Exploring Artificial Intelligence_files/dong.jpg" class="peopleimg" alt="Dong"></td>
+                        <td style="width:1%"></td>
+                        <td style="width:66%"><span style="font-weight: bold">CHEN, Dong</span><br>
+                           <span><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> BDI UC201</span><br>
+                           <span><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:dchenbl@connect.ust.hk">dchenbl@connect.ust.hk</a></span><br>
+                           <span><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>Office Hour: Every Monday 10:00 - 11:00 (BDI UC210)</span><br>
+                           <span><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                              Find me by PathAdvisor: <a href="https://navigate.ust.hk/path/app/location/id?id=b00000000000000000000006&amp;building_floor_id=bf0000000000000000000601">Click Here</a></span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="width:33%"><img src="./COMP 2211 Exploring Artificial Intelligence_files/Yiwei.JPG" class="peopleimg" alt="Jackson"></td>
+                        <td style="width:1%"></td>
+                        <td style="width:66%"><span style="font-weight: bold">CHEN, Yiwei (Jackson)</span><br>
+                           <span><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Rm 1001 (RPG
+                              Research Hub)</span><br>
+                           <span><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:ychenmb@connect.ust.hk">ychenmb@connect.ust.hk</a></span><br>
+                           <span><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>Office Hour: Every Thursday 12:00 - 13:00 (CS Lab Rm 4221)</span><br>
+                           <span><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                              Find me by PathAdvisor: <a href="http://pathadvisor.ust.hk/interface.php?roomno=4221">Click Here</a></span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="width:33%"><img src="./COMP 2211 Exploring Artificial Intelligence_files/bella.jpg" class="peopleimg" alt="Bella"></td>
+                        <td style="width:1%"></td>
+                        <td style="width:66%"><span style="font-weight: bold">CHEN, Zheng (Bella)</span><br>
+                           <span><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Working desk 1008-03, deng36, 1F academic building</span><br>
+                           <span><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:zchenin@connect.ust.hk">zchenin@connect.ust.hk</a></span><br>
+                           <span><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>Office Hour: Every Thursday 15:30 - 16:30 (CS Lab Rm 4221)</span><br>
+                           <span><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                              Find me by PathAdvisor: <a href="http://pathadvisor.ust.hk/interface.php?roomno=4221">Click Here</a></span>
+                        </td>
+                     </tr>
+                     <tr>
+                     <td style="width:33%"><img src="./COMP 2211 Exploring Artificial Intelligence_files/Pengbo.JPG" class="peopleimg" alt="Pengbo"></td>
+                        <td style="width:1%"></td>
+                        <td style="width:66%;">
+                           <span style="font-weight: bold">LI, Pengbo</span><br>
+                           <span><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Room 3661</span><br>
+                           <span><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:plibt@connect.ust.hk">plibt@connect.ust.hk</a></span><br>
+                           <span><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>Office Hour: Every Tuesday 11:00 - 12:00 (Rm 3661)</span><br>
+                           <span><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                              Find me by PathAdvisor: <a href="http://pathadvisor.ust.hk/interface.php?roomno=3661">Click Here</a></span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="width:33%"><img src="./COMP 2211 Exploring Artificial Intelligence_files/Zhaoyang.png" class="peopleimg" alt="Zhaoyang"></td>
+                        <td style="width:1%"></td>
+                        <td style="width:66%"><span style="font-weight: bold">LIU, Zhaoyang</span><br>
+                           <span><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> The Hall of Robotics Institute</span><br>
+                           <span><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:zy.liu@connect.ust.hk">zy.liu@connect.ust.hk</a></span><br>
+                           <span><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>Office Hour: Every Tuesday 14:00 - 15:00 (The Hall of Robotics Institute, Cheng Kar-Shun Robotics Institute, Lo Ka Chung University Center)</span><br>
+                           <span><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                              Find me by PathAdvisor: <a href="https://navigate.ust.hk/path/app/location/id?id=b00000000000000000000006&amp;building_floor_id=bf0000000000000000000601">Click Here</a></span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="width:33%"><img src="./COMP 2211 Exploring Artificial Intelligence_files/jialiang.jpg" class="peopleimg" alt="Jialiang"></td>
+                        <td style="width:1%"></td>
+                        <td style="width:66%"><span style="font-weight: bold">WANG, Jialiang</span><br>
+                           <span><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> RPG Hub</span><br>
+                           <span><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:jwangic@connect.ust.hk">jwangic@connect.ust.hk</a></span><br>
+                           <span><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>Office Hour: Every Monday 11:00 - 12:00 (CS Lab Rm 4221)</span><br>
+                           <span><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                              Find me by PathAdvisor: <a href="http://pathadvisor.ust.hk/interface.php?roomno=4221">Click Here</a></span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="width:33%"><img src="./COMP 2211 Exploring Artificial Intelligence_files/linshan.jpg" class="peopleimg" alt="Linshan"></td>
+                        <td style="width:1%"></td>
+                        <td style="width:66%"><span style="font-weight: bold">WU, Linshan (Luffy)</span><br>
+                           <span><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Rm 4203</span><br>
+                           <span><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:lwubf@connect.ust.hk">lwubf@connect.ust.hk</a></span><br>
+                           <span><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>Office Hour: Every Friday 13:00 - 14:00 (Rm 4203)</span><br>
+                           <span><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                              Find me by PathAdvisor: <a href="http://pathadvisor.ust.hk/interface.php?roomno=4203">Click Here</a></span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="width:33%"><img src="./COMP 2211 Exploring Artificial Intelligence_files/ho-hin.jpg" class="peopleimg" alt="Nathan"></td>
+                        <td style="width:1%"></td>
+                        <td style="width:66%;">
+                           <span style="font-weight: bold">LI, Ho Hin (Nathan) (UGTA)</span><br>
+                           <span><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:hhliag@connect.ust.hk">hhliag@connect.ust.hk</a></span><br>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="width:33%"><img src="./COMP 2211 Exploring Artificial Intelligence_files/rickson.jpg" class="peopleimg" alt="Rickson"></td>
+                        <td style="width:1%"></td>
+                        <td style="width:66%;">
+                           <span style="font-weight: bold">TAN, Rickson Caleb (UGTA)</span><br>
+                           <span><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:rctan@connect.ust.hk">rctan@connect.ust.hk</a></span><br>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="width:33%"><img src="./COMP 2211 Exploring Artificial Intelligence_files/liren.jpg" class="peopleimg" alt="Leo"></td>
+                        <td style="width:1%"></td>
+                        <td style="width:66%;">
+                           <span style="font-weight: bold">ZHANG, Liren (Leo) (UGTA)</span><br>
+                           <span><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:lzhangeg@connect.ust.hk">lzhangeg@connect.ust.hk</a></span><br>
+                        </td>
+		     </tr>
+                     <!--<tr>
+                           <td style="width:33%"><img src="img/placeholder.png" class="peopleimg" alt="placeholder"/></td>
+                           <td style="width:1%"></td>
+                           <td style="width:66%;">
+                              <span style="font-weight: bold">CHAN, Tai Man</span><br/>
+                              <span><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Rm XXXX</span><br/>
+                              <span><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:xxxx@ust.hk">xxxx@ust.hk</a></span><br/>
+                              <span><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>Office Hour: To be determined</span><br/>
+                              <span><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                              Find me by PathAdvisor: <a href="http://pathadvisor.ust.hk/interface.php?roomno=xxxx">Click Here</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="width:33%"><img src="img/placeholder.png" class="peopleimg" alt="placeholder"/></td>
+                           <td style="width:1%"></td>
+                           <td style="width:66%;">
+                              <span style="font-weight: bold">CHAN, Tai Man</span><br/>
+                              <span><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Rm XXXX</span><br/>
+                              <span><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:xxxx@ust.hk">xxxx@ust.hk</a></span><br/>
+                              <span><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>Office Hour: To be determined</span><br/>
+                              <span><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                              Find me by PathAdvisor: <a href="http://pathadvisor.ust.hk/interface.php?roomno=xxxx">Click Here</a>
+                           </td>
+                        </tr>-->
+                  </tbody></table>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Lectures Section -->
+   <section id="lectures" class="lectures-section">
+      <div class="container">
+         <div class="row">
+            <h3 class="titleheader">Lectures</h3>
+            <div class="col-lg-12">
+               <div id="Lec1" class="">
+                  <br>
+                  <p>The schedule listed below is tentative. Instructors may have some adjustments subject to the
+                     progress.</p>
+                  <br>
+                  <div class="table-responsive regulartable" style="border:none">
+                     <table class="table-hover">
+                        <tbody><tr>
+                           <th style="text-align: center; width:8%">Week#</th>
+                           <th style="text-align: center; width:30%">Topics</th>
+                           <th style="text-align: center; width:15%">Download</th>
+                           <th style="text-align: center; width:25%">Reading</th>
+                           <th style="text-align: center">Code / Additional Materials</th>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center">1</td>
+                           <td>Course Logistics</td>
+                           <td style="text-align: center">
+                              <a href="https://course.cse.ust.hk/comp2211/notes/0-logistics.pdf">0-logistics</a><br>(28 August 2025)<br>
+                           </td>
+                           <td></td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center">1</td>
+                           <td>Introduction to Artificial Intelligence</td>
+                           <td style="text-align: center">
+                              <a href="https://course.cse.ust.hk/comp2211/notes/1-introduction.pdf">1-introduction</a><br>(1 September 2025)
+                              </td>
+                           <td>
+                              <ul style="margin-left:-20px">
+                                 <li>A Complete History of AI: <a href="https://www.g2.com/articles/history-of-artificial-intelligence">Here</a>
+                                 </li>
+                                 <li>Meaning of Turing Test Nowadays: <a href="https://www.nature.com/articles/d41586-023-02361-7">Here</a></li>
+                              </ul>
+                           </td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center">1-3</td>
+                           <td>Advanced Python for Artificial Intelligence</td>
+                           <td style="text-align: center">
+                              <a href="https://course.cse.ust.hk/comp2211/notes/2-advanced-python.pdf">2-advanced-python</a>
+                              <br>(Updated on 16 Sep)
+                           </td>
+                           <td>Learning Python, O'Reilly: <a href="https://lbdiscover.ust.hk/bib/991012882953303412">Here</a> <br>- Chapter 4-5,
+                              7-18, 20, 22-23, 26-27</td>
+                           <td>
+                              <div style="text-align:center"><a href="https://course.cse.ust.hk/comp2211/notes/python-fundamentals-advanced-program.zip">Program</a></div>
+                              <div style="text-align:center">Python Fundamentals (Revision): <br><a href="https://course.cse.ust.hk/comp2211/notes/self-study-python-fundamentals-revision.pdf">Supplementary notes for self-study Python fundamentals</a> </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center">4</td>
+                           <td>Naive Bayes Classifier</td>
+                           <td style="text-align: center">
+                              <a href="https://course.cse.ust.hk/comp2211/notes/3-naive-bayes.pdf">3-naive-bayes</a>
+                              <br>(10 September 2025)
+                           </td>
+                           <td>Python: Beginner's Guide to AI: <br>- Chapter 12 P.266-P.275<br>
+                              Artificial Intelligence with Python: <a href="https://lbdiscover.ust.hk/bib/991012884447803412">Here</a><br>- Chapter 2
+                              P.42-P.46
+                           </td>
+                           <td>
+                              <div style="text-align:center"><a href="https://course.cse.ust.hk/comp2211/notes/naive-bayes-program.zip">Program</a></div>
+                              <div style="text-align:center">Supp. notes 1: <a href="https://course.cse.ust.hk/comp2211/notes/supp-bayes-theorem-proof.pdf">A Proof of Bayes' Theorem</a></div>
+                              <div style="text-align:center">Supp. notes 2: <a href="https://course.cse.ust.hk/comp2211/notes/supp-naive-bayes-problem.pdf">Continuous Variables</a>
+                           </div></td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center">5</td>
+                           <td>K-Nearest Neighbors Classifier</td>
+                           <td style="text-align: center">
+                              <a href="https://course.cse.ust.hk/comp2211/notes/4-k-nearest-neighbor.pdf">4-k-nearest-neighbor</a>
+                              <br>(Updated on 30 Sep)
+                           </td>
+                           <td>Python: Beginner's Guide to AI:<br>- Chapter 8 P.161-P.176<br>Artificial Intelligence
+                              with Python: <a href="https://julac.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=HKUST_IZ51246330040003412&amp;vid=HKUST">Here</a>
+                              <br>- Chapter 5 P.132-P.143</td>
+                           <td>
+                              <div style="text-align:center"><a href="https://course.cse.ust.hk/comp2211/notes/k-nearest-neighbors-program.zip">Program</a>
+                              </div>
+                              <div style="text-align:center">Supp. notes 1: <a href="https://course.cse.ust.hk/comp2211/notes/supp-k-nearest-neighbor-standard-deviation.pdf">Population and Sample Standard Deviation</a></div>
+                              <div style="text-align:center">Supp. notes 2: <a href="https://course.cse.ust.hk/comp2211/notes/supp-k-nearest-neighbor-square-root-of-n.pdf">Rule of Thumb to Select K</a></div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center">5</td>
+                           <td>K-Means Clustering</td>
+                           <td style="text-align: center">
+                              <a href="https://course.cse.ust.hk/comp2211/notes/5-k-means-clustering.pdf">5-k-means-clustering</a><br>(23 September 2025)
+                              </td>
+                           <td>Python: Beginner's Guide to AI:<br>- Chapter 6 P.111-P.122<br>
+                              Artificial Intelligence with Python: <a href="https://julac.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=HKUST_IZ51246330040003412&amp;vid=HKUST">Here</a><br>
+                              - Chapter 4 P.97-P.124</td>
+                           <td>
+                              <div style="text-align:center"><a href="https://course.cse.ust.hk/comp2211/notes/k-means-clustering-program.zip">Program</a>
+                                 <br>
+                                 Supp. notes 1: <a href="https://course.cse.ust.hk/comp2211/notes/supp-k-means-clustering-minimized.pdf">The Convergence of K-Means Clustering</a>
+                                 <br>
+                                 Supp. notes 2: <a href="https://course.cse.ust.hk/comp2211/notes/supp-k-means-clustering-pca.pdf">Principal Component Analysis</a>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center">6</td>
+                           <td>Artificial Neural Network - Neuron</td>
+                           <td style="text-align: center">
+                              <a href="https://course.cse.ust.hk/comp2211/notes/6-artificial-neuron.pdf">6-artificial-neuron</a><br>(3 October 2025)
+                              </td>
+                           <td>Artificial Intelligence with Python: <a href="https://julac.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=HKUST_IZ51246330040003412&amp;vid=HKUST">Here</a><br>-
+                              Chapter 14 P.356 - P.366</td>
+                           <td>
+                              <div style="text-align:center"><a href="https://course.cse.ust.hk/comp2211/notes/ann-perceptron-program.zip">Program</a>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center">7</td>
+                           <td>Artificial Neural Network - Multilayer Perceptron</td>
+                           <td style="text-align: center">
+                              <a href="https://course.cse.ust.hk/comp2211/notes/7-ann-mlp.pdf">7-ann-mlp</a><br>(14 October 2025)
+                           </td>
+                           <td>Artificial Intelligence with Python: <a href="https://julac.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=HKUST_IZ51246330040003412&amp;vid=HKUST">Here</a><br>-
+                              Chapter 14 Page 366 - 371<br>
+                              Activation Functions in Neural Networks: <a href="https://www.v7labs.com/blog/neural-networks-activation-functions">Here</a></td>
+                           <td>
+                              <div style="text-align:center"><a href="https://course.cse.ust.hk/comp2211/notes/ann-multilayer-perceptron-program.zip">Program</a>
+                                 <br>
+                                 Supp. notes: <a href="https://course.cse.ust.hk/comp2211/notes/supp-multilayer-perceptron-backpropagation.pdf">Derivation of Backpropagation</a>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center">8</td>
+                           <td>Digital Image Processing Fundamentals</td>
+                           <td style="text-align: center">
+                              <a href="https://course.cse.ust.hk/comp2211/notes/8-image-processing.pdf">8-image-processing</a><br>(3 November
+                              2025)
+                           </td>
+                           <td>Python Image Processing Cookbook: <a href="https://lbdiscover.ust.hk/bib/991012888737803412">Here</a><br>- Chapter
+                              1.1-1.3, 2.1, 2.5, 4.1-4.2</td>
+                           <td>
+                              <div style="text-align:center"><a href="https://course.cse.ust.hk/comp2211/notes/image-processing-fundamentals-program.zip">Program</a></div>
+                                   
+                                 Supp. notes: <a href="https://course.cse.ust.hk/comp2211/notes/supp-more-image-processing.pdf">More Image Processing</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center">9</td>
+                           <td>Convolutional Neural Network</td>
+                           <td style="text-align: center">
+                              <a href="https://course.cse.ust.hk/comp2211/notes/9-cnn.pdf">9-cnn</a><br>(10 November 2025)
+                              </td>
+                           <td>Python: Beginner's Guide to AI: <br>- Chapter 19 P.427-P.465<br>Artificial
+                              Intelligence with Python: <a href="https://julac.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=HKUST_IZ51246330040003412&amp;vid=HKUST">Here</a><br>-
+                              Chapter 16 Page 399 - 416</td>
+                           <td>
+                              <div style="text-align:center"><a href="https://course.cse.ust.hk/comp2211/notes/cnn-program.zip">Program</a></div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center">11</td>
+                           <td>Minimax and Alpha-Beta Pruning</td>
+                           <td style="text-align: center">
+                              <a href="https://course.cse.ust.hk/comp2211/notes/10-minimax.pdf">10-minimax</a><br>(17 November 2025)
+                              </td>
+                           <td>Artificial Intelligence with Python: <a href="https://lbdiscover.ust.hk/bib/991012884447803412">Here</a><br>- Chapter 9 P.236
+                              - P.247</td>
+                           <td>
+                              <div style="text-align:center"><a href="https://course.cse.ust.hk/comp2211/notes/minimax-program.zip">Program</a></div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center">12</td>
+                           <td>Ethics of Artificial Intelligence</td>
+                           <td style="text-align: center">
+                              <a href="https://course.cse.ust.hk/comp2211/notes/11-ai-ethics.pdf">11-ai-ethics</a> <br>(24 November 2025)
+                              </td>
+                           <td>AI and the Future of Humanity by Yuval Noah Harari: <a href="https://www.youtube.com/watch?v=LWiM-LuRe6w">Here</a><br>
+                              <a href="https://www.moralmachine.net/">Moral Machine website</a>
+                           </td>
+                           <td>
+                              <div style="text-align:center"></div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center">13</td>
+                           <td>Introduction to Reinforcement Learning <span style="color:red">(Optional)</span></td>
+                           <td style="text-align: center">
+                              <!-- <a href="notes/12-reinforcement-learning-full.pdf">Full</a> /
+                              <a href="notes/12-reinforcement-learning-4page.pdf">4-page</a><br />(1 February 2025) -->
+                           </td>
+                           <td>Python: Beginner's Guide to AI:<br>- Chapter 1 Page 8 - P.26<br>
+                              Artificial Intelligence with Python: <a href="https://lbdiscover.ust.hk/bib/991012884447803412">Here</a><br>- Chapter 15
+                              P.385 - P.398
+                           </td>
+                           <td></td>
+                        </tr>
+                     </tbody></table>
+                  </div>
+                  <br>
+               </div>
+            </div>
+         </div>
+         <br>
+         <!--<h4>Lecture Attendance via Zoom</h4>
+        <p>Lectures this semester will only be held via 
+Zoom meetings (until we switch to mixed-mode lite of 
+teaching later in the 
+semester, if possible). The links for the meetings are 
+<a href="#schedule">here</a>. 
+Before you join a meeting for the first time, visit <a 
+href="https://hkust.zoom.us/", target = _blank>this page</a> and sign in to Zoom using your HKUST e-mail, as our lecture meetings will require HKUST user authentication. When attending a lecture meeting, make sure to set up your screen username to:
+        
+        <br/><br/>
+        <span style="color:red">LASTNAME Firstname studentusername</span> E.g., CHAN Wing Ho cwingho<br/><br/>
+        
+        During a Zoom meeting, please remain muted in order to avoid background noise. If you have questions, you can push the Raise Hand button which will signal this to the instructor who will unmute you. You can also use the Chat function to post questions or comments, if it is enabled by the instructor. We strongly recommend that you join with your camera turned on as this helps create a more interactive online classroom experience. In the first lecture of the semester we will go over the Zoom meeting controls with you but if your have not used Zoom previously we suggest that you play around with it a bit in order to become familiar. You can find a good general set of guidelines <a href="http://cei.ust.hk/zoom-teaching-good-practices-and-faqs", target =_blank>here</a>.</p>
+		<br/>-->
+         <!--<h4>Lecture Videos</h4>
+		<p>Zoom lecture videos will be published on the supplementary website (<a 
+href="https://www.cse.ust.hk/~desmond/comp2211/Password_Only/">https://www.cse.ust.hk/~desmond/comp2211/Password_Only/</a>) 
+after each lecture class depending on when they become available.
+		</p>-->
+      </div>
+      
+   </section>
+   <!-- Honor Code Section -->
+   <section id="honorcode" class="honorcode-section">
+      <div class="container">
+         <div class="row">
+            <h3 class="titleheader">Honor Code</h3>
+            <div class="col-lg-12">
+               <!--<ul>                     
+                     <li>Anyone &mdash; both the copier and the copiee &mdash; caught cheating on their assignments will get zero marks for the assignment. In
+                        addition, they BOTH will get an additional 10% deduction from the <strong>final grade</strong> for the first time of cheating.
+                        Anyone get caught for cheating in an assignment for the second time will get an immediate FAIL grade.<br />
+                     </li>
+                     <li>On the other hand, anyone caught cheating in the final exam will get a FAIL grade <strong>immediately</strong>.</li>
+                     <li>There can be additional disciplinary actions as well from the department and university.</li>
+                  </ul>-->
+               <p>Honesty and integrity are central to academic work.
+                  You must observe and uphold the highest standards of academic integrity and
+                  honesty in all the work (lab exercises, programming assignments, exams, etc.) you do in this course.
+                  We deal with cheating
+                  cases seriously
+                  and the maximum penalty is a FAIL in the course plus additional
+                  disciplinary actions from the CSE Department as well as from the
+                  University. Both the copier(s) and the copiee will be punished, and the
+                  penalty will be more than just a zero mark in your assignments/exams.</p>
+               <p>Here are links to the <a href="http://ugadmin.ust.hk/integrity/student-1.html" class="contentlink">University's Honor code</a>, and the <a href="http://ugadmin.ust.hk/integrity/student-5.html" class="contentlink">University's Penalties
+                     for Cheating</a>.</p>
+               If you are not sure what is considered plagiarism,
+               <ul>
+                  <li> <span style="color:red">Do NOT use generative artificial intelligence tools like ChatGPT or
+                        similar software for your labs and programming assignments.</span></li>
+                  <li> <span style="color:red">Do NOT copy program codes from another student/person.</span></li>
+                  <li> <span style="color:red">Do NOT look at the actual program codes of another student.</span></li>
+                  <li> <span style="color:red">Do NOT share actual program codes with other students/people (by paper,
+                        emails, blogs, FB, Google Doc, etc.).</span></li>
+                  <li> <span style="color:red">Do NOT give your program codes to other students who ask for it, and do
+                        not ask for a copy of their code either.</span></li>
+                  <li> <span style="color:red">Do NOT post your program codes anywhere online.</span></li>
+                  <li> <span style="color:red">Do NOT leave your finished/unfinished program codes unattended.</span>
+                  </li>
+                  <li> <span style="color:red">While we encourage discussion among students, you have to write codes on
+                        your own.</span> </li>
+                  <li> <span style="color:red">During discussion, you should NOT go to the details such that everyone
+                        will end up in the same code.</span></li>
+               </ul>
+               The list is by no means exhaustive, and you will need to
+               use your own discretion.
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Labs Section -->
+   <section id="labs" class="labs-section">
+      <div class="container">
+         <div class="row">
+            <h3 class="titleheader">Labs</h3>
+            <div class="col-lg-12">
+               <p>The lab exercises are designed to help you learn a AI programming with on-the-spot advices of a
+                  teaching assistant. All the TAs assigned to the course are very experienced in AI programming. It is
+                  more a service to you than
+                  an exercise for the marks. The 10% mark is only set to encourage you to make good use of the lab time.
+                  Although we don't expect you to finish the lab exercise before you attend the lab, we expect you to
+                  have
+                  read the lab's materials and understand what you are required to do.
+               </p><br>
+               <p>We will use Google Colaboratory (aka Google Colab) as the development platform for AI programming.
+                  Please
+                  read the following tutorial which will help you get started:</p>
+               <ul>
+                  <li><a href="https://course.cse.ust.hk/comp2211/labs/colab-tutorial/index.html">Google Colaboratory and Usage</a></li>
+               </ul>
+               <br>
+               <p>
+                  To get point for the lab, you are requied to attend the lab and finish the requirement / program, and
+                  submit it to the <a href="https://zinc.cse.ust.hk/">ZINC (automatic grading system)</a> on or
+                  before the deadline as stated on the lab page. There are 10 lab exercises, only 5 of them will be
+                  graded. Each graded lab
+                  is worth
+                  10 points. Only the best 4 out of the 5 graded labs will be count towards to final grade. No late lab
+                  assignment will be
+                  accepted.
+               </p><br>
+               <p>Each lab attendance will be award 1 point. Since there are a
+                  total of 9 lab meetings, the maximum attendance point you can earn is 9.</p>
+               <p>By taking the attendance scores and ZINC scores into account, the final total lab points are
+                  calculated as
+                  follows:<br>
+                  <span style="color:red">Final total lab points = ((attendance points + best 4 lab scores from ZINC) /
+                     49) *
+                     10</span>
+               </p>
+               <br>
+               <p>
+                  <span style="font-weight:bold">[Public holiday exception]</span>
+                  <br>
+                  If a day is a public holiday, students are not required to attend the labs held on that day. There
+                  will be no attendance points
+                  for these labs for only those students who originally are supposed to attend these labs; other
+                  students are not affected. As different
+                  students may be affected by different public holidays, the final total lab points will be normalized
+                  according to the number of
+                  labs a student has to take. However, although a student may not need to attend a lab on a day that
+                  happens to be a public
+                  holiday, we strongly encourage the student to still go over the materials of that lab and try to
+                  finish it. Labs help students
+                  review what they are taught in lectures and get ready for the next lab.
+                  <br><br>
+                  This policy will also apply to situations when classes/labs are cancelled due to, e.g., adverse
+                  weather conditions, etc.
+               </p>
+               <br>
+               <div class="table-responsive regulartable" style="border:none">
+                  <table class="table-hover">
+                     <tbody><tr>
+                        <th>Date</th>
+                        <th>Topic</th>
+                        <th>Solution</th>
+                        <th>Videos/Tutorial Notes</th>
+                     </tr>
+                     <tr>
+                        <td>Sep 1, 2, 8 &amp; 9</td>
+                        <td colspan="3" style="color:red">No lab in the first two weeks. Additional lectures will be
+                           conducted
+                           to strengthen your Python programming skills.</td>
+                     </tr>
+                     <tr>
+                        <td>Sep 15 &amp; 16</td>
+                        <td><a href="https://course.cse.ust.hk/comp2211/labs/lab1/">Lab 1 - NumPy</a></td>
+                        <td style="text-align:center"><a download="" href="https://course.cse.ust.hk/comp2211/labs/lab1/files/lab1_review_with_sol.ipynb">Review Solution</a> <br>
+                           <a download="" href="https://course.cse.ust.hk/comp2211/labs/lab1/files/lab1_task_with_sol.ipynb">Task Solution</a> <br>
+                        </td>
+                        <td>
+                           <ul>
+                              <li>LA1: N/A</li>
+                              <li>LA2: <a href="https://hkust.zoom.us/rec/share/LEXO18IzqyqxSyqlyBiay9FClnIujG57Fq01D-HdoyCBbJEx9A_NvcIAuFRXUtJC.latppfjGLDg6upk5?startTime=1757994978000">Recording</a>
+                              </li>
+                           </ul>
+                        </td>
+                        
+                        <!-- 
+                        <td style="text-align:center"><a download
+                              href="labs/lab1/files/lab1_review_with_sol.ipynb">Review Solution</a> <br />
+                           <a download href="labs/lab1/files/lab1_task_with_sol.ipynb">Task Solution</a> <br />
+                        </td>
+                        <td>
+                           <ul>
+                              <li>LA1: <a
+                                    href="">Recording</a>
+                              </li>
+                           </ul>
+                        </td> -->
+                     </tr>
+                     <tr>
+                        <td>Sep 22 &amp;23</td>
+                        <td><a href="https://course.cse.ust.hk/comp2211/labs/lab2/">Lab 2 - Naive Bayes</a></td>
+                        <td style="text-align:center">
+                           <a download="" href="https://course.cse.ust.hk/comp2211/labs/lab2/files/lab2_task_with_sol.ipynb">Task Solution</a> <br>
+                        </td>
+                        <td>
+                           <ul>
+                              <li>LA1: <a href="https://hkust.zoom.us/rec/share/npV9OqL6EoRL0v1PqGhwBesK2Dbxk7TsiUO6nQvf957gW3exoaZV4Cuj-CrXB0a_.yeYKHxVIfhFa3MZ_?from=hub">Recording</a>
+                              </li>
+                              <li>
+				      LA2: <a href="https://hkust.zoom.us/rec/play/KvCTo2vv-6IVpuO0WUXJrp-NO2Hx2b--0x7kFyeMldM4dfnzrYHvA74gJDD0osNrrLQpuWG4jkes3Wdm.SIInKKxp0xIhoDar">Recording</a> 
+                              </li>
+                           </ul>
+                        </td> 
+                     </tr>
+
+                     <tr>
+                        <td>Sep 29 &amp; 30</td>
+                        <td><a href="https://course.cse.ust.hk/comp2211/labs/lab3/">Lab 3 - K-Nearest Neighbors Classifier</a></td>
+                        <td style="text-align:center"> <a download="" href="https://course.cse.ust.hk/comp2211/labs/lab3/files/lab3_solution.ipynb">Task
+                              Solution</a> <br>
+                        </td>
+			              
+                        <td>
+                           <ul>
+                              <li>LA1: <a href="https://hkust.zoom.us/rec/share/060AIBABnVBNgaYUzmQe8508JsVkqBPvmznu3KbCJK2YAStcNrmeDo-niHva0y54.r9AbQeh10vIroYuj?from=hub">Recording</a>
+                              </li>
+                              <li>LA2: <a href="https://hkust.zoom.us/rec/share/_AhdQU1ev0fWINzGU77Or5Fbj-t7UpW9ycG4TEgIB0gPxiLlhJiZJu_4iFpfWaRn.KWqCppsQGWnBJszz?from=hub">Recording</a>
+                              </li>
+                           </ul> 
+                        </td>
+                     </tr>
+
+                     <tr>
+                        <td>Oct 13 &amp; 14</td>
+                        <td><a href="https://course.cse.ust.hk/comp2211/labs/lab4/">Lab 4 - K-Means Clustering</a></td>
+                        <td style="text-align:center">
+                           <a href="https://course.cse.ust.hk/comp2211/labs/lab4/files/lab4_task_with_solution.ipynb">Task Solution</a> <br>
+                        </td>
+                        <td>
+                           <ul>
+                              <li>LA1: <a href="https://hkust.zoom.us/rec/share/OEnSG2VkH_i5r41pcO1p9Hs14NnvL1mO-BQC0ojCuAa2Kr8rbxIExfyVgSFbnfd_.KKqLFcKkQt_iHocz?from=hub">Recording</a>(<a href="https://course.cse.ust.hk/comp2211/labs/lab4/files/Lab4_convergence_proof.pdf">proof</a>)
+                              </li>
+                              <li>LA2: <a href="https://hkust.zoom.us/rec/share/PDxKKiHW3H0108VpAGv8q9py1sWoRrcf5kT_WlTkozk4wbtiJIN-rRv_ZZ-yCorN.SINE8wpdi_SGNiwN?startTime=1760414343000">Recording</a>
+                              </li>
+                           </ul>
+                        </td> 
+                     </tr>
+                     <tr>
+                        <td>Oct 20 &amp; 21</td>
+                        <td><a href="https://course.cse.ust.hk/comp2211/labs/lab5/">Lab 5 - Artificial Neuron</a></td>
+                        <td style="text-align:center">
+                              <a download="" href="https://course.cse.ust.hk/comp2211/labs/lab5/files/lab5_task_solution.ipynb">Task
+                              Solution</a> <br>
+                        </td><td>
+                           <ul>
+                            
+                              <li>LA1: <a href="https://hkust.zoom.us/rec/share/4BhCs7j9JXbJPdvS8ZJkXtn_DqVyYzGeM5DMN3Nl4VeNW5k0LgYwHOfU9a1jozky._BBhX4D4qRM7P_ds?from=hub">Recording</a>
+                                 </li>
+                              <li>LA2: <a href="https://hkust.zoom.us/rec/share/gsla3GI0SlzzXGex6KjB4-buV4t2COQI04XFT3TcG9MzQO-hwjwczuGLMbAFFOmd.qaiO1Bn3X_DGYqKO?from=hub">Recording</a>
+                                 </li>
+                               
+                           </ul>
+                        </td>
+                     </tr>
+
+                     <tr>
+                        <td>Nov 3 &amp; 4</td>
+                        <td><a href="https://course.cse.ust.hk/comp2211/labs/lab6/">Lab 6 - Multi-Layer Perceptron</a></td>
+                        <td style="text-align:center">
+                           <a href="https://course.cse.ust.hk/comp2211/labs/lab6/files/lab6_solution.ipynb">Task Solution</a> <br>
+                        </td>
+                        <td>
+                           <ul>
+                             <li>LA1: <a href="https://hkust.zoom.us/rec/share/N-NhfR0tViNOpIi8cMPiWce8Y3zaGehZcj0N6haSl38aq5ZnweG0t23dkocjZIFZ.8q63mSj0Ubsxguv2?from=hub">Recording</a>
+			                     </li>
+                              <li>LA2: <a href="https://hkust.zoom.us/rec/share/QA1A991qT6twM7beJQxyIy1M3KRd0AqlRlGyqFJgq9gMxIwpsTXygkljJjCorn96.2tyMwnK555c5BsXb?from=hub">Recording</a>
+			                     </li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>Nov 10 &amp; 11</td>
+                        <td><a href="https://course.cse.ust.hk/comp2211/labs/lab7/">Lab 7 - Digital Image Processing Fundamentals</a></td>
+                           <td style="text-align:center">
+                                 <a download="" href="https://course.cse.ust.hk/comp2211/labs/lab7/lab7_task_sol.ipynb">Task Solution</a>
+                           </td>
+                        <td>
+                           <ul>
+                              <li>LA1: <a href="https://hkust.zoom.us/rec/share/irHv1YPNftUnLDgb8UctyCTTxKcudAUbgEveuaTyRfFFYiaa3zXZLPMMAmoCMyPL.0xhKDdISwKuW_dS9?from=hub">Recording</a>
+                              </li>
+                              <li>LA2: <a href="https://hkust.zoom.us/rec/share/iUbICKLC_h_5xT5xyDyjOv6SGFz0qhSbrVQt_TRnXrdcmnWZCk1hBhPbXqVauOZt.GW_tp1bTPTimjFV9?from=hub">Recording</a>
+                              </li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>Nov 17 &amp; 18</td>
+                        <td><a href="https://course.cse.ust.hk/comp2211/labs/lab8/">Lab 8 - Image Classification (CNN) </a></td>
+                        <td style="text-align:center">
+                           <!--Solution here-->
+                        </td>
+                        <td>
+                           <ul>
+                              <li>LA1: <a href="https://hkust.zoom.us/rec/share/YFdgrF6y1xxhfqyzJcpeki9SJHmP8GZjJ5nfXaHbI3I42df9rLgyS2yJSOAq2g3d._jCPUfh7bOZZBF5r?from=hub">Recording</a>
+                              </li>
+                              <li>LA2: <a href="https://hkust.zoom.us/rec/share/x1SbVdwBnKOBnxGIrKgnbJzEvGyQ-WaEWUh4TK8OD8mgF1lVw2IiyKIPzVnAHWNe.FSpRjVBg_RjJ1iOZ?from=hub">Recording</a>
+                              </li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>Nov 24 &amp; 25</td>
+                        <td><a href="https://course.cse.ust.hk/comp2211/labs/lab9/">Lab 9 - Minimax and Alpha-Beta Pruning</a></td>
+                        <td style="text-align:center">
+                           <!--Solution here-->
+                        </td>
+                        <td>
+                           <ul>
+                              <li>LA1: <a href="https://hkust.zoom.us/rec/share/QTovS9auT1wddpFoo3qqkssJHLy3hMZUR9w41wZL6qY7Rn8WkD3Hy1bKvdNzjJiy.siKZJzEu7z2ek5RJ?from=hub">Recording</a>
+                              </li>
+                              <li>LA2: <a href="https://hkust.zoom.us/rec/share/M9DOyS3Ob54xa0WG4rk6kCpFm2hQYOkm94hlgOD7DdQROuKCswZLyuJdGr3Njgkr.bbiAMR_Y3skc1Bkh?from=hub">Recording</a>
+                              </li>
+                           </ul>
+                        </td>
+                     </tr>
+                    
+                     <!--   
+                        <tr>
+
+                           <td>November 21</td>
+                           <td><a href="labs/lab9/">Lab 9 - Minimax and Alpha-Beta Pruning </a></td>
+			   <td style="text-align:center">
+				   <a download href="labs/lab9/files/lab9_solution.ipynb">Solution</a>
+			   </td>
+                           <td>
+				<ul>
+					<li>LA1: <a href="https://rvcmedia.ust.hk/media/?path=24FA_COMP2211-LA1_241121_CyvUHUlnkO">Video</a></li>
+					<li>LA2: <a href="https://rvcmedia.ust.hk/media/?path=24FA_COMP2211-LA2_241121_8NELEvqRLw">Video</a></li>
+				</ul>
+                           </td>
+                        </tr>
+
+                      <tr>
+                           <td>November 30</td>
+                           <td><a href="labs/lab10/"> Lab 10 - Reinforcement Learning </a></td>
+                           <td style="text-align:center">
+                              <a href="labs/lab10/files/lab10_solution.ipynb">Solution</a>
+                           </td>
+                           <td>
+				<ul>
+					None. This is an optional Lab. 
+				</ul>
+                           </td>
+                              </tr>-->
+
+                     <!--
+                        <tr>
+                           
+                           <td>Nov 23 &amp; 24</td>
+                           <td><a href="labs/lab9/">Lab 9 - Minimax and Alpha-Beta Pruning  </a></td>
+			   <td style="text-align:center"><a href="labs/lab9/files/lab9_solution.py">Solution</a></td>
+                           <td>
+				<ul>
+					<li>LA1: <a href="https://rvcmedia.ust.hk/media/?path=23FA_COMP2211-LA1_231123_p39kwvDe5v">Video</a></li>
+					<li>LA2: <a href="https://rvcmedia.ust.hk/media/?path=23FA_COMP2012-LA2_231123_HKfV5r7TJl">Video</a></li>
+				</ul>
+                           </td>
+                              </tr>
+                        <tr>
+                           <td>Nov 30 &amp; Dec 1</td>
+                           <td><a href="labs/lab10/">Lab 10 - Reinforcement Learning  </a></td>
+                           <td style="text-align:center">
+                              <a href="labs/lab10/files/lab10_tasks_sol.ipynb">Solution</a>
+                           </td>
+                           <td>
+				<ul>
+					None. This is an optional Lab. 
+               <li>LA1: <a href="https://rvcmedia.ust.hk/media/?path=23FA_COMP2211-LA1_231123_p39kwvDe5v">Video</a></li>
+					<li>LA2: <a href="https://rvcmedia.ust.hk/media/?path=23FA_COMP2012-LA2_231123_HKfV5r7TJl">Video</a></li>
+				</ul>
+                           </td>
+                              </tr>-->
+
+                     <!--<tr>
+			   <td>
+                           </td>
+                        </tr>
+                         <tr>
+                           <td>April 17</td>
+                           <td><a href="labs/lab7/">Lab 7 - Digital Image Processing Fundamentals</a></td>
+                           <td style="text-align:center">
+                              <a href="labs/lab7/lab7_task_sol.ipynb">Solution</a>
+                          </td>
+			   <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>April 24</td>
+                           <td><a href="labs/lab8/">Lab 8 - Image Classification (CNN)</a></td>
+                           <td style="text-align:center">
+                              <a href="labs/lab8/lab8_task_sol.ipynb">Solution</a>
+                           </td>
+			   <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>May 1</td>
+                           <td><a href="labs/lab9/">Lab 9 - Minimax and Alpha-Beta Pruning</a></td>
+                           <td style="text-align:center">
+                             <a href="labs/lab9/files/lab9_solution.ipynb">Solution</a>
+                           </td>
+			   <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>Optional</td>
+                           <td><a href="labs/lab10/">Lab 10 - Reinforcement Learning</a></td>
+                           <td style="text-align:center">
+                             <a href="labs/lab10/files/lab10_tasks_sol.ipynb">Solution</a>
+                           </td>
+			   <td>
+                           </td>
+                        </tr>-->
+                  </tbody></table>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Assignments Section -->
+   <section id="assignments" class="projects-section">
+      <div class="container">
+         <div class="row">
+            <h3 class="titleheader">Programming Assignments</h3>
+            <div class="table-responsive regulartable" style="border:none">
+               <table class="table-hover">
+                  <tbody><tr>
+                     <th>Topic</th>
+                     <th style="text-align:center">TA-in-charge</th>
+                     <th>Solution and Appeal</th>
+                  </tr>
+                  <tr>
+                     <td><a href="https://course.cse.ust.hk/comp2211/assignments/pa1/">Programming Assignment 1</a></td>
+                     <td style="text-align:center">CHEN, Yiwei (<a href="mailto:ychenmb@connect.ust.hk">ychenmb@connect.ust.hk</a>) &amp; <br>TAN, Rickson Caleb (<a href="mailto:rctan@connect.ust.hk">rctan@connect.ust.hk</a>)
+                     </td>
+                     <td style="text-align:center">
+                        <a href="https://course.cse.ust.hk/comp2211/assignments/pa1/solution/pa1_sol.ipynb">Solution</a>
+                        <br>
+                        and
+                        <br>
+                        <a href="https://course.cse.ust.hk/comp2211/assignments/pa1_appeal/index.html">PA1 Appeal</a>
+                     </td>
+                  </tr>
+                  <tr>
+                        <td><a href="https://course.cse.ust.hk/comp2211/assignments/pa2/">Programming Assignment 2</a></td>
+                        <td style="text-align:center">Gary CHEUNG Wing Ho(<a href="mailto:garywh@ust.hk">garywh@ust.hk</a>) &amp;
+                           <br> ZHANG, Liren (Leo) (<a href="mailto:lzhangeg@connect.ust.hk">lzhangeg@connect.ust.hk</a>)</td>
+                        <td style="text-align:center">
+                           N/A
+                        </td>
+                     </tr>
+               </tbody></table>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Exam Section -->
+   <section id="exams" class="exam-section">
+      <div class="container">
+         <div class="row">
+            <h3 class="titleheader">Exam</h3>
+            <div class="col-lg-8">
+               <h4>Midterm Exam</h4>
+               <ul>
+                  <li>Date: October 28 (Tue)</li>
+                  <li>Time: 7:30pm to 9:30pm</li>
+                  <li>Venue: Check <a href="https://course.cse.ust.hk/comp2211/seat.html">here</a></li>
+                  <li>
+                     Scope:
+                     <ul>
+                        <li>Introduction to Artificial Intelligence</li>
+                        <li>Advanced Python for Artificial Intelligence</li>
+                        <li>Naive Bayes Classifier</li>
+                        <li>K-Nearest Neighbors</li>
+                        <li>K-Means Clustering</li>
+                        <li>Artificial Neural Network - Artificial Neuron</li>
+                        <li>Artificial Neural Network - Multilayer Perceptron (P.17)</li>
+                     </ul>
+                  </li>
+                  <li>All materials including lecture notes, lab exercises and programming assignments may be tested.</li>
+                  <li>
+                     <p>Statistics of the Midterm Exam
+                       </p><ul>
+                         <li>Mean = 58.23</li>
+                         <li>Standard deviation = 15.959</li>
+                         <li>Median = 59.93</li>
+                         <li>Max = 97.5</li>
+                         <!-- <li>Score Distribution:<br/><br/>
+                           <img style="width:100%" src="midterm/comp2211-spring-2025-distribution.png"/>
+                         </li> -->
+                       </ul>
+                     <p></p>
+                  </li>
+                  <li>Solution and Marking Scheme: <a href="https://course.cse.ust.hk/comp2211/midterm/COMP2211_midterm_sol_Fall2025.pdf">Click Here</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="col-lg-8">
+               <h4>Final Exam</h4>
+               <ul>
+                  <li>Date: December 13 (Sat)</li>
+                  <li>Time: 12:30pm to 3:30pm</li>
+                  <li>Venue: LG1 Table Tennis Room (L1) and [ATRIUM]TsangShiuTim ART HALL (L2)</li>
+                  <li>Seating plan will be released later</li>
+                  <li>
+                     Scope:
+                     <ul>
+                        <li>Introduction to Artificial Intelligence</li>
+			<li>Advanced Python for Artificial Intelligence</li>
+			<li>Naive Bayes Classifier</li>
+			<li>K-Nearest Neighbors</li>
+			<li>K-Means Clustering</li>
+			<li>Artificial Neural Network - Neuron</li>
+			<li>Artificial Neural Network - Multilayer Perceptron</li>
+			<li>Digital Image Processing Fundamentals</li>
+			<li>Convolutional Neural Network</li>
+			<li>Minimax and Alpha-Beta Pruning</li>
+			<li>Ethics of Artificial Intelligence</li>
+                      </ul>
+                  </li>
+		  <li>All materials including lecture notes, lab exercises and programming assignments may be tested.</li>
+		  <!--<li> 
+                     <p>Statistics of the final exam:
+                     <ul>
+                         <li>Mean: 61.39</li>
+                         <li>Stdev: 15.96</li>
+                         <li>Median: 64.75</li>
+                         <li>Max: 92.50</li>
+                         <li>Score distribution:<br/><br/>
+                             <img style="width:100%" src="final/comp2211-spring-2025-final-distribution.png"/>
+                         </li>
+                     </ul>
+		     </p>
+                   </li>
+                   <li>Solutions and Marking Scheme: <a href="final/comp2211-final-2025S-soln-scheme.pdf">Click Here</a>
+                   </li> -->
+		  </ul>
+            </div>
+            <br>
+            <div class="col-lg-12">
+               <h4>Past Exam Papers</h4>
+               <div class="table-responsive regulartable" style="border:none">
+                  <table class="table-hover">
+                     <thead>
+                        <tr>
+                           <th style="text-align:center">Semester</th>
+                           <th style="text-align:center">Mid-Term Exam</th>
+                           <th style="text-align:center">Final Exam</th>
+                        </tr>
+                     </thead>
+                     <tbody><tr>
+                        <td style="text-align:center">2022S</td>
+                        <td>
+                           <a href="https://course.cse.ust.hk/comp2211/past-paper/comp2211-midterm-2022S-paper.pdf">Question</a> |
+                           <a href="https://course.cse.ust.hk/comp2211/past-paper/comp2211-midterm-2022S-soln.pdf">Solution</a>
+                        </td>
+                        <td>
+                           <a href="https://course.cse.ust.hk/comp2211/past-paper/comp2211-final-2022S-part-a-paper.pdf">Question (Part A)</a> |
+                           <a href="https://course.cse.ust.hk/comp2211/past-paper/comp2211-final-2022S-part-a-soln.pdf">Solution (Part A)</a><br>
+                           <a href="https://course.cse.ust.hk/comp2211/past-paper/comp2211-final-2022S-part-b-paper.pdf">Question (Part B)</a> |
+                           <a href="https://course.cse.ust.hk/comp2211/past-paper/comp2211-final-2022S-part-b-soln.pdf">Solution (Part B)</a><br>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="text-align:center">2024S</td>
+                        <td>
+                           <a href="https://course.cse.ust.hk/comp2211/past-paper/comp2211-midterm-2024S-paper.pdf">Question</a> |
+                           <a href="https://course.cse.ust.hk/comp2211/past-paper/comp2211-midterm-2024S-soln.pdf">Solution</a>
+                        </td>
+                        <td>
+                           <a href="https://course.cse.ust.hk/comp2211/past-paper/comp2211-final-2024S-paper.pdf">Question</a> |
+                           <a href="https://course.cse.ust.hk/comp2211/past-paper/comp2211-final-2024S-soln.pdf">Solution</a><br>
+                        </td>
+                     </tr>
+                  </tbody></table>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+   </section>
+
+   <!-- Self-learning Section -->
+   <section id="selflearning" class="self-learning-section">
+      <div class="container">
+         <div class="row">
+            <h3 class="titleheader">Self-learning Center</h3>
+            <div class="col-lg-12">
+               <h4>Python Cheatsheets</h4>
+               <ul>
+                  <li>Page 1: <a href="https://course.cse.ust.hk/comp2211/cheatsheet/front.html">Here</a>,
+                     Page 2: <a href="https://course.cse.ust.hk/comp2211/cheatsheet/back.html">Here</a></li>
+               </ul>
+            </div>
+            <div class="col-lg-12">
+               <h4>Self-Tests</h4>
+               <ul>
+                  <li id="menu1"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test1.html" target="target_a"> Self-test 1: Introduction to
+                        Artificial Intelligence</a></li>
+                  <li id="menu2"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test2.html" target="target_a"> Self-test 2: Python Fundamentals
+                        for AI</a></li>
+                  <li id="menu3"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test3.html" target="target_a"> Self-test 3: Naive Bayes
+                        Classifier</a></li>
+                  <li id="menu4"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test4.html" target="target_a"> Self-test 4: K-Nearest
+                        Neighbours</a></li>
+                  <li id="menu5"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test5.html" target="target_a"> Self-test 5: K-Means
+                        Clustering</a></li>
+                  <li id="menu6"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test6.html" target="target_a"> Self-test 6: Artificial Neural
+                        Network - Perceptron</a></li>
+                  <li id="menu7"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test7.html" target="target_a"> Self-test 7: Artificial Neural
+                        Network - Multi-layer Perceptron</a></li>
+                  <li id="menu8"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test8.html" target="target_a"> Self-test 8: Digital Image
+                        Processing Fundamentals</a></li>
+                  <li id="menu9"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test9.html" target="target_a"> Self-test 9: Convolutional
+                        Neural Network</a></li>
+                  <li id="menu10"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test10.html" target="target_a"> Self-test 10: Minimax &amp;
+                        Alpha-Beta Pruning</a></li>
+                  <li id="menu11"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test11.html" target="target_a"> Self-test 11: Ethics of
+                        Artificial Intelligence</a></li>
+                  <li id="menu12"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test12.html" target="target_a"> Self-test 12: Introduction to
+                        Reinforcement Learning</a></li>
+               </ul>
+            </div>
+            <!--<div class="col-lg-4">
+                  <h4>Supplementary Materials</h4>
+                  <ul>
+		     <li>
+			<a href="practice2020/index.html" target="_black">Lab Exercises and Programming Assignments for FALL 2020/21</a>
+		     </li>
+		     <li>
+			<a href="practice2019/index.html" target="_black">Lab Exercises and Programming Assignments for FALL 2019/20</a>
+		     </li>
+		     <li>
+			<a href="practice2018/index.html" target="_black">Lab Exercises and Programming Assignments for FALL 2018/19</a><br/><br/>
+		     </li>
+                     <li>
+                        <a href="labs/vscode/index.html" target="_blank">VS Code Installation and Usage</a>
+                        <p>We use VS Code to write C++ codes in this course. VS Code provides an Integrated Development Environment (IDE) that allows developers to write, build, and debug C++ programs.</p>
+                     </li>
+                     <li><a href="https://developers.google.com/edu/c++/">Google's C++ Class</a><br />
+                     </li>
+                     <li>Online C++ References:<br />
+                        <a href="http://www.cplusplus.com/reference/">http://www.cplusplus.com/reference/</a><br />
+                        <a href="http://www.cplusplus.com/doc/tutorial/">http://www.cplusplus.com/doc/tutorial/</a><br />
+			<a href="http://www.gnu.org/software/make/manual/make.html">GNU 'make' Manual</a><br/>
+                        <br />
+                     </li>
+                     <li><a href="misc/C++Standard-ANSI-ISO-IEC-14882-2003.pdf">ANSI C++ Standard 2003</a><br /></li>
+                     <li><a href="misc/C++11-Standard-ANSI-ISO-IEC-n3337-20120116.pdf">ANSI C++ Standard 2012</a><br/></li>
+                     <li><a href="http://en.wikipedia.org/wiki/C%2B%2B14">Information about the new ANSI C++ Standard 2014</a><br/></li>
+                     <li><a href="https://en.wikipedia.org/wiki/C%2B%2B17">Information about the new ANSI C++ Standard 2017</a><br/></li>
+                     <li><a href="http://en.wikipedia.org/wiki/C%2B%2B20">Information about the new ANSI C++ Standard 2020</a><br/></li>
+                  </ul>
+               </div>               
+
+               <div class="col-lg-4">
+                  <h4>Memory Leak Check</h4>
+                  <ul>
+		     <li><a href="misc/drmemory_tutorial.html">Dr. Memory</a></li>
+		     <li><a href="misc/valgrind_tutorial.html">Valgrind</a></li>
+                  </ul>
+               </div>-->
+         </div>
+      </div>
+   </section>
+   <!-- FAQs Section -->
+   <section id="faqs" class="faqs-section">
+      <div class="container">
+         <div class="row">
+            <h3 class="titleheader">FAQs</h3>
+            <div class="col-lg-12">
+               <h4 style="padding-top:5px">How hard should I work?</h4>
+               <br>
+               Some people say that a 3-unit course takes 8 hours/week. It all depends. You should cultivate an
+               independent learning habit.<br>
+               <br>
+               Here is a guideline:<br>
+               <ul>
+                  <li>pre-study (1 hour): what topic/materials will the coming lecture be covering? </li>
+                  <li>
+                     attend class (3 hours): The A+ students tell you that they pay FULL attention in class and try to
+                     understand everything in the class so that it is easy to review the class materials.
+                     <ul>
+                        <li>our notes provide a guideline; also take your own notes </li>
+                        <li>ask questions whenever you don't understand<br>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>attend labs (2 hours)</li>
+                  <li>post-study (2 hours): re-reading the notes, book reading<br>
+                  </li>
+               </ul>
+               <br>
+               <!--<h4 style="padding-top:5px">How do I learn a new programming language?</h4>
+                  <br />
+                  Learning a programming language is similar to learning a human language (like Chinese, English, French, etc.) but only easier. However, the basic technique is similar to the 3Rs:<br />
+                  <ul>
+                     <li>read more: we are not going to follow the recommended textbook vigorously, and we can't give all the details in our lectures. Read the book! <br />
+                     </li>
+                     <li>write more: there are only 3 programming assignments in this class. That is NOT enough! Think of problems around you and try to solve them by writing a computer   program.<br />
+                     </li>
+                  </ul>-->
+               <!--<p>&nbsp;</p>-->
+               <h4 style="padding-top:5px">How can I write a program effectively?</h4>
+               <br>
+               You should spend a lot of time in THINKING (stay away from the computer) before you start WRITING. No
+               matter how beautiful your codes are, if the method you use is wrong, they are still wrong codes.<br>
+               <br>
+               Here is a guideline:<br>
+               <ul>
+                  <li>planning (30 - 40%) : algorithm design, code design, documentation </li>
+                  <li>coding (60 - 70%) : writing code, debugging, testing </li>
+               </ul>
+               <br>
+               <h4 style="padding-top:5px">What operating system do I use to program for this class?</h4>
+               <br>
+               We will use Colab programming environment, which is a platform-independent solution. So, you can simply
+               open up a browser and run Colab on your PC, Mac, and Linux.
+               <p>&nbsp;</p>
+               <h4 style="padding-top:5px">Where may I get help on programming problems?</h4>
+               <br>
+               God help those who help themselves! But if you can't find your God, try the following, in that
+               order:<br>
+               <ul>
+                  <li>Post your question on Piazza.</li>
+                  <li>Email your question to your TAs. (We do most business using emails here in the university.) Please
+                     do not expect an answer right away. </li>
+                  <li>Email your question to the instructor. </li>
+                  <li>Don't expect the instructors and your TAs to be your debugger! Except for obvious bugs, we won't
+                     debug for you. </li>
+                  <li>Find it on the Web.<br>
+                  </li>
+               </ul>
+               <br>
+               <p>
+               </p><h4 style="padding-top:5px">
+                  Where may I get more information about the computing facilities in CSE department?
+               </h4>
+               <br>
+               You can't afford to miss the following URL from our cssystem:<br>
+               <a href="http://cssystem.cse.ust.hk/home.php?docbase=UGuides&amp;req_url=UGuides/index.html#ug">http://cssystem.cse.ust.hk/home.php?docbase=UGuides&amp;req_url=UGuides/index.html#ug</a>
+            </div>
+         </div>
+      </div>
+   </section>
+   <footer class="page-footer">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+               Last modified on
+               <script type="text/javascript">document.write(document.lastModified);</script>11/27/2025 09:41:05
+               <br>
+               Maintained by COMP 2211 Teaching Team © 2025 HKUST Computer Science and Engineering
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- jQuery -->
+   <script src="./COMP 2211 Exploring Artificial Intelligence_files/jquery.js.download"></script>
+   <!-- Bootstrap Core JavaScript -->
+   <script src="./COMP 2211 Exploring Artificial Intelligence_files/bootstrap.min.js.download"></script>
+   <!-- Scrolling Nav JavaScript -->
+   <script src="./COMP 2211 Exploring Artificial Intelligence_files/jquery.easing.min.js.download"></script>
+   <script src="./COMP 2211 Exploring Artificial Intelligence_files/scrolling-nav.js.download"></script>
+
+
+
+</body></html>
