@@ -1,0 +1,15 @@
+.tooltip {
+	FONT: lighter 11px/1.3 Arial,sans-serif; WIDTH: 200px; COLOR: #000; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.tooltip SPAN.top {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; BACKGROUND: url(bt.gif) no-repeat 50% top; PADDING-BOTTOM: 0px; PADDING-TOP: 30px
+}
+.tooltip B.bottom {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; BACKGROUND: url(bt.gif) no-repeat 50% bottom; PADDING-BOTTOM: 15px; COLOR: #548912; PADDING-TOP: 3px
+}
+.tooltip {
+	DISPLAY: block
+}
+.tooltip  {
+	DISPLAY: block
+}

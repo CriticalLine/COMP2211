@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0060)https://course.cse.ust.hk/comp2211/self-test/self-test4.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>COMP2211 Self-test Web Page</title>
+
+<meta name="keywords" content="">
+<!--link rel="stylesheet" href="img/Underground.css" type="text/css" /-->
+<!-- Bubble tooltips: adopted from: http://www.web-graphics.com/mtarchive/BubbleTooltips.html--><!-- For automatic tooltip: -->
+<script src="./COMP2211 Self-test 4_files/bubbletooltips.js.download" type="text/javascript"></script>
+<!-- Example:  usage <a href="" title=""></a>  --><!-- For customize tooltip -->
+<link media="all" href="./COMP2211 Self-test 4_files/bt.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="./COMP2211 Self-test 4_files/jquery.js.download"></script>
+
+<!-- JQuery Calender is located here... -->
+<style type="text/css">@import url(jquerycalendar/jquery-calendar.css);</style>
+<script type="text/javascript" src="./COMP2211 Self-test 4_files/jquery-calendar.js.download"></script>
+
+<script type="text/javascript" src="./COMP2211 Self-test 4_files/selftestmenu.js.download"></script>
+<link rel="stylesheet" type="text/css" href="./COMP2211 Self-test 4_files/selfteststyle.css">
+<!-- highslide stuff: TESTING... -->
+<script type="text/javascript" src="./COMP2211 Self-test 4_files/highslide-with-html.js.download"></script>
+<script type="text/javascript">    
+    hs.graphicsDir = 'highslide/graphics/';
+    hs.outlineType = 'rounded-white';
+    hs.outlineWhileAnimating = true;
+</script>
+<style type="text/css">@import url(highslide/myslide.css);</style>
+<!-- END OF highslide stuff -->
+
+<link class="undefined" type="text/css" rel="stylesheet" href="./COMP2211 Self-test 4_files/BubbleTooltips.css" media="screen" style="display: block;"></head>
+
+<!-- Start of the main html body -->
+<body>
+
+<!-- wrap starts here -->
+<div id="main">
+<div id="wrap">
+        <!-- header -->
+        <div id="header">
+                <span id="slogan"></span>
+                <!-- tabs -->
+                <ul>
+                  <li class="showall-solution"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test4.html#"><span>Show all solutions</span></a></li>
+                  <li class="hideall-solution"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test4.html#"><span>Hide all solutions</span></a></li>
+				  
+				  <!--
+                  <li id="tabShowNormalView"><a href="#" title="The normal webpage view"><span>Web view</span></a></li>
+                  <li id="tabShowAllOnePage"><a href="#" title="The view which is suitable for printing"><span>Printable view</span></a></li>
+                  <li id="tabIncFontSize"><a href="#" title="Increase the font size" ><span >++ Font size</span></a></li>
+                  <li id="tabDecFontSize"><a href="#" title="Decrease the font size" ><span >-- Font size</span></a></li>
+				  
+				  -->
+				  
+                </ul>
+        </div>
+        <!-- main block: right panel -->
+        <!--div id="main"-->
+
+          <!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+          <div id="block1" style="display:block;	clear:left;">
+            <h1>Self-test 4: <br> K Nearest Neighbours</h1>
+
+          <ol>
+
+            <!-- Start of the first question -->
+            <li>
+            <div class="question-wrapper" style="position: static;">
+            <div class="question-content">
+              <p>For KNN, the computational complexity during training is ____, while the computational complexity during test time is ____, 
+                where "n" is the number of samples.
+                 (If you don't know about big O notations, please watch <a href="https://www.youtube.com/watch?v=__vX2sjlpXU">this</a> Youtube video. 
+                 If you still don't understand big O notations after whtching the video, you may simply skip this question.)</p>
+              <ol type="A">
+                <li> O(n), O(n)</li>
+                <li> O(n^2), O(n)</li>
+                <li> O(n), O(1)</li>
+                <li> O(1), O(n)</li>
+              
+              </ol>
+            </div>
+        
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <b>D</b>
+            </div>              
+            </div>
+            <hr>
+            </li>
+            <!-- End of the first question -->
+
+           
+			
+			
+			 <li>
+            <div class="question-wrapper">
+            <div class="question-content">      
+              <p>Which of the followings is/are hyperparameters in the KNN algorithm? 
+                (In machine learning, a hyperparameter is a parameter whose value is used to control the learning process. They are determined before training,
+               and cannot be inferred while fitting the machine to the training set because they refer to the model selection task, or algorithm hyperparameters, 
+                that in principle have no influence on the performance of the model but affect the speed and quality of the learning process.
+                 By contrast, the values of other parameters, which are often learnable, are derived via training.)
+              </p>
+              <ol type="A">
+                <li> K</li>
+                <li> Distance metric</li>
+                <li> Number of samples</li>
+              
+              </ol>
+            </div>
+          
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <b>A and B</b> 
+
+            </div>
+            </div>
+            <hr>
+            </li>
+
+
+            <li>
+            <div class="question-wrapper">
+            <div class="question-content">
+              <p>Suppose we have two points, A and B, in a Cartesian coordinate system, where the location of A is (1,5) and the location of B is (4,1). The L1 (Manhattan) distance between A and B is ___, and the L2 (Euclidean) distance between A and B is ___. </p>
+
+            </div>
+            
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <p><b>L1 distance: 7; L2 distance: 5.</b></p>
+            </div>
+            </div>
+            <hr>
+            </li>
+
+
+            <li>
+              <div class="question-wrapper">
+              <div class="question-content">
+                <p>To select the best K for our problem, we often divide our data into the training set, validation set, and test set, and check the performance of some K on the validation set. Explain why we do this on the validation set but not the training or test set.</p>
+                
+              </div>
+          
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>Suggested Answer: If we tune K on the training set, then the best K will always be 1 since the identical matching of every sample can be directly found in the set. If we tune K on the test set, this is essentially cheating, as it can no longer truly reflect the performance of our algorithm on unseen new data.</b> </p>
+              </div>
+              </div>
+              
+              <hr>
+              </li>
+
+            <li>
+            <div class="question-wrapper">
+            <div class="question-content">
+              <p>Which of the following is TRUE about KNN?
+              </p><ol type="A">
+                <li>It can only be used for classification.</li>
+                <li>It can only be used for regression.</li>
+                <li>It assumes that all data are of the same scale</li>
+                <li>None of the above</li>
+              </ol>
+            </div>
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <p><b>D</b> </p>
+            </div>
+            </div>
+
+            <hr>
+            </li>
+
+            <li>
+            <div class="question-wrapper">
+            <div class="question-content">
+
+              <p>Match the following distance metrics with their applicable data: L1 distance can be used for ___, L2 distance can be used for ___, and hamming distance can be used for ___.</p>
+              <ol type="A">
+                <li>continuous variable</li>
+                <li>categorical variable</li>
+                
+            
+              </ol>
+            </div>      
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <p> <b>A; A; B</b> </p>
+            </div>              
+            </div>
+            <hr>
+            </li>
+			
+			
+			<li>
+            <div class="question-wrapper">
+            <div class="question-content">
+              <p>Suppose we performed D-fold validation on our data to help decide the best K, and we plot the results in the following plot: </p><p></p>
+                <img src="./COMP2211 Self-test 4_files/KNNQ7.png" alt="plot">
+                <p>What is the best K in this case, according to the plot?</p><p></p>
+              
+
+              <p></p>              
+            </div>      
+
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <p> <b>7</b> </p>
+            </div>              
+            </div>
+            <hr>
+        </li>
+
+        <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p>Suppose you have given the following 2-class data where "+" represents a positive class and "-" represents a negative class. Suppose we use L2 distance. </p><p></p>
+                  <img src="./COMP2211 Self-test 4_files/KNNQ8.jfif" alt="plot">
+                  <p>According to the data distribution shown, what should be the best K?</p><p></p>
+                  <ol type="A">
+                    <li>3</li>
+                    <li>5</li>
+                    <li>A and B have the same effect</li>
+                    
+                
+                  </ol>
+  
+                <p></p>              
+              </div>      
+  
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p> <b>B: K = 5. When K = 3, 8/14 data points are correctly classified; when K = 5, 10/14 data points are correctly classified.</b> </p>
+              </div>              
+              </div>
+              <hr>
+          </li>
+          
+          <li>
+              <div class="question-wrapper">
+                <div class="question-content">
+                  <p>KNN is a machine learning algorithm that can be used for classification problems, and image classification is a fundamental task in computer vision. However, the KNN classifier is seldom used for image classification in reality because it can be easily hacked. 
+                    Suppose we define the L1 distance between two images as the summed pixelwise absolute difference over all pixels. For example, consider two 2x2 images:</p><p></p>
+                    <style>
+                      table, th, td {
+                         border: 1px solid black;
+                      }
+                   </style>
+                    
+                    <table>
+                      <tbody><tr>
+                         <td>15</td>
+                         <td>87</td>
+                      </tr>
+                      <tr>
+                         <td>38</td>
+                         <td>43</td>
+                      </tr>
+                   </tbody></table>
+                   and
+                   <table>
+                    <tbody><tr>
+                       <td>72</td>
+                       <td>11</td>
+                    </tr>
+                    <tr>
+                       <td>22</td>
+                       <td>63</td>
+                    </tr>
+                 </tbody></table>
+                  
+                    <p>According to the definition given above, the L1 distance between them should be |72-15|+|11-87|+|22-38|+|63-43|</p><p></p>
+                    <p>Using the L1 distance metric and KNN classification algorithm, propose 2 ways to produce new images from a given image, such that the produced images have the same L1 distance to the original image.</p><p></p>
+                    
+    
+                  <p></p>              
+                </div>      
+    
+                <div class="toggle-solution">Solution</div>
+                <div class="solution-content">
+                  <p> <b>Suggested solution: 1. We may predefine an intended distance and simply "mask out" a certain region in the image (so they have a pixel value of 0) such that the original sum of pixel values within that region is the same as our distance. 2. We may just adjust the brightness of our image by multiplying each pixel with a fixed ratio; this ratio can be particularly engineered such that the new image has the desired distance to our original image.</b> </p>
+                  <p> The ways mentioned above are not the only ways. In fact manually designing the value of each pixel may also work but is considered a less common image processing method than masking and multiplying a certain ratio. The purpose of the problem is to help you understand the limitaions of KNN and help you better appreciate convolutional neural networks to be introduced in the class later.</p>
+                </div>              
+                </div>
+                <hr>
+                </li>
+
+                <li>
+                  <div class="question-wrapper">
+                    <div class="question-content">
+                      <p>Suppose you are given some training data, as shown below. </p><p></p>
+                        <img src="./COMP2211 Self-test 4_files/KNNQ10.png" alt="plot">
+                        <p>Assume we use the KNN classification algorithm with K=3 on new data (1,1). Which class will this new data be predicted as?</p><p></p>
+                        <ol type="A">
+                          <li>positive (+)</li>
+                          <li>negative (-)</li>
+                          
+                      
+                        </ol>
+        
+                      <p></p>              
+                    </div>      
+        
+                    <div class="toggle-solution">Solution</div>
+                    <div class="solution-content">
+                      <p> <b>A</b> </p>
+                    </div>              
+                    </div>
+                    <hr>
+                </li>
+
+            
+
+          </ol>
+        </div>
+
+        <!-- wrap ends here; don't delete this /div --> 
+        </div>
+
+</div>
+
+
+
+
+<div id="calendar_div"></div><span id="btc" style="position: absolute;"></span><div style="padding: 0px; border: none; margin: 0px; position: absolute; left: 0px; top: 0px; width: 100%; z-index: 1001;"><a class="highslide-loading" title="Click to cancel" style="position: absolute; opacity: 0.75; left: -9999px; z-index: 1;">Loading...</a><table cellspacing="0" style="padding: 0px; border: none; margin: 0px; visibility: hidden; position: absolute; z-index: 1001; border-collapse: collapse;"><tbody style="padding: 0px; border: none; margin: 0px;"><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px 0px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -40px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px 0px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -80px; height: 20px; width: 20px;"></td><td class="rounded-white" style="padding: 0px; border: none; margin: 0px; position: relative;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px -80px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -20px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -60px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px -20px; height: 20px; width: 20px;"></td></tr></tbody></table><img src="./COMP2211 Self-test 4_files/rounded-white.png" style="padding: 0px; border: none; margin: 0px; position: absolute; left: -9999px; top: -9999px;"></div></body></html>

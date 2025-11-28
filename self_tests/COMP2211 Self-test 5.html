@@ -1,0 +1,512 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0060)https://course.cse.ust.hk/comp2211/self-test/self-test5.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>COMP2211 Self-test Web Page</title>
+  
+  <meta name="keywords" content="">
+  <!--link rel="stylesheet" href="img/Underground.css" type="text/css" /-->
+  <!-- Bubble tooltips: adopted from: http://www.web-graphics.com/mtarchive/BubbleTooltips.html-->
+  <!-- For automatic tooltip: -->
+  <script src="./COMP2211 Self-test 5_files/bubbletooltips.js.download" type="text/javascript"></script>
+  <!-- Example:  usage <a href="" title=""></a>  -->
+  <!-- For customize tooltip -->
+  <link media="all" href="./COMP2211 Self-test 5_files/bt.css" type="text/css" rel="stylesheet">
+  <script type="text/javascript" src="./COMP2211 Self-test 5_files/jquery.js.download"></script>
+
+  <!-- JQuery Calender is located here... -->
+  <style type="text/css">
+    @import url(jquerycalendar/jquery-calendar.css);
+  </style>
+  <script type="text/javascript" src="./COMP2211 Self-test 5_files/jquery-calendar.js.download"></script>
+
+  <script type="text/javascript" src="./COMP2211 Self-test 5_files/selftestmenu.js.download"></script>
+  <link rel="stylesheet" type="text/css" href="./COMP2211 Self-test 5_files/selfteststyle.css">
+  <!-- highslide stuff: TESTING... -->
+  <script type="text/javascript" src="./COMP2211 Self-test 5_files/highslide-with-html.js.download"></script>
+  <script type="text/javascript">
+    hs.graphicsDir = 'highslide/graphics/';
+    hs.outlineType = 'rounded-white';
+    hs.outlineWhileAnimating = true;
+  </script>
+  <style type="text/css">
+    @import url(highslide/myslide.css);
+  </style>
+  <!-- END OF highslide stuff -->
+
+<link class="undefined" type="text/css" rel="stylesheet" href="./COMP2211 Self-test 5_files/BubbleTooltips.css" media="screen" style="display: block;"></head>
+
+<!-- Start of the main html body -->
+
+<body>
+
+  <!-- wrap starts here -->
+  <div id="main">
+    <div id="wrap">
+      <!-- header -->
+      <div id="header">
+        <span id="slogan"></span>
+        <!-- tabs -->
+        <ul>
+          <li class="showall-solution"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test5.html#"><span>Show all solutions</span></a></li>
+          <li class="hideall-solution"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test5.html#"><span>Hide all solutions</span></a></li>
+
+          <!--
+                  <li id="tabShowNormalView"><a href="#" title="The normal webpage view"><span>Web view</span></a></li>
+                  <li id="tabShowAllOnePage"><a href="#" title="The view which is suitable for printing"><span>Printable view</span></a></li>
+                  <li id="tabIncFontSize"><a href="#" title="Increase the font size" ><span >++ Font size</span></a></li>
+                  <li id="tabDecFontSize"><a href="#" title="Decrease the font size" ><span >-- Font size</span></a></li>
+				  
+				  -->
+
+        </ul>
+      </div>
+      <!-- main block: right panel -->
+      <!--div id="main"-->
+
+      <!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+      <div id="block1" style="display:block;	clear:left;">
+        <h1>Self-test 5: <br> K-means clustering </h1>
+
+        <ol>
+
+          <!-- Basic type question -->
+
+          <li>
+            <div class="question-wrapper" style="position: static;">
+              <div class="question-content">
+                <p>Which of the following description about K-means clustering is correct?</p>
+                <ol type="A">
+                  <li>K-means clustering is a supervised learning algorithm</li>
+                  <li>K-means clustering makes prediction by majority voting</li>
+                  <li>The "K" in K-means clustering refers to the number of data points</li>
+                  <li>K-means clustering achieves categorization of data points</li>
+                </ol>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <b> D. K-means clustering achieves categorization of data points. K-means clustering makes prediction according to the closest centroid of data points; KNN makes prediction by majority voting. The "K" in K-means clustering refers to the number of clusters.</b>
+              </div>
+            </div>
+            <hr>
+          </li>
+          
+          <li>
+            <div class="question-wrapper" style="position: static;">
+              <div class="question-content">
+                <p>Arrange the following steps in order for the first iteration of K-means clustering</p>
+                <ol type="A">
+                  <li>Calculate the distances between each centroids and each points</li>
+                  <li>Label each point according to its closest centroid</li>
+                  <li>Choose K random points to be the initial centroids.</li>
+                  <li>Recompute the centroids according to the labelling</li>
+                </ol>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <b> C -&gt; A -&gt; B -&gt; D</b>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper" style="position: static;">
+              <div class="question-content">
+                <p>In an iteration of K-means clustering, the data points with coordinates (9,7), (9,2) and (7,9) are labelled as "Category 1". What is the new position of the centroid for "Category 1"?</p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <b>(8.33333, 6)</b>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p>Following up the previous question, complete the following code snippet that computes the centroid of N data points, each with 2 coordinates (stored in a Numpy array of shape (N, 2))
+</p><pre>  import numpy as np
+  from dataset import data
+  
+  print(data)
+  <p style="color:#3EB489">  # Print "array([[9, 7], [9, 2], [7, 9]])"
+
+  # In this case N = 3
+  
+  # Your code goes here</p>
+  print(centroid)
+  <p style="color:#3EB489">  # Print "array([8.33333333, 6.  ])"</p>
+</pre>
+Your code should be at most one or two lines, and it should not contain any loops <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>centroid = np.average(data, axis = 0)</b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Suppose you are doing K-means clustering on 4 data points. In the following array, the [i, j]-th entry represents the distance of data[i] to centroid[j]. How should you properly label the data points?
+</p><pre>  array([[0.28 , 0.69, 0.50],
+       [0.61, 0.34, 0.54],
+       [0.18, 0.44, 0.81],
+       [0.78 , 0.15, 0.10]])
+</pre> 
+                <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>Point 0 - Category 0 <br>
+                  Point 1 - Category 1 <br>
+                  Point 2 - Category 0 <br>
+                  Point 3 - Category 2 </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+          
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p>Following up the previous question, complete the following code snippet that labels the data point according to their closest centroid.
+</p><pre>  import numpy as np
+  from dataset import data, centroids, get_distance
+  
+  dists = get_distance(data, centroids)
+  print(dists)
+  <p style="color:#3EB489">  # Print
+    "array([[0.28 , 0.69, 0.50],
+    [0.61, 0.34, 0.54],
+    [0.18, 0.44, 0.81],
+    [0.78 , 0.15, 0.10]])"
+  
+  # Your code goes here</p>
+  print(categories)
+  <p style="color:#3EB489">  # Print "array([0, 1, 0, 2], dtype=int64)"</p>
+</pre>
+Your code should be at most one or two lines, and it should not contain any loops. Hint: look at the "np.argmin" function <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>categories = np.argmin(dists, axis = 1)</b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Suppose you have the following array where each row represents a data point with 3 coordinate points. Compute the Euclidean distance between the points and the centroid with coordinates (0.4, 0.5, 0.6).
+</p><pre>array([[0.89, 0.07, 0.43],
+  [0.31, 0.75, 0.51],
+  [0.52, 0.68, 0.28],
+  [0.9 , 0.59, 0.65]])
+</pre> 
+                <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>Point 0 - 0.67372101 <br>
+                  Point 1 - 0.2805352 <br>
+                  Point 2 - 0.38626416 <br>
+                  Point 3 - 0.51048996 </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p>Following up the previous question, complete the following code snippet that computes the Euclidean distance between the data points and the given centroid.
+</p><pre>  import numpy as np
+  from dataset import data, centroid
+  
+  print(data, centroid)
+  <p style="color:#3EB489">  # Print
+    "array([[0.89, 0.07, 0.43],
+    [0.31, 0.75, 0.51],
+    [0.52, 0.68, 0.28],
+    [0.9 , 0.59, 0.65]])"
+    
+    array([0.4, 0.5, 0.6])
+  
+  # Your code goes here</p>
+  print(dists)
+  <p style="color:#3EB489">  # Print "array([0.67372101, 0.2805352 , 0.38626416, 0.51048996])"</p>
+</pre>
+Your code should be at most one or two lines, and it should not contain any loops. Hint: reviewing the last question of the self test on Python Fundamentals might help :D <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>dists = np.sqrt(np.sum((data - centroid) ** 2, axis = 1))</b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Which of the following clustering is NOT a plausible outcome of K-means clustering under Euclidean distance? </p>
+                <img src="./COMP2211 Self-test 5_files/kmc1.png" alt="diagram 1">
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>A. Clusters must be circles or ellipsoids.</b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper" style="position: static;">
+              <div class="question-content">
+                <p>Which of the following is a widely-used application for K-means clustering?</p>
+                <ol type="A">
+                  <li>Handwritten digit recognition</li>
+                  <li>Enemy AIs in video games</li>
+                  <li>Chat bots</li>
+                  <li>Customer segmentation</li>
+                </ol>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <b> D. Customer segmentation</b>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+
+
+
+          <!-- Medium type question -->
+
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Determine whether each of the following statements about K-means clustering is correct. If it is correct, then give a brief explaination. If it is incorrect, try to come up with an counterexample.</p>
+                <ol type="A">
+                  <li> The centroids in K-means clustering always converges. </li>
+                  <li> K-means clustering performs quickly on large datasets. </li>
+                  <li> K-means clustering always minimizes the sum of inter-cluster distance. </li>
+                  <li> K-means clustering is deterministic - i.e. it always produces the same result on the same dataset. </li>
+                </ol>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  A : True - this is by design of the algorithm, provided you have a deterministic tiebreaker. Roughly speaking, every iteration of K-means reduces the sum-squared distances between the centroids. So, if the algorithm cycles between clusterings A, B (keep in mind the number of ways to put N points into K clusters is finite), then the distances of clustering A will be smaller than that of clustering B, which in turn will be smaller than that of clustering A, which does not make sense.
+                  <br> <br>
+                  B : True - at least compared to some other algorithms like perceptrons.
+                  <br> <br>
+                  C : False - It does not always reaches the global minimum.
+                  <br> <br>
+                  D : False - in the version of K-means clustering in lecture, we choose the centroids randomly.
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p>Which of the following is NOT a necessary preprocessing step for K-means clustering?</p>
+                <ol type="A">
+                  <li> Perform standardization on all the features </li>
+                  <li> Try to handle and remove outliers </li>
+                  <li> Perform Principal Component Analysis </li>
+                  <li> Shuffle the dataset </li>
+                </ol>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <b>
+                  D. Shuffle the dataset - K-means is insensitive to the order of the datas. Of course if we pick the first K data points as our initial centroids then it would become sensitive but otherwise it is not.
+                </b>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p>Suppose we have the following one-dimensional dataset with 10 data points, and we want to perform K-means clustering with K=2. We choose our initial centroids as 0 and 1. What are the centroid positions after one iteration of K-means clustering?</p>
+<pre>  array([0.56, 0.38, 0.48, 0.51, 0.7 , 0.98, 0.6 , 0.87, 0.61, 0.54])
+</pre>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <b>
+                  Datas closer to 0: 0.02, 0.45, 0.41, 0.03
+                  <br>
+                  Datas closer to 1: 0.93, 0.7 , 0.78, 0.52, 0.59, 0.53
+                  <br> <br>
+                  Centroid 0 position after one iteration: (0.02 + 0.45 + 0.41 + 0.03)/4 = 0.2275
+                  <br>
+                  Centroid 1 position after one iteration: (0.93 + 0.7 + 0.78 + 0.52 + 0.59 + 0.53)/6 = 0.675
+                </b>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p>Following up the previous question, comlpete the following code snippet to perform K-means clustering to determine the final centroid positions.
+</p><pre>  import numpy as np
+  from dataset import data
+
+  print(data)
+  <p style="color:#3EB489">  # Print "array([0.56, 0.38, 0.48, 0.51, 0.7 , 0.98, 0.6 , 0.87, 0.61, 0.54])"</p>
+
+  centroids = np.array([0, 1], dtype = np.float64)
+  converge = False
+  
+  while not converge:
+    last = np.array(centroids)
+    <p style="color:#3EB489">    
+    # Your code goes here
+    
+    Hint: You have to accomplish the 3 recurring steps of K-mens clustering
+    1. Calculate the distance between the centroids and the data points (Use the np.abs function)
+    2. Assign to each data point a centroid (Use the np.argmin function)
+    3. Update the centroid positions (Use the np.average function)
+  
+  
+    # This determines whether the centroids moved by comparing it to the centroids from the last iteration; if the sum is 0 then it converged</p>
+    converge = np.sum(np.abs(last - centroids)) == 0
+  
+  print(centroids)
+  <p style="color:#3EB489">  # Print "array([0.52571429, 0.85])"</p>
+</pre>
+Your code should contain at most three to five lines, and it should not contain any loops.<p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <b>
+<pre>  dists = np.abs(centroids.reshape(-1, 1) - data)
+  cats = np.argmin(dists, axis = 0)
+  centroids[0] = np.average(data[cats == 0])
+  centroids[1] = np.average(data[cats == 1])
+</pre>
+                </b>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p>In your IDLE or VScode, make changes to the code from the previous question to determine how many iterations of K-means clustering that we have performed to achieve convergence. For your convenience, the code along with the model answer from the previous question is provied below.</p>
+<pre>  import numpy as np
+
+  data = np.array([0.56, 0.38, 0.48, 0.51, 0.7 , 0.98, 0.6 , 0.87, 0.61, 0.54])
+
+  centroids = np.array([0, 1], dtype = np.float64)
+  converge = False
+  
+  while not converge:
+    last = np.array(centroids)
+    dists = np.abs(centroids.reshape(-1, 1) - data)
+    cats = np.argmin(dists, axis = 0)
+    centroids[0] = np.average(data[cats == 0])
+    centroids[1] = np.average(data[cats == 1])
+    converge = np.sum(np.abs(last - centroids)) == 0
+</pre>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <b> 5 iterations. One way to achieve it is via the following modification:
+<pre>  import numpy as np
+
+  data = np.array([0.56, 0.38, 0.48, 0.51, 0.7 , 0.98, 0.6 , 0.87, 0.61, 0.54])
+
+  centroids = np.array([0, 1], dtype = np.float64)
+  converge = False
+  iters = 0
+  
+  while not converge:
+    last = np.array(centroids)
+    dists = np.abs(centroids.reshape(-1, 1) - data)
+    cats = np.argmin(dists, axis = 0)
+    centroids[0] = np.average(data[cats == 0])
+    centroids[1] = np.average(data[cats == 1])
+    converge = np.sum(np.abs(last - centroids)) == 0
+    iters += 1
+
+  assert iters == 5
+</pre>
+                </b>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+
+
+          <!-- Advanced type question -->
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p>In this exercise, we will try to apply K-means clustering to image segmentation. An image is a 2-dimensional array of pixels, where each pixel has a specific color, determined by its R, G, B values ranging from 0 to 1. In image processing, we typically represent an C x R image with a Numpy array with shape (R, C, 3). As such, we can regard an image as a giant dataset, where each data point has 3 features (RGB).
+                  <br> <br>
+                  We will also perform elbow method to determine the best K value.
+                  <br> <br>
+                  Here is the colab file: https://colab.research.google.com/drive/1ju9Sfitrjh2LgJ3i7ToTEqGrm_jJ5Jlh?usp=sharing 
+                </p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <b>
+                  Here are the answers: https://colab.research.google.com/drive/1nZXuSh0mc-UYcOw8oZYQ159FTskqutkZ?usp=sharing
+                </b>
+              </div>
+            </div>
+            <hr>
+          </li>
+      
+
+
+
+        </ol>
+      </div>
+
+      <!-- wrap ends here; don't delete this /div -->
+    </div>
+
+  </div>
+  
+
+
+
+
+<div id="calendar_div"></div><span id="btc" style="position: absolute;"></span><div style="padding: 0px; border: none; margin: 0px; position: absolute; left: 0px; top: 0px; width: 100%; z-index: 1001;"><a class="highslide-loading" title="Click to cancel" style="position: absolute; opacity: 0.75; left: -9999px; z-index: 1;">Loading...</a><table cellspacing="0" style="padding: 0px; border: none; margin: 0px; visibility: hidden; position: absolute; z-index: 1001; border-collapse: collapse;"><tbody style="padding: 0px; border: none; margin: 0px;"><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px 0px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -40px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px 0px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -80px; height: 20px; width: 20px;"></td><td class="rounded-white" style="padding: 0px; border: none; margin: 0px; position: relative;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px -80px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -20px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -60px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px -20px; height: 20px; width: 20px;"></td></tr></tbody></table><img src="./COMP2211 Self-test 5_files/rounded-white.png" style="padding: 0px; border: none; margin: 0px; position: absolute; left: -9999px; top: -9999px;"></div></body></html>

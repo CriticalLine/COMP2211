@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://course.cse.ust.hk/comp2211/assignments/pa1/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<!-- ### Change assignment number ### -->
+    <title>COMP 2211 Assignment 1: Text Sentiment Analysis with Naïve Bayes</title>
+
+   <!-- Bootstrap core CSS -->
+  <link href="./COMP 2211 Assignment 1_ Text Sentiment Analysis with Naïve Bayes_files/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="./COMP 2211 Assignment 1_ Text Sentiment Analysis with Naïve Bayes_files/blog-home.css" rel="stylesheet">
+
+  <!-- For code highlighting -->
+  <link href="./COMP 2211 Assignment 1_ Text Sentiment Analysis with Naïve Bayes_files/prism.css" rel="stylesheet">
+
+  <style>
+    pre {
+      background: #f4f4f4;
+      border: 1px solid #ddd;
+      border-left: 3px solid #f36d33;
+      color: #666;
+      page-break-inside: avoid;
+      font-family: monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 1.6em;
+      max-width: 100%;
+      overflow: auto;
+      padding: 1em 1.5em;
+      display: block;
+      word-wrap: break-word;
+    }
+
+    span.input {
+      color: #00f700;
+      ;
+    }
+
+    /* table {
+      width: 100%;
+      display: inline-block;
+      overflow-x: auto;
+    }
+
+    table caption {
+      font-size: medium;
+    }
+
+    table thead th {
+      background-color: #ddd;
+    }
+
+    table th,
+    table td {
+      text-align: left;
+      padding: 3px 6px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #aaa #aaa;
+    }
+
+    table tr:nth-child(even) {
+      background-color: #eee;
+    } */
+
+    blockquote {
+      border: 1px solid #b3b3b3;
+      border-left: 10px solid #b3b3b3;
+      border-radius: 0px;
+      background: #fafafa;
+      font-size: 18px;
+      font-family: Georgia, serif;
+      margin: 10px;
+      padding: 10px 20px;
+    }
+
+    blockquote p {
+      margin: 0;
+      line-height: 30px;
+      padding-bottom: 20px;
+    }
+
+    blockquote.small {
+      display: block;
+      font-size: 80%;
+      color: brown;
+      text-align: right;
+    }
+
+    code {
+      /* color: goldenrod; */
+      font-size: 1em;
+      /* background: none !important; */
+    }
+
+    figure.figure {
+      width: 100%;
+      text-align: center;
+    }
+
+    .bd-callout {
+      padding: 1.25rem;
+      margin-top: 1.25rem;
+      margin-bottom: 1.25rem;
+      border: 1px solid #eee;
+      border-left-width: .25rem;
+      border-radius: .25rem;
+    }
+
+    .bd-callout h4 {
+      margin-top: 0;
+      margin-bottom: .25rem;
+    }
+
+    .bd-callout p:last-child {
+      margin-bottom: 0;
+    }
+
+    .bd-callout code {
+      border-radius: .25rem;
+    }
+
+    .bd-callout+.bd-callout {
+      margin-top: -.25rem;
+    }
+
+    .bd-callout-info {
+      border-left-color: #5bc0de;
+    }
+
+    .bd-callout-warning {
+      border-left-color: #f0ad4e;
+    }
+
+    .bd-callout-danger {
+      border-left-color: #d9534f;
+    }
+
+    .bd-callout-success {
+      border-left-color: #5cb85c;
+    }
+
+    .bd-callout-primary {
+      border-left-color: #428bca;
+    }
+
+    .bd-callout-info h6 {
+      color: #5bc0de;
+    }
+
+    .bd-callout-warning h6 {
+      color: #f0ad4e;
+    }
+
+    .bd-callout-danger h6 {
+      color: #d9534f;
+    }
+
+    .bd-callout-success h6 {
+      color: #5cb85c;
+    }
+
+    .bd-callout-primary h6 {
+      color: #428bca;
+    }
+  </style>
+  </head>
+
+  <body>
+  <script src="./COMP 2211 Assignment 1_ Text Sentiment Analysis with Naïve Bayes_files/prism.js.download"></script>
+  <!--     <script src="https://myCDN.com/prism@v1.x/components/prism-core.min.js"></script>
+    <script src="https://myCDN.com/prism@v1.x/plugins/autoloader/prism-autoloader.min.js"></script> -->
+
+    <!-- Page Content -->	
+    <div class="container">
+
+      <div class="row">
+
+        <!-- Entries Column -->
+        <div class="col-md-9">
+
+          <h2 class="my-4"><span style="color:darkblue">COMP 2211</span>
+            <small>Exploring Artificial Intelligence</small>
+          </h2>
+		  
+		  <!-- ### Change assignment number and title ### -->
+		  <h3 class="my-4">Programming Assignment 1
+            <span style="color:#660066">Text Sentiment Analysis with Naïve Bayes</span>
+          </h3>
+
+          <!-- Introduction section -->
+		  <!-- ### Complete introduction section for the assignment ### -->
+          <div class="card mb-4">
+		  
+		    <!-- ### Add an image representing the assignment content here ### -->
+            <img class="card-img-top" src="./COMP 2211 Assignment 1_ Text Sentiment Analysis with Naïve Bayes_files/teaser.png" alt="Card image cap" height="450px">
+			
+            <div class="card-body" id="introduction">
+              <h3 class="card-title">Introduction</h3>
+              <p class="card-text">
+          <emoji>🎉</emoji>Welcome to PA1!<emoji>🎉</emoji> <br>In this assignment, we will build a <strong>Naïve Bayes Model</strong> to analyze user reviews about Video Games from Amazon. This task is the base for content moderation, user engagement analysis, and surfacing high-quality content in industry.
+          Although we will not cover <strong>Natural Language Processing (NLP)</strong> in COMP2211, this assignment provides a practical introduction to text analysis, and it's fun to have a taste of it <emoji>😄</emoji>. <br>Rest assured, we only ask you to implement techniques you've learned in the course.
+          Your system will perform two key analytical tasks:
+          </p><ol>
+            <li>
+              <strong>Sentiment Classification</strong>: Build a <strong>Naïve Bayes Classifier</strong> to determine whether reviews are <strong>positive</strong> or <strong>negative</strong>.
+            </li>
+            <li>
+              <strong>Feature Analysis</strong>: Identify the most important words driving sentiment predictions through log-odds analysis.
+            </li>
+          </ol>
+			  <p></p>
+			  <!-- <br/> -->
+			  
+			  <!-- <h4>Sub-section heading</h4>
+			  <p>
+			    ...
+			  </p>
+			  <br/>
+			  
+			  <h4>Sub-section heading</h4>
+			  <p>
+			    ...
+			  </p>			   -->
+            </div>
+            <div class="card-footer text-muted">
+              End of Introduction
+            </div>
+          </div>
+
+          <!-- Description section -->
+		  <!-- ### Complete description section for the assignment ### -->
+          <div class="card mb-4">      
+            <div class="card-body" id="description">
+              <h3 class="card-title">Description</h3>
+			  <br>
+			  <h4>Getting Started</h4>
+			  <!-- <br/> -->
+			  <p class="card-text">
+			    </p><ol>
+          <li>Download following files by right-clicking and selecting "Save link as":</li>
+          <ul>
+            <li>Task notebook: <a href="https://course.cse.ust.hk/comp2211/assignments/pa1/files/pa1_task.ipynb">pa1_task.ipynb</a></li>
+            <li>Dataset file: <a href="https://course.cse.ust.hk/comp2211/assignments/pa1/files/dataset.csv">dataset.csv</a></li>
+          </ul>
+          <li>Open the <code>.ipynb</code> file in Google Colab to get started.</li>
+          <li>Upload the dataset file to Colab:<br>
+            Drag the CSV file into Colab's <em>files</em> folder (not the sample data folder) as shown:
+            <br><img src="./COMP 2211 Assignment 1_ Text Sentiment Analysis with Naïve Bayes_files/colab.jpg" alt="colab upload" width="700px"><br>
+            And you should see your uploaded file in the output cell following <code>%ls</code> command in the notebook.
+            Otherwise, you may need to adjust file paths in your code to access the data correctly.
+          </li>
+        </ol>
+			  <p></p>
+			  <br>
+			  <h4>Grading Scheme</h4>
+			  <!-- <br/> -->
+			  <p class="card-text">
+          </p><ul>
+            <li><strong>Task0.1 Concatenate the title and text with weights: </strong><br>function <code>concatenate_title_and_text</code>
+              <ul>
+                <li>accuracy test (1 point)</li>
+              </ul>
+            </li>
+            <li><strong>Task0.2 Assign the sentiment labels: </strong><br>function <code>label_assign</code>
+              <ul>
+                <li>accuracy test (0.75 point)</li>
+                <li>efficiency test (0.75 point)</li>
+              </ul>
+            </li>
+            <li><strong>Task1.1: Compute the class probabilities: </strong><br>function <code>compute_class_prob</code>
+              <ul>
+                <li>accuracy test (1 point)</li>
+                <li>efficiency test (1 point)</li>
+              </ul>
+            </li>
+            <li><strong>Task1.2: Compute the word probabilities: </strong><br>function <code>compute_word_prob</code>
+              <ul>
+                <li>accuracy test (1 point)</li>
+                <li>efficiency test (1 point)</li>
+              </ul>
+            </li>
+            <li><strong>Task1.3: Predicts the class labels for new data: </strong><br>function <code>predict</code>
+              <ul>
+                <li>accuracy test (0.75 point)</li>
+                <li>efficiency test (0.75 point)</li>
+              </ul>
+            </li>
+            <li><strong>Task2.1: Compute log odds ratios matrix: </strong><br>function <code>compute_log_odds</code>
+              <ul>
+                <li>accuracy test (0.75 point)</li>
+                <li>efficiency test (0.75 point)</li>
+              </ul>
+            </li>
+            <li><strong>Task2.2: Identify top positive/negative indicator words: </strong><br>function <code>find_top_words</code>
+              <ul>
+                <li>accuracy test (0.75 point)</li>
+                <li>efficiency test (0.75 point)</li>
+              </ul>
+            </li>
+            <li><strong>Task 2.3: Identify most confusing words ("ambiguous words"): </strong><br>function <code>find_ambiguous_words</code>
+              <ul>
+                <li>accuracy test (0.75 point)</li>
+                <li>efficiency test (0.75 point)</li>
+              </ul>
+            </li>
+            <li><strong>Task3.1: Compute confusion matrix: </strong><br>function <code>compute_confusion_matrix</code>
+              <ul>
+                <li>accuracy test (0.75 point)</li>
+                <li>efficiency test (0.75 point)</li>
+              </ul>
+            </li>
+            <li><strong>Task3.2: Calculate precision, recall, and F1-score: </strong><br>function <code>calculate_metrics</code>
+              <ul>
+                <li>accuracy test (1 point)</li>
+              </ul>
+            </li>
+          </ul>
+			  <p></p>
+            </div>
+			<div class="card-footer text-muted">
+              End of Description
+            </div>
+          </div>
+
+          <!-- Download section -->
+		  <!-- ### Complete download section for the assignment ### -->
+          <!-- <div class="card mb-4">            
+            <div class="card-body" id="download">
+              <h3 class="card-title">Resources &amp; Sample I/O</h3>
+			  <ul>
+			    <li>Skeleton code: <a href="">...</a></li>
+				<li>Demo program (if any): <a href="">...</a></li>
+			  </ul>
+            </div>            
+			<div class="card-footer text-muted">
+              End of Download
+            </div>
+          </div> -->
+		  
+		  <!-- Submission and deadline section -->
+		  <!-- ### Complete submission and deadline section for the assignment ### -->
+          <div class="card mb-4">            
+            <div class="card-body" id="submission">
+              <h3 class="card-title">Submission and Deadline</h3> 
+			  <p>
+			    Deadline: <font color="red"><strong>23:59:00 on Oct 24, 2025.</strong></font>
+			  </p>
+			  <br>
+			  <h4>ZINC Submission</h4>
+			  <p>
+          </p><ol>
+            <li>
+              Download your code as a <code>.py</code> file from Google Colab:
+            </li>
+              <ul>
+                <li>Click <strong>File → Download → Download .py</strong></li>
+              </ul>
+            <li>Rename the downloaded file to <code>pa1_task.py</code></li>
+            <li>Compress the file into a <code>.zip</code> archive:</li>
+              <ul>
+                <li>Any archive name is acceptable</li>
+              </ul>
+            <li>Submit the archive to <a href="https://zinc.cse.ust.hk/">ZINC</a>.</li>
+            <li><strong>Important grading notes:</strong></li>
+              <ul>
+                <li>Final evaluation uses different test cases/datasets</li>
+                <li>Hard-coded solutions or dataset-specific adaptations may result in significant grade reductions</li>
+              </ul>
+          </ol>
+				<!-- Create a single zip file that contains ? .ipynb files, only these ? files, NOT a folder containing them. Submit the zip file to <a href="https://zinc.cse.ust.hk">ZINC</a>. ZINC usage instructions can be found <a href="https://zinc.cse.ust.hk/guide"></a>. -->
+				<!-- <br/><br/> -->
+				<strong>Notes:</strong>
+				<ul>
+					<li>You may submit your file multiple times, but only the latest version will be graded.</li>
+					<li>Submit early to avoid any last-minute problem. Only ZINC submissions will be accepted.</li>
+					<li>The ZINC server will be very busy in the last day especially in the last few hours, so you should expect you would get the grading result report not-very-quickly. However, as long as your submission is successful, we would grade your latest submission with all test cases after the deadline.</li>
+					<li>If you have encountered any server-side problem or webpage glitches with ZINC, you may post on the <a href="https://support.zinc.ust.dev/">ZINC support forum</a> to get attention and help from the ZINC team quickly and directly. If you post on Piazza, you may not get the fastest response as we need to forward your report to them, and then forward their reply to you, etc.
+					</li>
+				</ul>
+			  <p></p>
+			  <br>
+			  <h4>Compilation Requirement</h4>
+			  <p>It is <span style="font-weight:bold">required</span> that your submissions can be compiled and run successfully in our online autograder ZINC. If we cannot even compile your work, it won't be graded. Therefore, for parts that you cannot finish, just put in dummy implementation so that your whole program can be compiled for ZINC to grade the other parts that you have done. Empty implementations can be like:
+			  </p><pre class="shadow-sm rounded"><code>def SomeFunctionICannotFinishRightNow():
+    return 0
+
+def SomeFunctionICannotFinishRightNowButIWantOtherPartsGraded():
+</code></pre>
+			  <p></p>
+			  <br>
+			  <h4>Reminders</h4>
+			  <p>
+			    <span style="font-weight:bold">Make sure you actually upload the correct version of your source files - we only grade what you upload</span>. Some students in the past submitted an empty file or a wrong file or an exe file which is worth zero mark. So <span style="font-weight:bold">you must double-check the file you have submitted</span>.
+			  </p>
+			  <br>
+			  <h4>Late Submission Policy</h4>
+			  <p>
+			    There will be a penalty of -1 point (out of a maximum 100 points) for every minute you are late. For instance, since the deadline of assignment 1 is 23:59:00 on Oct 24th, if you submit your solution at 1:00:00 on Oct 25th , there will be a penalty of -61 points for your assignment. However, the lowest grade you may get from an assignment is zero: any negative score after the deduction due to late penalty (and any other penalties) will be reset to zero.
+			  </p>
+            </div>
+			<div class="card-footer text-muted">
+              End of Submission and Deadline
+            </div>
+          </div>
+		  
+		  <!-- FAQ section -->
+		  <!-- ### Complete FAQ section for the assignment ### -->
+          <div class="card mb-4">            
+            <div class="card-body" id="faq">
+              <h3 class="card-title">Frequently Asked Questions</h3> 			  
+		      <h4>Frequently Asked Questions</h4>
+			    <p>
+          We are waiting for your questions! Please post your questions on <a href="https://canvas.ust.hk/courses/64950/external_tools/5157">Piazza</a>, and we will update this section with common questions and answers.
+  			  <br>
+          <br>
+          <font color="red"><strong>Q:</strong></font> What if I get different words order in Task 2.2 and Task 2.3 when there's tie?<br>
+			    <font color="green"><strong>A:</strong></font> It doesn't matter your ZINC passing if you get all correct scores. We won't compare the order of the ties on ZINC. So just make sure you get the correct scores for all words and see if you can pass ZINC test.
+			    </p>	
+          <p>
+          <font color="red"><strong>Q:</strong></font> What is the output type of Task0.1?<br>
+          <font color="green"><strong>A:</strong></font> There is a mistake in the notebook instruction. You should return a Pandas Series instead of a DataFrame. The return type should be "&lt;'class' pandas.core.series.Series&gt;". We have fixed this mistake in the notebook now and you will see it by redownloading it.
+          </p>
+          <p>
+          <font color="red"><strong>Q:</strong></font> What are the output types of Task 2.2 and Task 2.3?<br>
+          <font color="green"><strong>A:</strong></font> You should return numpy arrays instead of lists.
+          </p>
+          <p>
+            <font color="red"><strong>Q:</strong></font> Can I use ".toarray()" in Task 1.2 and Task 1.3?<br>
+            <font color="green"><strong>A:</strong></font> Yes you can use any numpy operation in this assignment. <font color="brown"><u>Only for-loops are not allowed to use.</u></font>
+          </p>
+          <p>
+            <font color="red"><strong>Q:</strong></font> I do not use any for-loop in Task 3.1 but I still can not pass the efficiency test. How can I solve it?<br>
+            <font color="green"><strong>A:</strong></font> Try to use summation instead of multiplication.
+          </p>
+          <p>
+            <strong>Note:</strong> for Task 1.1, 1.2 and 1.3, you should be able to pass the efficiency test if you only used numpy operations. If you fail in passing the efficiency tests, please email us or raise a question on <a href="https://canvas.ust.hk/courses/64950/external_tools/5157">Piazza</a>.
+          </p>
+            </div>
+		    <div class="card-footer text-muted">
+              End of Frequently Asked Questions
+            </div>          
+          </div>
+        </div>
+				
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-3">
+		  <div class="sticky-top">
+            <!-- Menu Widget -->
+            <div class="card my-12">
+              <h5 class="card-header">Menu</h5>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <ul class="mb-0" type="circle" style="padding-left:20px">
+                      <li>
+                        <a href="https://course.cse.ust.hk/comp2211/assignments/pa1/#introduction">Introduction</a>
+                      </li>
+                      <li>
+                        <a href="https://course.cse.ust.hk/comp2211/assignments/pa1/#description">Description</a>
+                      </li>
+                      <!-- <li>
+                        <a href="#download">Resources &amp; Sample I/O</a>
+                      </li> -->
+			  		  <li>
+					    <a href="https://course.cse.ust.hk/comp2211/assignments/pa1/#submission">Submission &amp; Deadline</a>
+					  </li>
+					  <li>
+					    <a href="https://course.cse.ust.hk/comp2211/assignments/pa1/#faq">Frequently Asked Questions</a>
+					  </li>
+                    </ul>
+                  </div>                
+                </div>
+              </div>
+            </div>
+		  
+		    <!-- Maintainance widget -->
+            <div class="card my-4">
+              <h5 class="card-header">Page maintained by</h5>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        CHEN, Yiwei
+                      </li>
+                      <li>
+                        Email: <a href="mailto:ychenmb@connect.ust.hk">ychenmb@connect.ust.hk</a>
+                      </li>
+					  <li>Last Modified: <script type="text/javascript">document.write(document.lastModified);</script>10/10/2025 18:54:50</li>
+            <li>Task Designer: Li Wenying</li>
+                    </ul>
+                  </div>				
+                </div>
+              </div>
+            </div>
+		  
+		  
+		    <!-- Homepage widget -->
+            <div class="card my-4">
+              <h5 class="card-header">Homepage</h5>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <a href="http://course.cse.ust.hk/comp2211">Course Homepage</a>
+                      </li>
+                    </ul>
+                  </div>				
+                </div>
+              </div>
+            </div>
+		  </div>
+        </div>
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Maintained by COMP 2211 Teaching Team © 2025 HKUST Computer Science and Engineering</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="./COMP 2211 Assignment 1_ Text Sentiment Analysis with Naïve Bayes_files/jquery.min.js.download"></script>
+    <script src="./COMP 2211 Assignment 1_ Text Sentiment Analysis with Naïve Bayes_files/bootstrap.bundle.min.js.download"></script>	
+  
+
+
+</body></html>

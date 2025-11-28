@@ -1,0 +1,1038 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0060)https://course.cse.ust.hk/comp2211/self-test/self-test2.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>COMP2211 Self-test Web Page</title>
+  
+  <meta name="keywords" content="">
+  <!--link rel="stylesheet" href="img/Underground.css" type="text/css" /-->
+  <!-- Bubble tooltips: adopted from: http://www.web-graphics.com/mtarchive/BubbleTooltips.html-->
+  <!-- For automatic tooltip: -->
+  <script src="./COMP2211 Self-test 2_files/bubbletooltips.js.download" type="text/javascript"></script>
+  <!-- Example:  usage <a href="" title=""></a>  -->
+  <!-- For customize tooltip -->
+  <link media="all" href="./COMP2211 Self-test 2_files/bt.css" type="text/css" rel="stylesheet">
+  <script type="text/javascript" src="./COMP2211 Self-test 2_files/jquery.js.download"></script>
+
+  <!-- JQuery Calender is located here... -->
+  <style type="text/css">
+    @import url(jquerycalendar/jquery-calendar.css);
+  </style>
+  <script type="text/javascript" src="./COMP2211 Self-test 2_files/jquery-calendar.js.download"></script>
+
+  <script type="text/javascript" src="./COMP2211 Self-test 2_files/selftestmenu.js.download"></script>
+  <link rel="stylesheet" type="text/css" href="./COMP2211 Self-test 2_files/selfteststyle.css">
+  <!-- highslide stuff: TESTING... -->
+  <script type="text/javascript" src="./COMP2211 Self-test 2_files/highslide-with-html.js.download"></script>
+  <script type="text/javascript">
+    hs.graphicsDir = 'highslide/graphics/';
+    hs.outlineType = 'rounded-white';
+    hs.outlineWhileAnimating = true;
+  </script>
+  <style type="text/css">
+    @import url(highslide/myslide.css);
+  </style>
+  <!-- END OF highslide stuff -->
+
+<link class="undefined" type="text/css" rel="stylesheet" href="./COMP2211 Self-test 2_files/BubbleTooltips.css" media="screen" style="display: block;"></head>
+
+<!-- Start of the main html body -->
+
+<body>
+
+  <!-- wrap starts here -->
+  <div id="main">
+    <div id="wrap">
+      <!-- header -->
+      <div id="header">
+        <span id="slogan"></span>
+        <!-- tabs -->
+        <ul>
+          <li class="showall-solution"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test2.html#"><span>Show all solutions</span></a></li>
+          <li class="hideall-solution"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test2.html#"><span>Hide all solutions</span></a></li>
+
+          <!--
+                  <li id="tabShowNormalView"><a href="#" title="The normal webpage view"><span>Web view</span></a></li>
+                  <li id="tabShowAllOnePage"><a href="#" title="The view which is suitable for printing"><span>Printable view</span></a></li>
+                  <li id="tabIncFontSize"><a href="#" title="Increase the font size" ><span >++ Font size</span></a></li>
+                  <li id="tabDecFontSize"><a href="#" title="Decrease the font size" ><span >-- Font size</span></a></li>
+				  
+				  -->
+
+        </ul>
+      </div>
+      <!-- main block: right panel -->
+      <!--div id="main"-->
+
+      <!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+      <div id="block1" style="display:block;	clear:left;">
+        <h1>Self-test 2: <br> Python Fundamentals for Artificial Intelligence </h1>
+
+        <ol>
+
+          <p>We have compiled a list of NumPy functions in <a href="https://colab.research.google.com/drive/1B9ID6T9p2voxZEW_RgAdg8ULMX5uzxxY?usp=sharing">this Colab file</a>. These are functions and array methods that you would likely encounter in this course.</p>
+
+          <!-- Basic type question -->
+
+
+          <li>
+            <div class="question-wrapper" style="position: static;">
+              <div class="question-content">
+                <p>Which of the following defines a dictionary?</p>
+                <ol type="A">
+                  <li> ["a", "b"]</li>
+                  <li> ["a": "b"]</li>
+                  <li> {"a", "b"}</li>
+                  <li> {"a": "b"}</li>
+                </ol>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <b>D. {"a": "b"}</b>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper" style="position: static;">
+              <div class="question-content">
+                <p>What does print(len("hehehaha")) output?</p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <b>8</b>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p>What does print(len(r"\n Desmond is a good guy na!\n")) output? </p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>30. This is a raw string, so just count the number of characters between the quotes.</b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p>Which of the following is not a mutable type? </p>
+                <ol type="A">
+                  <li>Lists</li>
+                  <li>Tuples</li>
+                  <li>Dictionaries</li>
+                  <li>Sets</li>
+                </ol>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>B. Tuples</b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p>Complete the following code snippet to print a NumPy array of all zeros, with 3 rows and 5 columns. Your code should be at most one line.</p>
+
+<pre>  import numpy as np
+  <p style="color:#3EB489">  # Your code goes here</p>
+  print(a)
+</pre>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  a = np.zeros((3, 5))
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p>Complete the following code snippet to print this NumPy array
+</p><pre>[[1, 2, 3, 4],
+[5, 6, 7, 8],
+[9, 10, 11, 12],
+[13, 14, 15, 16]]
+</pre>
+                    Your code should be at most one to two lines.<p></p>
+
+<pre>  import numpy as np
+  <p style="color:#3EB489">  # Your code goes here</p>
+  print(a)
+</pre>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  a = np.arange(16).reshape((4,4)) + 1
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> What is the shape of the following array?
+</p><pre>[  [[1, 2, 3, 4],
+[5, 6, 7, 8]],
+
+[[9, 10, 11, 12],
+[13, 14, 15, 16]],
+
+[[9, 10, 11, 12],
+[13, 14, 15, 16]]  ]
+</pre>        
+              <p></p>
+              </div>
+
+              <ol type="A">
+                <li> (2, 3, 4)</li>
+                <li> (3, 2, 4)</li>
+                <li> (2, 4, 3)</li>
+                <li> (3, 4, 2)</li>
+              </ol>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  B. (3, 2, 4)
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Complete the following function that returns the maximum value within a NumPy array.
+</p><pre>  import numpy as np
+
+  def Get_Max(a: np.ndarray):
+  <p style="color:#3EB489">    # Your code goes here</p>
+    return m
+  
+  a = np.array([1, 2, 3, 42, 5, 6])
+  print(Get_Max(a))
+  <p style="color:#3EB489">  # Print "42"</p>
+
+</pre>
+Your code should be at most one to two lines, and should not contain any loops.
+              <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  m = a.max()
+                  or
+                  m = np.max(a)
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Complete the following function that returns the minimum value within a NumPy array.
+</p><pre>  import numpy as np
+
+  def Get_Min(a: np.ndarray):
+  <p style="color:#3EB489">    # Your code goes here</p>
+    return m
+  
+  a = np.array([1, 2, 3, 42, 5, 6])
+  print(Get_Min(a))
+  <p style="color:#3EB489">  # Print "1"</p>
+
+</pre>
+Your code should be at most one to two lines, and should not contain any loops.
+              <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  m = a.min()
+                  or
+                  m = np.min(a)
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> What is the output of the following code?
+</p><pre>  import numpy as np
+  a = np.array([[1, 2, 3, 4],
+  [5, 6, 7, 8]])
+  print(a.transpose())
+</pre>
+              <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+</b></p><pre><b>  array([[1, 5],
+  [2, 6],
+  [3, 7],
+  [4, 8]])
+</b></pre><b>
+                </b><p></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <!-- Q11-20 -->
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Suppose we have an array M of shape (4, 5, 6). Which of the following operations are valid? </p>
+              <ol type="A">
+                <li> M + A, where A is an array of shape (4, 5)</li>
+                <li> M + B, where B is an array of shape (4, 1)</li>
+                <li> M + C, where C is an array of shape (5, 3)</li>
+                <li> M + D, where D is an array of shape (5, 1)</li>
+              </ol>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  D. M + D
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> What is the output of the following code?
+</p><pre>  import numpy as np
+
+  a = np.array([[2, 2, 1, 1], [1, 2, 3, 4]])
+  b = np.array([[1, 3, 5, 7], [2, 4, 6, 8]])
+  print(a + b)
+</pre>
+              <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  </b></p><pre><b>  array([[ 3,  5,  6,  8],
+  [ 3,  6,  9, 12]])
+                  </b></pre><b>
+                </b><p></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Which of the following functions correctly compares two integer arrays and returns "True" if and only if they have the same shape and entries?
+</p><pre>  import numpy as np
+
+  def A(a1, a2):
+    return a1 == a2
+
+  def B(a1, a2):
+    return a1 - a2 == 0
+
+  def C(a1, a2):
+    if a1.shape == a2.shape:
+      return (a1 == a2).all()
+    return False
+
+  def D(a1, a2):
+    if a1.shape == a2.shape:
+      return a1 - a2 == 0
+    return False
+</pre>
+              <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  C. The all() method of NumPy arrays returns True if and only if all entries are True (more accurately, True-like)
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Suppose we have an array M of shape (3,4,5). Which of the following operations are valid? </p>
+              <ol type="A">
+                <li> M * A, where A is an array of shape (3, 4)</li>
+                <li> M * B, where B is an array of shape (3, 1)</li>
+                <li> M * C, where C is an array of shape (4, 1)</li>
+                <li> M * D, where D is an array of shape (5, 1)</li>
+              </ol>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  C. M * C
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Suppose we have an array M of shape (22, 11). Which of the following operations are valid? Also, determine the shape of the array after the operation. </p>
+              <ol type="A">
+                <li> np.dot(M, A), where A is an array of shape (11, 33)</li>
+                <li> np.dot(B, M), where B is an array of shape (33, 11)</li>
+                <li> np.dot(M, C), where C is an array of shape (22, 11)</li>
+                <li> np.dot(D, M), where D is an array of shape (11, 33)</li>
+              </ol>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  A. np.dot(M, A). The dot() function on 2D NumPy arrays is matrix multiplication, which has to be on matrices (i x j) and (j x k). In other words, when you write their shapes side by side (like (22, 11)(11, 33)), their inner dimensions have to match; then the resulting array is just the outer dimensions (in this case, (22, 33))
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> In Image Processing, we often want to use a data type called "8-bit unsigned integer" (np.uint8), which is an integer ranging from 0-255; they will represent the intensity of colors in an image. Complete the following code snippet, which creates an array of shape (1920, 1080) with all 8-bit unsigned integers, with a value of 0.
+</p><pre>  import numpy as np
+
+  <p style="color:#3EB489">  # Your code goes here</p>
+  print(a.dtype)
+  <p style="color:#3EB489">  # Print "dtype('uint8')"</p>
+
+</pre>
+Your code should be at most one to two lines, and should not contain any loops.
+              <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  a = np.zeros((1920, 1080), dtype = np.uint8)
+                  <br><br>
+                  or
+                  <br><br>
+                  a = np.full((1920, 1080), fill_value = 0, dtype = np.uint8)
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> What is the output of the following code?
+</p><pre>  import numpy as np
+
+  a = np.array([[2, 2, 1, 1], [1, 2, 3, 4]])
+  b = np.array([[22], [11]])
+  print(a + b)
+</pre>
+              <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  </b></p><pre><b>array([[24, 24, 23, 23],
+[12, 13, 14, 15]])
+                  </b></pre><b>
+                </b><p></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <!-- Medium type question Q18 - 27 -->
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Consider the following code
+</p><pre>  from another_file import data
+  import matplotlib.pyplot as plt
+
+  plt.figure()
+  plt.plot(data)
+  plt.show()
+</pre>
+Which of the following best describes "pyplot"?
+              <p></p>
+              <ol type="A">
+                <li> It is a function</li>
+                <li> It is a module</li>
+                <li> It is a package</li>
+                <li> It is a library</li>
+              </ol>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  B. It is a module. Modules are the first layer of the container that holds functions.
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> What is the output of the following code?
+</p><pre>  import numpy as np
+
+  a = np.arange(1000).reshape(10, 10, 10)
+  haha = a[(1,2,3), (4,5,6), (7,8,9)]
+  print(haha)
+</pre>
+              <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  array([147, 258, 369])
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Complete the following function that returns all values that are greater than or equal to the mean values in the array.
+</p><pre>  import numpy as np
+
+  def Get_Above_Mean(a: np.ndarray):
+  <p style="color:#3EB489">    # Your code goes here</p>
+    return m
+  
+  a = np.array([1, 23, 3, 42, 5, 6, 15])
+  print(np.average(a))
+  <p style="color:#3EB489">  # Print "13.571428571428571"</p>
+  print(Get_Above_Mean(a))
+  <p style="color:#3EB489">  # Print "array([23, 42, 15])"</p>
+
+</pre>
+Your code should be at most one to two lines, and should not contain any loops.
+              <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  m = a[a &gt;= np.average(a)]
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Complete the following function that returns the second largest element of an array.
+</p><pre>  import numpy as np
+
+  def Get_second(a: np.ndarray):
+  <p style="color:#3EB489">    # Your code goes here</p>
+    return m
+  
+  a = np.array([1, 23, 3, 42, 5, 6, 15])
+  print(Get_second(a))
+  <p style="color:#3EB489">  # Print "23"</p>
+
+</pre>
+Your code should be at most one to two lines, and should not contain any loops. Hint: use np.argsort
+              <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  sort = np.argsort(a)
+                  <br>
+                  m = a[sort[-2]]
+                  <br> <br>
+                  From your TA: I don't know about you, but argsort is super hard for me to understand at first, and the documentation is quite unclear. 
+                  I will throw in a bit of my own explaination. The argsort function returns an array of "rankings". The first element in np.argsort(array) returns the *index of* the smallest element in the array. The second element in np.argsort(array) returns the *index of* the second smallest element in he array, and so on. 
+                  This array of indices makes it such that array[np.argsort(array)] uses integer array slicing to return a sorted array (by reference!). 
+                  <br><br>
+                  Hence, the second largest element is the second last element in np.argsort(array), or, with fancy Python array indexing, the -2th element. 
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Desmond promises that 25% of the class will get an A range in COMP2211. Assume in the following code, that student[i] scores marks[i] points. Complete the following function that returns an array of all students with an A range.
+</p><pre>  import numpy as np
+  from grade_book import students, marks
+
+  def Get_A_range(students: np.ndarray, marks: np.ndarray):
+    num_students = students.shape[0]
+    num_A_range = num_students // 4
+  <p style="color:#3EB489">    # Your code goes here</p>
+    return students_with_A_range
+  
+  A_range_students = Get_A_range(students, marks)
+  print(*A_range_students, sep = "\n")
+  <p style="color:#3EB489">
+    # The * prefix unpacks the array. Then the print statement will print every element in "A_range_students" one by one, separated by "sep", which is "\n"
+    # This print statement will print your name if you work hard :)
+  </p>
+
+</pre>
+Your code should be at most one to two lines, and should not contain any loops. Hint: the last question might help.
+              <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  sort = np.argsort(marks)
+                  <br>
+                  students_with_A_range = students[sort[-num_A_range:]]
+                  <br><br>
+                  or
+                  <br><br>
+                  cutoff_index = np.argsort(marks)[-num_A_range]
+                  <br>
+                  students_with_A_range = students[marks&gt;=marks[cutoff_index]]
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Using broadcasting magic, complete the following code snippet to print this NumPy array with shape (2211, 4)
+</p><pre>  [[0, 1, 2, 3],
+  [0, 1, 2, 3],
+  [0, 1, 2, 3],
+  ...,
+  [0, 1, 2, 3],
+  [0, 1, 2, 3],
+  [0, 1, 2, 3]]
+</pre>
+<pre>  import numpy as np
+
+  a = np.arange(4)
+  <p style="color:#3EB489">  # Your code goes here</p>
+  print(array)
+
+</pre>
+Your code should be at most one to two lines, and should not contain any loops.
+              <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  array = a + np.zeros((2211,4), dtype = int) or array = a + np.zeros((2211,1), dtype = int)
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Using broadcasting magic, complete the following code snippet to print this NumPy array with shape (2211, 4)
+</p><pre>  [[   0,    1,    2,    3],
+  [   1,    2,    3,    4],
+  [   2,    3,    4,    5],
+  ...,
+  [2208, 2209, 2210, 2211],
+  [2209, 2210, 2211, 2212],
+  [2210, 2211, 2212, 2213]]
+</pre>
+<pre>  import numpy as np
+
+  a = np.arange(4)
+  <p style="color:#3EB489">  # Your code goes here</p>
+  print(array)
+
+</pre>
+Your code should be at most one to two lines, and should not contain any loops.
+              <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  array = a + np.arange(2211).reshape(2211, 1)
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Using broadcasting magic, complete the following code snippet to print this NumPy array with shape (2211, 4)
+</p><pre>  [[   0,    2,    4,    6],
+  [   4,    6,    8,   10],
+  [   8,   10,   12,   14],
+  ...,
+  [8832, 8834, 8836, 8838],
+  [8836, 8838, 8840, 8842],
+  [8840, 8842, 8844, 8846]]
+</pre>
+<pre>  import numpy as np
+
+  a = np.arange(4)
+  <p style="color:#3EB489">  # Your code goes here</p>
+  print(array)
+
+</pre>
+Your code should be at most one to two lines, and should not contain any loops.
+              <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  array = a + np.arange(2211 * 4).reshape(2211, 4) 
+                  <br><br>
+                  or
+                  <br><br>
+                  array = a + (np.arange(2211) * 2).reshape(2211, 1)
+                  <br>
+                  array *= 2
+                  <br><br>
+                  or
+                  <br><br>
+                  array = 2*a + (np.arange(2211)*4).reshape(2211,1)
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> What is the expected output of the following code?
+</p><pre>  import numpy as np
+  import time
+
+  s = 999999999
+  a = np.random.random((s, 1))
+  b = np.random.random((1, s))
+
+  def time1():
+    t1 = time.time()
+    np.dot(b, a)
+    t2 = time.time()
+    return t2 - t1
+
+  def time2():
+    t1 = time.time()
+    res = 0
+    for i in range(s):
+        res += a[i, 0] * b[0, i]
+    t2 = time.time()
+    return t2 - t1
+
+    print(time1() &lt;= time2())
+</pre>
+              <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  True. We tested this in IDLE, and time1 is 0.45924925804138184 while time2 is 288.3381974697113. NumPy arrays are generally much much MUCH faster than loops.
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> Complete the following code snippet to get the minimum value of each row in a 2D array. (For the sake of terminology, a row is a set of data that spans along the last dimension)
+</p><pre>  import numpy as np
+
+  a = np.array([[ 9,  3,  0,  3, 10,  9],
+    [11,  4, 13,  1, 12,  8],
+    [ 9,  4,  7,  6,  6,  7],
+    [ 8,  1, 12, 13,  2,  9]])
+  <p style="color:#3EB489">  # Your code goes here</p>
+  print(mins)
+  <p style="color:#3EB489">  # Print "array([0, 1, 4, 1])"</p>
+</pre>
+Your code should be at most one to two lines, and should not contain any loops. Hint: take a look at the "axis" argument that appears in many common NumPy functions.
+              <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  mins = np.min(a, axis = 1). The "axis" argument instructs the NumPy method to perform a task, but only along a specific dimension. For instance, in this example, we get the minimum value, but only along dimension 1 (aka rows).
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <!-- Advanced type question -->
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p>Which of the following returns "False"?</p>
+                <ol type="A">
+                  <li> 3 ** 2 == 9 </li>
+                  <li> 0.1 + 0.2 == 0.3 </li>
+                  <li> 12.0 / 4.0 == 3.0</li>
+                  <li> 5 // 3 == 1</li>
+                </ol>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <b>
+                  B. 0.1 + 0.2 == 0.3
+                  <br>
+                  This is because a floating point value is not represented too accurately in Python (and other
+                  languages, too); Python thinks that 0.1 + 0.2 would be equal to 0.30000000000000004 instead. Do the following to compare floating point values:
+<pre>  a = 0.1 + 0.2
+  b = 0.3
+  really_small_number = 1e-9
+  print(abs(a - b) &lt; really_small_number)
+  <font color="#3EB489"> 
+  # Outputs True
+  <font color="Black">
+</font></font></pre><font color="#3EB489"><font color="Black">
+                </font></font></b><font color="#3EB489"><font color="Black">
+              </font></font></div><font color="#3EB489"><font color="Black">
+            </font></font></div><font color="#3EB489"><font color="Black">
+            <hr>
+          </font></font></li><font color="#3EB489"><font color="Black">
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p>What is the output of the following code? </p>
+<pre>  import numpy as np
+
+  haha = np.array([1, 2, 3])
+  hehe = haha
+  hehe[2] = 999
+  print(haha)
+</pre>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>[1  2  999]. There are two properties of python and numpy working together:
+                  <br> <br>
+                  1. Python grabs things by reference: In the statement hehe = haha, we are not copying the values of haha to hehe; instead, we are saying that hehe should point to whatever memory location that haha is pointing to.
+                  <br> <br>
+                  2. NumPy arrays are mutable: In the statement hehe[2] = 999, we can directly change the value of the numpy array that hehe is pointing at. Since hehe and haha are pointing to the same array by property (1), the array that haha points to is precisely the one that got changed.
+                </b></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> In machine learning, we often want to label our data with a 2D array with N rows, where each data is a row of 0s and 1s, indicating whether the feature belongs in a certain category. This technique is known as One-Hot Encoding. Complete the following code that turns a 1D array of non-negative integers into One-Hot Encoding. (For the sake of terminology, a row is a set that spans along the last dimension.)
+</p><pre>  import numpy as np
+
+  def One_Hot(a: np.ndarray):
+    num_categories = np.max(a) + 1
+    num_datas = a.shape[0]
+  <p style="color:#3EB489">    # Your code goes here</p>
+    return one_hot
+  
+  a = np.array([0,1,3,4])
+  print(One_Hot(a))
+  <p style="color:#3EB489">  # Print 
+    "[[1, 0, 0, 0, 0],
+    [0, 1, 0, 0, 0],
+    [0, 0, 0, 1, 0],
+    [0, 0, 0, 0, 1]]"</p>
+
+</pre>
+Your code should be at most five lines and should not contain any loops.
+              <p></p>
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>
+                  Here are two possible solutions. The first one uses integer array slicing:
+</b></p><pre><b>  one_hot = np.zeros((num_datas, num_categories), dtype = int)
+  one_hot[np.arange(num_datas), a] = 1
+</b></pre><b>
+                  Here we first create an array with the required shape with all zeros. In the second line, we use integer array slicing to turn the required indices to 1's.
+                  <br> <br>
+                  The second one uses broadcasting magic
+<pre>  one_hot = np.array(a.reshape(num_datas, 1) == np.arange(num_categories), dtype = int)
+</pre>
+                  We will split the code into multiple parts as follows to facilitate explanation. First, convince yourself that the following code snippet is functionally identical to the one above.
+<pre>  aT = a.reshape(num_datas, 1)
+  categories = np.arange(num_categories)
+  flags = aT == categories
+  one_hot = np.array(flags, dtype = int)
+</pre>
+                  In the first line, we use reshape to shift all the data to the second dimension; this sets up broadcasting. The second line creates a 1D array containing all the possible data categories that might appear in array a.
+                  <br> <br>
+                  In the third line, we use broadcasting to compare every row of aT against every column of categories. By broadcasting magic, flags[i, j] holds the boolean value a[i] == categories[j].
+                  <br> <br>
+                  The flags array is essentially what we need, except in boolean. We only need to turn all the True's to 1's and False's to 0's. The last line is just one of the many ways to achieve this result.
+                  <br> <br> <br> <br>
+                  You are strongly recommended to understand both solutions as they are vitally important for the rest of the course.
+                </b><p></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+          <li>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <p> One task frequently appearing in machine learning is to compute the "distances" between different data points. A "data point" in this question has 3 different features represented by 3 floating point values. 
+                  Suppose an array X of shape (2211, 3) holds 2211 data points (which is our training data set), and another array T of shape (300, 3) holds 300 data points (which is our test data set). Using broadcasting magic, complete the following code snippet that computes the NumPy array "dists" of shape (2211, 300), where dists[i, j] is the distance between X[i] and T[j] for each i and j.
+              <br><br>
+              For the sake of terminology, the distance between x = (x1, x2, x3) and y = (y1, y2, y3) is defined as the square root of (x1 - y1)^2 + (x2 - y2)^2 + (x3 - y3)^2
+             </p>
+<pre>  import numpy as np
+  from dataset import training_data, test_data
+
+  X, T = training_data, test_data
+  print(X.shape, T.shape)
+  <p style="color:#3EB489">  # Print "(2211, 3) (300, 3)"
+  
+  # Your code goes here</p>
+  print(dists.shape)
+  <p style="color:#3EB489">  # Print "(2211, 300)"</p>
+</pre>
+Your code should be at most five lines, and should not contain any loops. Try not to hard-code the numbers "2211" and "300" into your code.
+              </div>
+
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b> This is actually a question from PA1 and the midterm of Spring 2022. We provide two solutions for this question, and we shall try our best to explain both. You have to understand at least one of them.
+
+                  <br> <br>
+                  Solution 1:
+</b></p><pre><b>  X_reshaped = X.reshape(-1, 1, 3)
+  T_reshaped = T.reshape(1, -1, 3)
+  dists = np.sqrt(np.sum((T_reshaped - X_reshaped) ** 2, axis = 2))
+</b></pre><b>
+                  This solution is perhaps best understood via a diagram.
+                  <br>
+                  <img src="./COMP2211 Self-test 2_files/hehehaha.png" alt="diagram">
+                  <br>
+                  From the diagram, we can see that the array T_reshaped - X_reshaped has shape (2211, 300, 3), and the [i,j]-th row of the array is the element-wise subtraction of T[i] and X[j]. Then, we square it element-wise, add up the square of each coordinate, and take the square root.
+                  <br>
+                  Note 1: This solution seems to have the drawback of having to hard-code the number of features compared to solution 2; one way to fix this is via the following
+<pre>  num_features = X.shape[-1]
+  X_reshaped = X.reshape(-1, 1, num_features)
+  T_reshaped = T.reshape(1, -1, num_features)
+  dists = np.sqrt(np.sum((T_reshaped - X_reshaped) ** 2, axis = 2))
+</pre>
+                  Note 2: In the official marking scheme, this solution is further reduced into a cryptic one-line solution in two different ways under the "alternative solutions" section:
+<pre>  dists = np.sqrt(np.sum(np.square(np.expand_dims(X_test, 1) - X_train), axis=2))
+  dists = np.sqrt(np.sum(np.square(X_test[:,None] - X_train[None]), axis=-1))
+</pre>
+                  but they are essentially the same as our solution here.
+                  <br><br>
+                  Solution 2:
+<pre>  M = -2 * np.dot(T, X.transpose())
+  sum_T_squared = np.square(T).sum(axis=1)
+  sum_X_squared = np.square(X).sum(axis=1)
+  dists = np.sqrt(M + sum_T_squared.reshape(-1, 1) + sum_X_squared.reshape(1, -1))
+</pre>
+                  This solution uses the expansion formula (a - b)^2 = a^2 - 2ab + b^2. It is essentially this formula on the scale of an entire NumPy array.
+                  <br><br>
+                  M represents the "-2ab" part. Recall that np.dot() is matrix multiplication on 2D arrays, so np.dot(T, X.transpose())[i, j] is the sum of the coordinate-wise product of T[i] and X[j]. It has shape (2211, 300).
+                  <br>
+                  sum_T_squared represents the a^2 part. Recall that np.square(T) computes the element-wise square of T, so it has shape (2211, 3). Summing it along axis 1, we get an array of shape (2211,), in which the i-th entry represents the sum of squares of each data point. Similarly, sum_X_squared has shape (300,)
+                  <br>
+                  In the last line, we make the arrays into the correct shape, which sets us up for adding everything using broadcasting magic twice, completing the task.
+                  <br><br>
+                  Try to draw a similar diagram to that of solution 1 shall aid your understanding of array broadcasting.
+                </b><p></p>
+              </div>
+            </div>
+            <hr>
+          </li>
+
+        </font></font></ol><font color="#3EB489"><font color="Black">
+      </font></font></div><font color="#3EB489"><font color="Black">
+
+      <!-- wrap ends here; don't delete this /div -->
+    </font></font></div><font color="#3EB489"><font color="Black">
+
+  </font></font></div><font color="#3EB489"><font color="Black">
+  
+
+
+
+</font></font><div id="calendar_div"></div><span id="btc" style="position: absolute;"></span><div style="padding: 0px; border: none; margin: 0px; position: absolute; left: 0px; top: 0px; width: 100%; z-index: 1001;"><a class="highslide-loading" title="Click to cancel" style="position: absolute; opacity: 0.75; left: -9999px; z-index: 1;">Loading...</a><table cellspacing="0" style="padding: 0px; border: none; margin: 0px; visibility: hidden; position: absolute; z-index: 1001; border-collapse: collapse;"><tbody style="padding: 0px; border: none; margin: 0px;"><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px 0px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -40px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px 0px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -80px; height: 20px; width: 20px;"></td><td class="rounded-white" style="padding: 0px; border: none; margin: 0px; position: relative;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px -80px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -20px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -60px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px -20px; height: 20px; width: 20px;"></td></tr></tbody></table><img src="./COMP2211 Self-test 2_files/rounded-white.png" style="padding: 0px; border: none; margin: 0px; position: absolute; left: -9999px; top: -9999px;"></div></body></html>

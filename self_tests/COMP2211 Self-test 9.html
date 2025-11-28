@@ -1,0 +1,645 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0060)https://course.cse.ust.hk/comp2211/self-test/self-test9.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>COMP2211 Self-test Web Page</title>
+
+<meta name="keywords" content="">
+<!--link rel="stylesheet" href="img/Underground.css" type="text/css" /-->
+<!-- Bubble tooltips: adopted from: http://www.web-graphics.com/mtarchive/BubbleTooltips.html--><!-- For automatic tooltip: -->
+<script src="./COMP2211 Self-test 9_files/bubbletooltips.js.download" type="text/javascript"></script>
+<!-- Example:  usage <a href="" title=""></a>  --><!-- For customize tooltip -->
+<link media="all" href="./COMP2211 Self-test 9_files/bt.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="./COMP2211 Self-test 9_files/jquery.js.download"></script>
+
+<!-- JQuery Calender is located here... -->
+<style type="text/css">@import url(jquerycalendar/jquery-calendar.css);</style>
+<script type="text/javascript" src="./COMP2211 Self-test 9_files/jquery-calendar.js.download"></script>
+
+<script type="text/javascript" src="./COMP2211 Self-test 9_files/selftestmenu.js.download"></script>
+<link rel="stylesheet" type="text/css" href="./COMP2211 Self-test 9_files/selfteststyle.css">
+<!-- highslide stuff: TESTING... -->
+<script type="text/javascript" src="./COMP2211 Self-test 9_files/highslide-with-html.js.download"></script>
+<script type="text/javascript">    
+    hs.graphicsDir = 'highslide/graphics/';
+    hs.outlineType = 'rounded-white';
+    hs.outlineWhileAnimating = true;
+</script>
+<style type="text/css">@import url(highslide/myslide.css);</style>
+<!-- END OF highslide stuff -->
+
+<link class="undefined" type="text/css" rel="stylesheet" href="./COMP2211 Self-test 9_files/BubbleTooltips.css" media="screen" style="display: block;"></head>
+
+<!-- Start of the main html body -->
+<body>
+
+<!-- wrap starts here -->
+<div id="main">
+<div id="wrap">
+        <!-- header -->
+        <div id="header">
+                <span id="slogan"></span>
+                <!-- tabs -->
+                <ul>
+                  <li class="showall-solution"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test9.html#"><span>Show all solutions</span></a></li>
+                  <li class="hideall-solution"><a href="https://course.cse.ust.hk/comp2211/self-test/self-test9.html#"><span>Hide all solutions</span></a></li>
+				  
+				  <!--
+                  <li id="tabShowNormalView"><a href="#" title="The normal webpage view"><span>Web view</span></a></li>
+                  <li id="tabShowAllOnePage"><a href="#" title="The view which is suitable for printing"><span>Printable view</span></a></li>
+                  <li id="tabIncFontSize"><a href="#" title="Increase the font size" ><span >++ Font size</span></a></li>
+                  <li id="tabDecFontSize"><a href="#" title="Decrease the font size" ><span >-- Font size</span></a></li>
+				  
+				  -->
+				  
+                </ul>
+        </div>
+        <!-- main block: right panel -->
+        <!--div id="main"-->
+
+          <!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Test 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+          <div id="block1" style="display:block;	clear:left;">
+            <h1>Self-test 9: <br> Convolutional Neural Networks  </h1>
+
+          <ol>
+
+            <!-- Start of the first question -->
+            <li>
+            <div class="question-wrapper" style="position: static;">
+            <div class="question-content">
+              <p>Which of the followings is/are true about the convolutional layer in CNN?</p>
+              <ol type="A">
+                <li> The number of weights depends on the depth of the input volume.</li>
+                <li> The number of biases is equal to the number of filters.</li>
+                <li> The total number of parameters depends on the stride. </li>
+                <li> The total number of parameters depends on the padding.</li>
+              
+              </ol>
+            </div>
+        
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <b>AB</b>
+            </div>              
+            </div>
+            <hr>
+            </li>
+            <!-- End of the first question -->
+
+           
+			
+			
+			 <li>
+            <div class="question-wrapper">
+            <div class="question-content">      
+              <p>Which of the following statements claims certain advantages of CONV layers compared to Dense layers in computer vision tasks is/are TRUE?</p>
+              <ol type="A">
+                <li> Convolution itself is a non-linear operation and brings more non-linearity and stronger expressiveness to the network.</li>
+                <li> Conv layers usually have more parameters compared to Dense layers assuming the same input; hence it has stronger expressiveness.</li>
+                <li> Convolution preserves spatial context while dense layers will lose spatial context by flattening everything.</li>
+                <li> Conv layers are more similar to how the human visual system works, where different areas of the brain are activated by different levels of features.</li>
+              </ol>
+            </div>
+          
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <b>CD </b>
+              
+
+            </div>
+            </div>
+            <hr>
+            </li>
+
+            
+
+            <li>
+            <div class="question-wrapper">
+            <div class="question-content">
+              <p>Suppose we have a conventional CNN architecture: input 32*32*3 RGB image, first Conv layer has 256 3*3 filters, 
+                followed by a 2*2 max pooling layer, followed by Conv layer with 128 3*3 filters, followed by another 2*2 max pooling layer,
+                followed by Conv layer with 64 3*3 filters, then a 2*2 max pooling layer, then a flattening layer, a dense layer with 1000 neurons, 
+                and output layer with 10 neurons.
+                   What is the total number of parameters in the network, including bias, assuming no padding is done for any Conv layer?</p>
+              
+            </div>
+            
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <p><b>3*3*3*256+256 + 3*3*256*128+128 + 3*3*128*64+64 + 2*2*64*1000+1000 + 1000*10+10 = 643010
+                
+              </b></p>
+              <p><b>Hint: you need the output size after all the CONV layers to calculate the number of neurons after the Flatten layer.</b></p>
+            </div>
+            </div>
+            <hr>
+            </li>
+
+            <!-- insert code question  -->
+            <li>
+              <div class="question-wrapper">
+              <div class="question-content">
+                <p>Read the following code in python, which builds a CNN using the Keras library. What is the number of parameters in this network?</p>
+                <pre>from keras.models import Sequential
+from keras.layers import Conv2D, MaxPooling2D
+from keras.layers import Dense, Dropout, Flatten
+                  
+def custom_model():
+    model = Sequential()
+    model.add(Conv2D(filters=16,kernel_size=(3, 3), activation='relu',input_shape=(28,28,3)))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(Conv2D(filters=32,kernel_size=(3, 3), activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(Conv2D(filters=64,kernel_size=(3, 3), activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(Flatten())
+    model.add(Dense(units=64, activation='relu'))
+    model.add(Dropout(0.2))
+    model.add(Dense(units=5, activation='softmax'))
+    
+    return model
+
+model = custom_model()
+                </pre>
+              </div>
+              
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>28069 
+                </b></p>
+                <p>Note: The steps should be similar to the previous question. You may also directly copy the code to Python and run model.summary() 
+                  to check the number of parameters. But please don't use this to directly obtain the answer. You may encounter similar parameter 
+                  calculation problems in the exam, so make sure you know how to solve Q3 and Q4.</p>
+              </div>
+              </div>
+              <hr>
+              </li>
+            <!-- end insert code question -->
+
+            <li>
+              <div class="question-wrapper">
+              <div class="question-content">
+                <p>You are given a dataset of 10 x 10 grayscale images. Your goal is to build
+                  a classifier that will classify all images into 5 classes. You decide to choose one approach from MLP and CNN:</p>
+                  <p><b>MLP configuration:</b> the input is flattened into a 100-dimensional vector, followed by a fully-connected
+                    layer with 5 neurons</p>
+                    
+                      <p><b>CNN configuration:</b> the input is directly given to a convolutional layer with five 10 x 10 filters</p>
+                      <p>Explain which method is better and why?</p>
+
+                
+              </div>
+          
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p><b>Suggested Answer: The two methods are essentially the same. The only difference is that the CNN configuration doesn't require
+                  flattening the input, so it's slightly more efficient in some way. But this difference can be neglected in practice.
+                </b> </p>
+              </div>
+              </div>
+              
+              <hr>
+              </li>
+
+            <li>
+            <div class="question-wrapper">
+            <div class="question-content">
+              <p>Professor Li Fei-Fei from Stanford and her team launched the ImageNet competition in 2010. And in the following years, teams from 
+                all over the world have been trying different approaches to solve the challenge. In the first 2 years, conventional image processing
+                methods were used. And this was the common method at that time, as before the development of CNN, computer vision researchers had always
+                 been trying to find or hand engineer the features 
+                in images for multiple computer vision tasks. But in 2012, the AlexNet architecture significantly improved the performance, and CNNs became
+                exceedingly popular after that up to today. Recall what you have learnt in the "image processing" topic, and think about where
+                are the learnable parameters in CONV layers. Write your understanding of <b>what CNNs can actually learn and why this would help improve the 
+                image classification performance.</b>
+      
+              </p>
+              
+            </div>
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+              <p><b>Suggested Answer: From what you have learnt in the "image processing" topic, you should know that image convolution is powerful in finding 
+                the features of an image if we already
+                know the right kernel to use. Using different levels of features is essential for correctly classifying the images. What Conv layers 
+                actually learn is to extract the features. Because the learnable parameters are the convolution kernel itself, it will learn to extract the 
+                useful features in the image of different levels, and use the extracted feature maps to do classification. Compared to hand engineering the features
+                by humans, letting the model learn to extract the feature itself is less time-consuming and produces better performance results.
+                 </b> </p>
+            </div>
+            </div>
+
+            <hr>
+            </li>
+
+            <li>
+            <div class="question-wrapper">
+            <div class="question-content">
+
+              <p>The Visual Geometry Group won the ImageNet Champion in 2014, and their network was named the VGG network. VGG is one of 
+                the most famous CNN architectures in modern CNN development and is somehow the last successful CNN example that follows the 
+                traditional CNN design principle (CONV+POOL). (In case you are interested, GoogleNet and ResNet challenged this traditional principle,
+                and ResNet is, up to today, considered as the best choice of CNN architecture for most applications) The table below lists the details of each 
+                layer in the VGG-16 network. Calculate the output shape and number of parameters of each layer and fill in the table.
+              </p>
+              <!-- Table begin -->
+              <style>
+                table, th, td {
+                   border: 1px solid black;
+                }
+             </style>
+              
+              <table>
+                <tbody><tr>
+                   <td><b>Layer Description</b></td>
+                   <td><b>Input Shape</b></td>
+                   <td><b>Output Shape</b></td>
+                   <td><b>Number of Parameters</b></td>
+                </tr>
+                <!-- VGG block1 -->
+                <tr>
+                   <td>64 3*3 Conv filter, padding=1, stride=1</td>
+                   <td>(224,224,3)</td>
+                   <td> </td>
+                   <td> </td>
+                </tr>
+                <tr>
+                  <td>64 3*3 Conv filter, padding=1, stride=1</td>
+                  <td> </td>
+                  <td> </td>
+                  <td> </td>
+               </tr>
+               <tr>
+                <td>2*2 max pooling, no padding, stride=(2,2)</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <!-- VGG block2 -->
+                </tr><tr>
+                  <td>128 3*3 Conv filter, padding=1, stride=1</td>
+                  <td> </td>
+                  <td> </td>
+                  <td> </td>
+               </tr>
+               <tr>
+                 <td>128 3*3 Conv filter, padding=1, stride=1</td>
+                 <td> </td>
+                 <td> </td>
+                 <td> </td>
+              </tr>
+              <tr>
+               <td>2*2 max pooling, no padding, stride=(2,2)</td>
+               <td> </td>
+               <td> </td>
+               <td> </td>
+               <!-- VGG block3 -->
+               </tr><tr>
+                <td>256 3*3 Conv filter, padding=1, stride=1</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+             </tr>
+             <tr>
+               <td>256 3*3 Conv filter, padding=1, stride=1</td>
+               <td> </td>
+               <td> </td>
+               <td> </td>
+            </tr>
+            <tr>
+              <td>256 3*3 Conv filter, padding=1, stride=1</td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+           </tr>
+            <tr>
+             <td>2*2 max pooling, no padding, stride=(2,2)</td>
+             <td> </td>
+             <td> </td>
+             <td> </td>
+             <!-- VGG block4 -->
+             </tr><tr>
+              <td>512 3*3 Conv filter, padding=1, stride=1</td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+           </tr>
+           <tr>
+             <td>512 3*3 Conv filter, padding=1, stride=1</td>
+             <td> </td>
+             <td> </td>
+             <td> </td>
+          </tr>
+          <tr>
+            <td>512 3*3 Conv filter, padding=1, stride=1</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+         </tr>
+          <tr>
+           <td>2*2 max pooling, no padding, stride=(2,2)</td>
+           <td> </td>
+           <td> </td>
+           <td> </td>
+           <!-- VGG block5 -->
+           </tr><tr>
+            <td>512 3*3 Conv filter, padding=1, stride=1</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+         </tr>
+         <tr>
+           <td>512 3*3 Conv filter, padding=1, stride=1</td>
+           <td> </td>
+           <td> </td>
+           <td> </td>
+        </tr>
+        <tr>
+          <td>512 3*3 Conv filter, padding=1, stride=1</td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+       </tr>
+        <tr>
+         <td>2*2 max pooling, no padding, stride=(2,2)</td>
+         <td> </td>
+         <td> </td>
+         <td> </td>
+        </tr>
+<!-- flatten -->
+        <tr>
+          <td>flatten</td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+         </tr>
+
+         <tr>
+          <td>Dense layer with 4096 neurons</td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+         </tr>
+         <tr>
+          <td>Dense layer with 4096 neurons</td>
+          <td> </td>
+          <td> </td>
+          <td>  </td>
+         </tr>
+         <tr>
+          <td>Dense layer with 10 neurons</td>
+          <td> </td>
+          <td>(10,)</td>
+          <td> </td>
+         </tr>
+             </tbody></table>
+            
+
+            </div>  
+
+            <div class="toggle-solution">Solution</div>
+            <div class="solution-content">
+<!-- Table begin -->
+              <style>
+                table, th, td {
+                   border: 1px solid black;
+                }
+             </style>
+              
+              <table>
+                <tbody><tr>
+                   <td><b>Layer Description</b></td>
+                   <td><b>Input Shape</b></td>
+                   <td><b>Output Shape</b></td>
+                   <td><b>Number of Parameters</b></td>
+                </tr>
+                <!-- VGG block1 -->
+                <tr>
+                   <td>64 3*3 Conv filter, padding=1, stride=1</td>
+                   <td>(224,224,3)</td>
+                   <td>(224,224,64)</td>
+                   <td>1792</td>
+                </tr>
+                <tr>
+                  <td>64 3*3 Conv filter, padding=1, stride=1</td>
+                  <td>(224,224,64)</td>
+                  <td>(224,224,64)</td>
+                  <td>36928</td>
+               </tr>
+               <tr>
+                <td>2*2 max pooling, no padding, stride=(2,2)</td>
+                <td>(224,224,64)</td>
+                <td>(112,112,64)</td>
+                <td>0</td>
+                <!-- VGG block2 -->
+                </tr><tr>
+                  <td>128 3*3 Conv filter, padding=1, stride=1</td>
+                  <td>(112,112,64)</td>
+                  <td>(112,112,128)</td>
+                  <td>73856</td>
+               </tr>
+               <tr>
+                 <td>128 3*3 Conv filter, padding=1, stride=1</td>
+                 <td>(112,112,128)</td>
+                 <td>(112,112,128)</td>
+                 <td>147584</td>
+              </tr>
+              <tr>
+               <td>2*2 max pooling, no padding, stride=(2,2)</td>
+               <td>(112,112,128)</td>
+               <td>(56,56,128)</td>
+               <td>0</td>
+               <!-- VGG block3 -->
+               </tr><tr>
+                <td>256 3*3 Conv filter, padding=1, stride=1</td>
+                <td>(56,56,128)</td>
+                <td>(56,56,256)</td>
+                <td>295168</td>
+             </tr>
+             <tr>
+               <td>256 3*3 Conv filter, padding=1, stride=1</td>
+               <td>(56,56,256)</td>
+               <td>(56,56,256)</td>
+               <td>590080</td>
+            </tr>
+            <tr>
+              <td>256 3*3 Conv filter, padding=1, stride=1</td>
+              <td>(56,56,256)</td>
+              <td>(56,56,256)</td>
+              <td>590080</td>
+           </tr>
+            <tr>
+             <td>2*2 max pooling, no padding, stride=(2,2)</td>
+             <td>(56,56,256)</td>
+             <td>(28,28,256)</td>
+             <td>0</td>
+             <!-- VGG block4 -->
+             </tr><tr>
+              <td>512 3*3 Conv filter, padding=1, stride=1</td>
+              <td>(28,28,256)</td>
+              <td>(28,28,512)</td>
+              <td>1180160</td>
+           </tr>
+           <tr>
+             <td>512 3*3 Conv filter, padding=1, stride=1</td>
+             <td>(28,28,512)</td>
+             <td>(28,28,512)</td>
+             <td>2359808</td>
+          </tr>
+          <tr>
+            <td>512 3*3 Conv filter, padding=1, stride=1</td>
+            <td>(28,28,512)</td>
+            <td>(28,28,512)</td>
+            <td>2359808</td>
+         </tr>
+          <tr>
+           <td>2*2 max pooling, no padding, stride=(2,2)</td>
+           <td>(28,28,512)</td>
+           <td>(14,14,512)</td>
+           <td>0</td>
+           <!-- VGG block5 -->
+           </tr><tr>
+            <td>512 3*3 Conv filter, padding=1, stride=1</td>
+            <td>(14,14,512)</td>
+            <td>(14,14,512)</td>
+            <td>2359808</td>
+         </tr>
+         <tr>
+           <td>512 3*3 Conv filter, padding=1, stride=1</td>
+           <td>(14,14,512)</td>
+           <td>(14,14,512)</td>
+           <td>2359808</td>
+        </tr>
+        <tr>
+          <td>512 3*3 Conv filter, padding=1, stride=1</td>
+          <td>(14,14,512)</td>
+          <td>(14,14,512)</td>
+          <td>2359808</td>
+       </tr>
+        <tr>
+         <td>2*2 max pooling, no padding, stride=(2,2)</td>
+         <td>(14,14,512)</td>
+         <td>(7,7,512)</td>
+         <td>0</td>
+        </tr>
+<!-- flatten -->
+        <tr>
+          <td>flatten</td>
+          <td>(7,7,512)</td>
+          <td>(25088,)</td>
+          <td>0</td>
+         </tr>
+
+         <tr>
+          <td>Dense layer with 4096 neurons</td>
+          <td>(25088,)</td>
+          <td>(4096,)</td>
+          <td>102764544</td>
+         </tr>
+         <tr>
+          <td>Dense layer with 4096 neurons</td>
+          <td>(4096,)</td>
+          <td>(4096,)</td>
+          <td>16781312 </td>
+         </tr>
+         <tr>
+          <td>Dense layer with 10 neurons</td>
+          <td>(4096,)</td>
+          <td>(10,)</td>
+          <td>40970</td>
+         </tr>
+             </tbody></table>
+            
+          
+          <p><b>This is a very tedious question, but please expect to do something almost identical in the exam with a smaller network.
+            Also, if you are interested, <a href="https://arxiv.org/abs/1409.1556">here</a> is the link to the original VGG network paper.
+            VGG is a good CNN network to study for beginners.</b>
+          </p>
+<!-- table end -->
+
+            </div>              
+            </div>
+            <hr>
+            </li>
+
+            <li>
+              <div class="question-wrapper">
+              <div class="question-content">
+  
+                <p>Which of the followings is/are FALSE about pooling layers?
+                </p><ol type="A">
+                  <li>It is used to reduce the size of the feature maps so that it speeds up the computation of the network.</li>
+                  <li>It is applied after convolution and RELU operations.</li>
+                  <li>It is not a differentiable operation.</li>
+                  <li>The number of learnable parameters in a pooling layer is the same as the filter size.</li>
+              
+                </ol>
+              </div>      
+              <div class="toggle-solution">Solution</div>
+              <div class="solution-content">
+                <p> <b>CD</b> </p>
+              </div>              
+              </div>
+              <hr>
+              </li>
+
+
+              <li>
+                <div class="question-wrapper">
+                <div class="question-content">
+    
+                  <p>Name 3 hyperparameters in pooling layers.
+                  
+                </p></div>      
+                <div class="toggle-solution">Solution</div>
+                <div class="solution-content">
+                  <p> <b>Suggested Answer: Filter size, Stride, Category of pooling operation(max pooling, average pooling, etc.)</b> </p>
+                </div>              
+                </div>
+                <hr>
+                </li>
+
+              <li>
+                <div class="question-wrapper">
+                <div class="question-content">
+    
+                  <p>Which of the followings is/are FALSE about the idea of the dropout?</p>
+                  <ol type="A">
+                  
+                    <li>The dropout rate p is a hyperparameter to be considered when designing the model.</li>
+                    <li>It is designed as a way to avoid over-fitting.</li>
+                    <li>A dropout rate of 0.5 means half of the neuron output will be set to 0.</li>
+                    <li>The higher the dropout rate, the better the model performance.</li>
+                
+                  </ol>
+                </div>      
+                <div class="toggle-solution">Solution</div>
+                <div class="solution-content">
+                  <p> <b>CD</b> </p>
+                  <p> <b>Note that a dropout rate of 0.5 means that each neuron has a probability of 0.5 to be turned off; not exactly half of the 
+                    neurons are turned off.
+                  </b> </p>
+                </div>              
+                </div>
+                <hr>
+                </li>
+			
+
+        
+          
+          
+
+
+                
+
+            
+
+          </ol>
+        </div>
+
+        <!-- wrap ends here; don't delete this /div --> 
+        </div>
+
+</div>
+
+
+
+
+<div id="calendar_div"></div><span id="btc" style="position: absolute;"></span><div style="padding: 0px; border: none; margin: 0px; position: absolute; left: 0px; top: 0px; width: 100%; z-index: 1001;"><a class="highslide-loading" title="Click to cancel" style="position: absolute; opacity: 0.75; left: -9999px; z-index: 1;">Loading...</a><table cellspacing="0" style="padding: 0px; border: none; margin: 0px; visibility: hidden; position: absolute; z-index: 1001; border-collapse: collapse;"><tbody style="padding: 0px; border: none; margin: 0px;"><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px 0px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -40px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px 0px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -80px; height: 20px; width: 20px;"></td><td class="rounded-white" style="padding: 0px; border: none; margin: 0px; position: relative;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px -80px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -20px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) 0px -60px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://course.cse.ust.hk/comp2211/self-test/highslide/graphics/outlines/rounded-white.png&quot;) -20px -20px; height: 20px; width: 20px;"></td></tr></tbody></table><img src="./COMP2211 Self-test 9_files/rounded-white.png" style="padding: 0px; border: none; margin: 0px; position: absolute; left: -9999px; top: -9999px;"></div></body><!-- table end --></html>
