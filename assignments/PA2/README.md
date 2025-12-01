@@ -27,4 +27,4 @@ Summary of my models:
 
 I got 88.2% acc for mlp model, and 87.3% for cnn model on ZINC.
 
-You can ask questions in the discussion here instead of **Piazza**. If you want to know some secret.
+**In pa2_grading folder you can find what you want**
