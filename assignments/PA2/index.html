@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- ### Change assignment number ### -->
+  <title>COMP 2211 Programming Assignment 2: Grade Appeal</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="./blog-home.css" rel="stylesheet">
+
+  <!-- Prism syntax highlighter -->
+  <link href="./prism.css" rel="stylesheet">
+
+  <style type="text/css">
+    img.limit {
+      max-width: 100%
+    }
+  </style>
+</head>
+
+<body>
+  <script src="./prism.js"></script>
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <!-- Entries Column -->
+      <div class="col-md-9">
+        <h2 class="my-4">
+          <span style="color:darkblue">COMP 2211</span>
+          <small>Exploring Artificial Intelligence</small>
+        </h2>
+
+        <!-- ### Change assignment number and title ### -->
+        <h3 class="my-4">
+          Programming Assignment 2
+          <span style="color:#660066">Grade Appeal</span>
+        </h3>
+
+        <!-- Introduction section -->
+        <div class="card mb-4">
+          <div class="card-body" id="procedures">
+            <h3 class="card-title">Appeal Procedures</h3>
+            <br />
+            <div class="alert alert-info">
+              <strong>Important Notice:</strong> All appeals must follow these procedures exactly. Incomplete
+              submissions or
+              non-compliant requests will not be considered.
+            </div>
+
+            <h5>Step 1: Verify Your Grade</h5>
+            <ul>
+              <li><strong>Cross-verify your scores:</strong>
+                <ul>
+                  <li>Check detailed test results on the <a href="https://zinc.cse.ust.hk/">ZINC System</a></li>
+                  <!-- <li>Confirm your bonus eligibility on Canvas Assignment <a
+                      href="https://canvas.ust.hk/courses/60961/assignments/381873">PA1 Bonus</a>. Note that "1" stands for getting a bonus and "0" for not getting a bonus. "-" means we didn't received your submission.
+                  </li> -->
+                </ul>
+              </li>
+              <li><strong>Important notes:</strong>
+                <ul>
+                  <!-- <li>ZINC displays raw scores before bonus calculation</li>
+                  <li>Bonus marks (if applicable) will be added to your final PA1 scores via separate Canvas assignment. We will create a new assignment to display final scores after appeal</li> -->
+                  <li>Only your <strong>most recent submission (before deadline)</strong> on ZINC was graded</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h5>Step 2: Test Your Code</h5>
+            <ol>
+              <li>Download the complete set of test files from the <a href="#resources">Resources section</a></li>
+              <li>Place your <code>COMP2211_task.py</code>, <code>mlp_model.keras</code>, <code>cnn_model.keras</code> in the same folder as the test files</li>
+              <li>Run the relevant test scripts for the cases you want to appeal</li>
+            </ol>
+
+            <h5>Step 3: Prepare the Appeal Report</h5>
+            <p>Create a PDF containing:</p>
+            <ul>
+              <li><strong>Test Case Identification:</strong>
+                <ul>
+                  <li>Specific test case numbers (e.g., #4, #16)</li>
+                  <li>Corresponding function names and original output on ZINC</li>
+                </ul>
+              </li>
+              <li><strong>Technical Justification:</strong>
+                <ul>
+                  <li>Detailed analysis justifying why your code should pass</li>
+                  <li>Direct comparison with reference solution (<code>COMP2211_PA2_sol.py</code>)</li>
+                  <li>Note: Statements about playground performance alone are insufficient. E.g.</li>
+                  <ul>
+                    <li>"My code got the expected output on the Playground/Expected Output" and</li>
+                    <li>"My code passed the given test cases but not hidden test cases" are not acceptable reasons on
+                      their own. We use multiple datasets to grade your PA.</li>
+                  </ul>
+                </ul>
+              </li>
+            </ul>
+
+            <h5>Step 4: Submit Your Appeal</h5>
+            <ul>
+              <li>Upload to: <a href="https://canvas.ust.hk/courses/64950/assignments/409832">PA2 Appeal Portal</a></li>
+              <li>Deadline: <span class="text-danger">8 Dec 2025 Mon 23:59 HKT</span></li>
+              <li>Late submissions will not be accepted</li>
+            </ul>
+
+            <div class="alert alert-warning mt-4">
+              <h5>Important Policies</h5>
+              <ul>
+                <li>No partial credit for individual test cases</li>
+                <li>Code modifications will not be accepted - we only evaluate your original submission</li>
+                <li>You may email the TAs or post on Piazza for enquiries regarding the appeal instructions. However,
+                  TAs will NOT discuss your appeal (nor comment on appeal progress) via email nor Piazza.</li>
+                <li>Final scores will be updated approximately 7 days after appeal deadline (depending on the number of requests received)</li>
+                <li>All post-appeal grades are <strong>FINAL</strong></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-footer text-muted">
+            End of Appeal Procedures
+          </div>
+        </div>
+
+        <!-- Grading Scheme Section -->
+        <div class="card mb-4">
+          <div class="card-body" id="grading-scheme">
+            <h3 class="card-title">Grading Scheme</h3>
+            <br />
+
+            <h4>Test Categories</h4>
+            <div class="alert alert-info">
+              <strong>Three Fundamental Checks:</strong>
+              <ol class="mb-0">
+                <li><strong>Accuracy test:</strong> Correct algorithm implementation, i.e., your code output should match that of the sample solution.</li>
+                <li><strong>Model test:</strong> Proper use of models and data structures as required by the assignment. Also, the accuracy on the hidden dataset.</li>
+                <li><strong>Validity test:</strong> Proper coding practices, i.e., not using unauthorized libraries or packages, no plagiarism, etc.</li>
+              </ol>
+            </div>
+
+            <h4>Test Groups</h4>
+
+            <div class="card border-primary mb-3">
+              <div class="card-header bg-primary text-white">
+                Tests #1, 2, 3, 4, 5, 9: Core Functionality
+              </div>
+              <div class="card-body">
+                <ul>
+                  <li><strong>Focus:</strong> Algorithm accuracy</li>
+                  <li><strong>Metrics:</strong>
+                    <ul>
+                      <li><strong>Accuracy Test: Direct comparison between derived results and expected results.</strong></li>
+                      <li><strong>Validity test:</strong> Proper library imports, plagiarism</li>
+                    </ul>
+                  </li>
+                  <li><strong>Features:</strong>
+                    <ul>
+                      <li>Hidden dataset test cases</li>
+                      <li>Error isolation between tests</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="alert alert-warning">
+              <strong>Monkey Patch to Prevent Error Accumulation</strong><br>
+              We used monkey patch to prevent error accumulation in the test cases:
+              <ul>
+                <li>Each test case is independent, i.e., do not reuse results from previous test cases</li>
+                <li>We substitute your function implementation with the intermediate results from sample solution, if that test case involves
+                  previous functions</li>
+              </ul>
+              This means that if your code fails a test case, it will not affect the grading of subsequent test cases.
+            </div>
+
+            <div class="card border-success mb-3">
+              <div class="card-header bg-success text-white">
+                Tests #6, 7, 8, 11, 12: Model Functionality
+              </div>
+              <div class="card-body">
+                <ul>
+                  <li><strong>Focus:</strong> Model Implementation</li>
+                  <li><strong>Metrics:</strong>
+                    <ul>
+                      <li><strong>Model inspection:</strong> Compare the structure of the submitted model and the generated model.</li>
+                      <li><strong>Accuracy test:</strong> Evaluate the accuracy on the hidden dataset.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Features:</strong>
+                    <ul>
+                      <li>Hidden dataset test cases</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <h4>“No module named 'google.colab'”</h4>
+            <ul>
+              <li>The test scripts are designed to run in a standard Python environment. Therefore, any code requiring Google Colab or other unnecessary libraries will not work during testing.</li>
+              <li>If your code fails due to this error, please remove or comment out the relevant code before testing.</li>
+              <li>You can submit an appeal in this case and receive a 20% penalty.</li>
+            </ul>
+
+            <h5>Universal Rules</h5>
+            <ul>
+              <li>No unauthorized libraries. Standard Python/NumPy syntax required.</li>
+              <li>Only the <u>last valid submission</u> is evaluated. 
+                <!-- For dual portal submissions: -->
+                <!-- <ul>
+                  <li>Both <strong>PA1 (Original)</strong> and <strong>PA1 Deadline Extended</strong> submissions are graded</li>
+                  <li>Only the extended deadline submission will be considered for final scoring</li>
+                  </ul> -->
+                </ul>
+              
+              </li>
+            </ul>
+
+          </div>
+          <div class="card-footer text-muted">
+            End of Grading Scheme
+          </div>
+        </div>
+
+        <!-- Bonus Scheme Section -->
+        <!-- <div class="card mb-4">
+          <div class="card-body" id="bonus">
+            <h3 class="card-title">Bonus Points Clarification</h3>
+            <br />
+
+            <div class="alert alert-success">
+              <h5>Eligibility Criteria</h5>
+              <ul class="mb-0">
+                <li>Submitted to <strong>PA1 (Original)</strong> portal by Oct 24, 23:59 HKT</li>
+                <li>Made no subsequent resubmissions after the original deadline</li>
+              </ul>
+            </div>
+            <ul>
+              <li><strong>Calculation:</strong> 10% of earned PA1 score. ZINC displays raw scores <em>before</em> bonus calculation. Canvas will reflect final scores with bonus after processing.</li>
+              <li><strong>Application:</strong> Bonus points are applied exclusively to programming assignment scores
+                and cannot affect lab or exam grades.
+              </li>
+            </ul>
+
+          </div>
+          <div class="card-footer text-muted">
+            End of Bonus Clarification
+          </div>
+        </div> -->
+
+        <!-- Revised Resources Section -->
+        <div class="card mb-4 language-text">
+          <div class="card-body" id="resources">
+            <h3 class="card-title">Resources</h3>
+            <br />
+            <h5>Complete Test Package</h5>
+            <ul>
+              <li><a href="./files/pa2_grading.zip">Download All Test Files (ZIP)</a></li>
+              <li>Includes:
+                <ul>
+                  <li>All test scripts (.py files)</li>
+                  <li>All dataset files (.csv & .npy files)</li>
+                  <li>Reference solution (<code>COMP2211_PA2_sol.py</code>, <code>mlp_model_sol.keras</code>, <code>cnn_model_sol.keras</code>).</li>
+                </ul>
+              </li>
+              <li>Test case files:
+                <ul>
+                  <li>Test #1: test_1_remove_duplicate.py</li>
+                  <li>Test #2: test_2_clean_text.py</li>
+                  <li>Test #3: test_3_text_preprocessing.py</li>
+                  <li>Test #4: test_4_tfidf_vectorization.py</li>
+                  <li>Test #5: test_5_split_dataset.py</li>
+                  <li>Test #6: test_6_get_mlp_model.py</li>
+                  <li>Test #7: test_7_1_mlp_accuracy.py</li>
+                  <li>Test #8: test_7_2_mlp_accuracy.py</li>
+                  <li>Test #9: test_8_tokenize_text.py</li>
+                  <li>Test #10: test_9_get_cnn_model.py</li>
+                  <li>Test #11: test_10_1_cnn_accuracy.py</li>
+                  <li>Test #12: test_10_2_cnn_accuracy.py</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h5 class="mt-4">File Structure</h5>
+            <pre><code>pa2_grading/
+├── hidden_movies_data*.csv  # Hidden testing datasets (3 total, for monkey patching)
+├── hidden_*.npy             # Hidden processed data (5 total, for monkey patching)
+├── test_[1-10]_*.py         # Test scripts (12 total)
+├── mlp_model.keras          # YOUR MLP MODEL (place YOUR OWN file here)
+├── cnn_model.keras          # YOUR CNN MODEL (place YOUR OWN file here)
+├── COMP2211_PA2.py          # YOUR SOLUTION (place YOUR OWN file here)
+├── mlp_model_sol.keras      # Reference MLP model weights
+├── cnn_model_sol.keras      # Reference CNN model weights
+└── COMP2211_PA2_sol.py      # Reference solution</code></pre>
+            <div class="alert alert-warning mt-3">
+              <strong>File Structure Notes:</strong>
+              <ul class="mb-0 pl-3">
+                <li>All files are in the root <code>pa2_grading/</code> directory</li>
+                <li><code>test_X.py</code> = Test case scripts </li>
+                <li>Total 23 files (12 Python test cases + 5 NPY + 3 CSV + 2 Reference models + 1 Reference Solution)</li>
+                <li>Your <code>COMP2211_PA2.py</code> must reside in this root directory</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card-footer text-muted">
+            End of Resources
+          </div>
+        </div>
+
+        <div class="card mb-4 language-text">
+          <div class="card-body" id="statistics">
+            <h3 class="card-title">Statistics</h3>
+            <br />
+            <!-- <img class="card-img-top" src="files/pa1_distribution.png" alt="PA1 Distribution"> 
+				<br/>
+				<br/> -->
+            <ul>
+              <li>Min: 0</li>
+              <li>Max: 15</li>
+              <li>Median: 13</li>
+              <li>Mean: 12.13</li>
+              <li>Std. Dev.: 3.55</li>
+            </ul>
+            <!-- <p>Note: These statistics reflect pre-appeal grades and exclude any bonus points from early submissions.
+            </p> -->
+          </div>
+          <div class="card-footer text-muted">
+            End of Statistics
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-3">
+        <div class="sticky-top">
+          <!-- Menu Widget -->
+          <div class="card my-12">
+            <h5 class="card-header">Menu</h5>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul class="mb-0" style="padding-left:20px" type="circle">
+                    <li><a href="#procedures">Appeal Procedures</a></li>
+                    <li><a href="#grading-scheme">Grading Scheme</a></li>
+                    <!-- <li><a href="#bonus">Bonus Points Clarification</a></li> -->
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#statistics">Statistics</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Maintenance widget -->
+          <div class="card my-4">
+            <h5 class="card-header">Page maintained by</h5>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      Gary CHEUNG Wing Ho
+                    </li>
+                    <li>
+                      Email: <a href="mailto:garywh@ust.hk">garywh@ust.hk</a>
+                    </li>
+                    <li>Last Modified:
+                      <script type="text/javascript">document.write(document.lastModified);</script>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Homepage widget -->
+          <div class="card my-4">
+            <h5 class="card-header">Homepage</h5>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="http://course.cse.ust.hk/comp2211">Course Homepage</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Maintained by COMP 2211 Teaching Team © 2025 HKUST Computer Science
+        and Engineering</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="./jquery.min.js"></script>
+  <script src="./bootstrap.bundle.min.js"></script>
+
+  <div id="highlighter--hover-tools" style="display: none;">
+    <div id="highlighter--hover-tools--container">
+      <div class="highlighter--icon highlighter--icon-copy" title="Copy"></div>
+      <div class="highlighter--icon highlighter--icon-change-color" title="Change Color"></div>
+      <div class="highlighter--icon highlighter--icon-delete" title="Delete"></div>
+    </div>
+  </div>
+</body>
+
+</html>
